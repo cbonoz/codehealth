@@ -1,7 +1,7 @@
 Codehealth
 =========
 
-Codehealth is a Sublime Text 2/3 plugin.
+Codehealth is a Sublime Text 2/3 plugin that analyzes the health of code comments.
 
 For now it supports **Git** version control
 
@@ -33,9 +33,9 @@ The "Packages" directory is located at:
 
         %APPDATA%/Roaming/Sublime Text 3/Packages/
 
-Please, make sure your VCS (version control system) binaries is in the PATH (**especially if you are on Windows**).
+<!-- Please, make sure your VCS (version control system) binaries is in the PATH (**especially if you are on Windows**).
 
-To do that on Windows, open `Control Panel -> System -> Advanced system settings -> Environment variables -> System Variables`, find PATH, click "Edit" and append `;C:\path\to\VCS\binaries` for every VCS you will use (or make sure it's already there).
+To do that on Windows, open `Control Panel -> System -> Advanced system settings -> Environment variables -> System Variables`, find PATH, click "Edit" and append `;C:\path\to\VCS\binaries` for every VCS you will use (or make sure it's already there). -->
 
 Features / Usage
 ----------------
