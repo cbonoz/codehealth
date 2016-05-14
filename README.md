@@ -16,7 +16,7 @@ Or you can **download** the latest source from [GitHub](https://github.com/cbono
 
 Or **clone** the repository to your Sublime Text "Packages" directory:
 
-    git clone git://github.com/gornostal/Codehealth.git
+    git clone git@github.com:cbonoz/codehealth.git
 
 
 The "Packages" directory is located at:
