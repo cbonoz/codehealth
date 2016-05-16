@@ -64,10 +64,9 @@ https://github.com/SublimeText/WordHighlight
 
 
 ##### Implementation details:
-Sublime Plugin requires:
-1. Editing the sublime color theme file (color themes for highlights are drawn from the user settings - defaults are used if this is not customly set). 
+Sublime Plugin requires editing the sublime color theme file (color themes for highlights are drawn from the user settings - defaults are used if this is not customly set). 
   * Will need to create/edit new color themes (red/orange/green) for health ratings for comments.
-2. Adding sublime plugin files to packages folder. Tools -> Developer -> Plugins will show you where the plugins folder is. If you add a .py sublime-style plugin file to this, it will automatically be loaded and begin executing.
+    Adding sublime plugin files to packages folder. Tools -> Developer -> Plugins will show you where the plugins folder is. If you add a .py sublime-style plugin file to this, it will automatically be loaded and begin executing.
 
 Refer to https://www.sublimetext.com/docs/3/api_reference.html
 
