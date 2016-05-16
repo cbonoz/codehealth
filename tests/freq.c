@@ -25,6 +25,7 @@ int main()
    {
       /** Printing only those characters 
           whose count is at least 1 */
+
  
       if (count[c] != 0)
          printf("%c occurs %d times in the entered string.\n",c+'a',count[c]);
