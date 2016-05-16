@@ -1,0 +1,30 @@
+{
+	"build_systems":
+	[
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "\"python\" -u \"$file\""
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"SublimeLinter":
+	{
+	    "@python": 2.7,
+	    "linters":
+	    {
+	        "pep8":
+	        {
+	            "@disable": false,
+	            "ignore": "E127,E128",
+	            "max-line-length": 20
+	        }
+	    }
+	}
+}

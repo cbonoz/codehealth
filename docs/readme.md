@@ -34,3 +34,40 @@ Motivation
 2. Extract the comments from the file into Comment Objects. Track these comments through the git history.
 3. Build an algorithm that computes each comments' health score based on the metrics defined in the original one pager.
 4. Build a light IDE plugin that will highlight comments according to their health rating (invoked via an IDE command)
+
+Notes
+---
+
+
+##### Implementing CodeHealth Webhook Check
+1. Pre-commit (client side)
+  *  Checks to see if the comments of affected functions are updated.
+  *  Looks at previous commit, looks at changes and editing.
+  *  Warns user via command line of potential stale comments resulting from the latest changes
+  *  This would be managed locally as part of the repo. There would be an npm module that invokes a script each time a local user attempts to create a new commit.
+  * Would use a package like: https://github.com/observing/pre-commit
+
+
+2. Pre-push (server side)
+  * Requires hosting a server in which responds to events and dev
+  * Push requests would be routed to the live server. Configuration guide here: https://developer.github.com/webhooks/configuring/
+  * Server-side scripts would execute on the committed code. To push successfully, these scripts would need to pass.
+
+
+##### My Opinion
+
+Would recommend running the comment health test in a pre-commit-hook as the change would already be recorded when attempting to push. Push and pull only exchange information about already recorded changes. If a push test fails,  that user would still have "broken" revision in his or her repository (regardless of whether that person was able to successfully push to the server or not).
+
+The workflow would require the npm package for pre-commit hooks. When the user invokes git commit via the command line, the pre-commit check would intervene and make sure the tests associated with the check pass.
+
+https://github.com/SublimeText/WordHighlight
+
+
+##### Implementation details:
+Sublime Plugin requires:
+1. Editing the sublime color theme file (color themes for highlights are drawn from the user settings - defaults are used if this is not customly set). 
+  * Will need to create/edit new color themes (red/orange/green) for health ratings for comments.
+2. Adding sublime plugin files to packages folder. Tools -> Developer -> Plugins will show you where the plugins folder is. If you add a .py sublime-style plugin file to this, it will automatically be loaded and begin executing.
+
+Refer to https://www.sublimetext.com/docs/3/api_reference.html
+

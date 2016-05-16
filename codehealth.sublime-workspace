@@ -1,0 +1,1858 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"conte",
+				"content_type"
+			],
+			[
+				"git",
+				"github_getresult"
+			],
+			[
+				"add",
+				"add_url_params"
+			],
+			[
+				"get",
+				"get_content"
+			],
+			[
+				"comm",
+				"commit_number"
+			],
+			[
+				"COM",
+				"COMMIT_API"
+			],
+			[
+				"dec",
+				"decode	function"
+			],
+			[
+				"temp_",
+				"temp_obj['children"
+			],
+			[
+				"metho",
+				"method_pairs"
+			],
+			[
+				"meth",
+				"method_pairs"
+			],
+			[
+				"has",
+				"hasattr"
+			],
+			[
+				"static",
+				"staticmethod	(codesniffer.py)"
+			],
+			[
+				"ou",
+				"out_file"
+			],
+			[
+				"up",
+				"updateFolder"
+			],
+			[
+				"update",
+				"updateFolder	(main.js)"
+			],
+			[
+				"file",
+				"fileSystem"
+			],
+			[
+				"body",
+				"body_elements"
+			],
+			[
+				"sim",
+				"similarity_score"
+			],
+			[
+				"As",
+				"Assignment	(class_attributes.txt)"
+			],
+			[
+				"sel",
+				"selected_index"
+			],
+			[
+				"load",
+				"loadJson"
+			],
+			[
+				"tree",
+				"treefile	(tree.html)"
+			],
+			[
+				"dire",
+				"directives	(index.html)"
+			],
+			[
+				"json",
+				"jsongetter	(index.html)"
+			],
+			[
+				"main",
+				"MainCtrl"
+			],
+			[
+				"If",
+				"IfThenElse	(class_attributes.txt)"
+			],
+			[
+				"Method",
+				"MethodDeclaration"
+			],
+			[
+				"met",
+				"methods"
+			],
+			[
+				"chec",
+				"check_god_class"
+			],
+			[
+				"Code",
+				"CodeSniffer	(pyreflect.py)"
+			],
+			[
+				"WMC",
+				"WMC_VERY_HIGH"
+			],
+			[
+				"stat",
+				"staticmethod"
+			],
+			[
+				"LONG",
+				"LONG_PARAMETER"
+			],
+			[
+				"num",
+				"numPlans"
+			],
+			[
+				"grea",
+				"greatestSum"
+			],
+			[
+				"la",
+				"lazy_class	(codesniffer.py)"
+			],
+			[
+				"code",
+				"codesniffer"
+			],
+			[
+				"Varia",
+				"VariableDeclarator	(class_attributes.txt)"
+			],
+			[
+				"Non",
+				"NonInterruptable"
+			],
+			[
+				"pl",
+				"plain_data"
+			],
+			[
+				"plain",
+				"plain_data"
+			],
+			[
+				"PRI",
+				"PRIVATE_KEY_FILE"
+			],
+			[
+				"pri",
+				"privkey"
+			],
+			[
+				"most",
+				"most_common_tokens"
+			],
+			[
+				"test",
+				"test_folders"
+			],
+			[
+				"de",
+				"decrypt"
+			],
+			[
+				"view",
+				"viewsets"
+			],
+			[
+				"aes",
+				"aes_key2"
+			],
+			[
+				"AE",
+				"AESCipher"
+			],
+			[
+				"plai",
+				"plain_text"
+			],
+			[
+				"cipher",
+				"cipher_text"
+			],
+			[
+				"cip",
+				"cipher_text"
+			],
+			[
+				"eval",
+				"evalSpecial"
+			],
+			[
+				"check",
+				"checkReferences"
+			],
+			[
+				"clas",
+				"clause1"
+			],
+			[
+				"cur",
+				"cur_solver"
+			],
+			[
+				"make",
+				"makeCopyWithFreshVarNames"
+			],
+			[
+				"stri",
+				"stringify	(classes.js)"
+			],
+			[
+				"max",
+				"max_results"
+			],
+			[
+				"bind",
+				"bindings"
+			],
+			[
+				"head",
+				"head_clause"
+			],
+			[
+				"Obj",
+				"Object"
+			],
+			[
+				"last",
+				"last_type"
+			],
+			[
+				"send",
+				"send_params"
+			],
+			[
+				"CALL",
+				"call_METHOD"
+			],
+			[
+				"block",
+				"block_params"
+			],
+			[
+				"Block",
+				"BlockLit"
+			],
+			[
+				"trans",
+				"transList"
+			],
+			[
+				"Bloc",
+				"Block"
+			],
+			[
+				"my",
+				"mySend"
+			],
+			[
+				"is",
+				"isSpecial"
+			],
+			[
+				"RET",
+				"ret_val"
+			],
+			[
+				"compare",
+				"compare-expr"
+			],
+			[
+				"handl",
+				"handle-list"
+			],
+			[
+				"crea",
+				"create-branch"
+			],
+			[
+				"compar",
+				"compare-expr"
+			],
+			[
+				"co",
+				"converting"
+			],
+			[
+				"Fac",
+				"Face_Matrix"
+			],
+			[
+				"sc",
+				"scree_plot"
+			],
+			[
+				"sigm",
+				"sigma_percentage"
+			],
+			[
+				"plot",
+				"plot_spectrum"
+			],
+			[
+				"image",
+				"image_to_omit"
+			],
+			[
+				"imag",
+				"image_to_omit"
+			],
+			[
+				"df_",
+				"df_stock"
+			],
+			[
+				"NO",
+				"NO_VALUE	(motley_resource.py)"
+			],
+			[
+				"Ex",
+				"Exception	class"
+			],
+			[
+				"see",
+				"seen_expr"
+			],
+			[
+				"map",
+				"maplist"
+			],
+			[
+				"el",
+				"element_k"
+			],
+			[
+				"class",
+				"class_properties"
+			],
+			[
+				"init",
+				"init_METHOD"
+			],
+			[
+				"c",
+				"current_class"
+			],
+			[
+				"parent",
+				"parent_name"
+			],
+			[
+				"cla",
+				"classProperties"
+			],
+			[
+				"prim",
+				"primValue"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"pr",
+				"prototype	(homework_notes.txt)"
+			],
+			[
+				"assi",
+				"assign_zero"
+			],
+			[
+				"assign_",
+				"assign_integer"
+			],
+			[
+				"toS",
+				"toString()	func"
+			],
+			[
+				"val",
+				"val_len"
+			],
+			[
+				"con",
+				"constructor	(tests.js)"
+			],
+			[
+				"del",
+				"delimiter	param"
+			],
+			[
+				"data",
+				"dataset_name"
+			],
+			[
+				"Better",
+				"BetterSorry"
+			],
+			[
+				"arity",
+				"arityCheck"
+			],
+			[
+				"p",
+				"p_type"
+			],
+			[
+				"cons",
+				"constructor"
+			],
+			[
+				"aw",
+				"awksub_grammar"
+			],
+			[
+				"conv",
+				"convert_grammar"
+			],
+			[
+				"match",
+				"matchEnv"
+			],
+			[
+				"matc",
+				"matchEnv"
+			],
+			[
+				"list",
+				"listCompHelper"
+			],
+			[
+				"loop",
+				"lookUp"
+			],
+			[
+				"cons_ter",
+				"cons_terminals_using_rules"
+			],
+			[
+				"equal",
+				"equal_sets"
+			],
+			[
+				"bel",
+				"belongs_to"
+			],
+			[
+				"inter",
+				"interp_helper"
+			],
+			[
+				"rai",
+				"raindrop"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"FILE",
+				"FILENAMESIZ"
+			],
+			[
+				"ty",
+				"try_again"
+			],
+			[
+				"FIL",
+				"FILENAMESIZ"
+			],
+			[
+				"key_",
+				"key_exact"
+			],
+			[
+				"vio",
+				"violation"
+			],
+			[
+				"neq",
+				"neq_val_len"
+			],
+			[
+				"logi",
+				"logic_error"
+			],
+			[
+				"RC_",
+				"RC_FILE_READ_FAILED	(BTreeIndex.cc)"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "docs/readme.md",
+			"settings":
+			{
+				"buffer_size": 3419,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "# -*- coding: utf-8 -*-\n\nfrom __future__ import print_function\n\nimport sublime\nimport sublime_plugin\nimport os\nimport threading\nimport subprocess\nimport functools\nimport re\nfrom copy import copy\n\n# https://pypi.python.org/pypi/comment_parser/1.0.3\n\n\n\n\nIS_ST3 = sublime.version().startswith('3')\n\n\ndef get_settings():\n    return sublime.load_settings(\"Codehealth.sublime-settings\")\n\ndef get_vcs_settings():\n    \"\"\"\n    Returns list of dictionaries\n    each dict. represents settings for VCS\n    \"\"\"\n\n    default = [\n        {\"name\": \"git\", \"dir\": \".git\", \"cmd\": \"git\"},\n        {\"name\": \"svn\", \"dir\": \".svn\", \"cmd\": \"svn\"},\n        {\"name\": \"bzr\", \"dir\": \".bzr\", \"cmd\": \"bzr\"},\n        {\"name\": \"hg\",  \"dir\": \".hg\",  \"cmd\": \"hg\"},\n        {\"name\": \"tf\",  \"dir\": \"$tf\",  \"cmd\": \"C:/Program Files (x86)/Microsoft Visual Studio 11.0/Common7/IDE/TF.exe\"}\n    ]\n    settings = get_settings().get('vcs', default)\n\n    # re-format settings array if user has old format of settings\n    if type(settings[0]) == list:\n        settings = [dict(name=name, cmd=cmd, dir='.'+name) for name, cmd in settings]\n\n    return settings\n\n\ndef get_user_command(vcs_name):\n    \"\"\"\n    Returns command that user specified for vcs_name\n    \"\"\"\n\n    try:\n        return [vcs['cmd'] for vcs in get_vcs_settings() if vcs.get('name') == vcs_name][0]\n    except IndexError:\n        return None\n\n\n\ndef get_vcs(directory):\n    \"\"\"\n    Determines root directory for VCS and which of VCS systems should be used for a given directory\n\n    Returns dictionary {name: .., root: .., cmd: .., dir: ..}\n    \"\"\"\n\n    vcs_check = [(lambda vcs: lambda dir: os.path.exists(os.path.join(dir, vcs.get('dir', False)))\n                 and vcs)(vcs) for vcs in get_vcs_settings()]\n\n    start_directory = directory\n    while directory:\n        available = list(filter(bool, [check(directory) for check in vcs_check]))\n        if available:\n            available[0]['root'] = directory\n            return available[0]\n\n        parent = os.path.realpath(os.path.join(directory, os.path.pardir))\n        if parent == directory:  # /.. == /\n            # try TFS as a last resort\n            # I'm not sure why we need to do this. Seems like it should find root for TFS in the main loop\n            return tfs_root(start_directory)\n        directory = parent\n\n    return None\n\n\ndef main_thread(callback, *args, **kwargs):\n    # sublime.set_timeout gets used to send things onto the main thread\n    # most sublime.[something] calls need to be on the main thread\n    sublime.set_timeout(functools.partial(callback, *args, **kwargs), 0)\n\n\ndef _make_text_safeish(text, fallback_encoding, method='decode'):\n    # The unicode decode here is because sublime converts to unicode inside\n    # insert in such a way that unknown characters will cause errors, which is\n    # distinctly non-ideal... and there's no way to tell what's coming out of\n    # git in output. So...\n    try:\n        unitext = getattr(text, method)('utf-8')\n    except (UnicodeEncodeError, UnicodeDecodeError):\n        unitext = getattr(text, method)(fallback_encoding)\n    except AttributeError:\n        # strongly implies we're already unicode, but just in case let's cast\n        # to string\n        unitext = str(text)\n    return unitext\n\n\ndef do_when(conditional, callback, *args, **kwargs):\n    if conditional():\n        return callback(*args, **kwargs)\n    sublime.set_timeout(functools.partial(do_when, conditional, callback, *args, **kwargs), 50)\n\n\ndef log(*args, **kwargs):\n    \"\"\"\n    @param *args: string arguments that should be logged to console\n    @param debug=True: debug log mode\n    @param settings=None: instance of sublime.Settings\n    \"\"\"\n    debug = kwargs.get('debug', True)\n    settings = kwargs.get('settings', None)\n\n    if not settings:\n        settings = get_settings()\n\n    if debug and not settings.get('debug', False):\n        return\n\n    print('Codehealth:', *args)\n\n\nclass EditViewCommand(sublime_plugin.TextCommand):\n\n    def run(self, edit, command=None, output='', begin=0, region=None):\n        \"\"\"\n        For some reason Sublime's view.run_command() doesn't allow to pass tuples,\n        therefore region must be a list\n        \"\"\"\n        region = sublime.Region(int(region[0]), int(region[1])) if region else None\n        if command == 'insert':\n            self.view.insert(edit, int(begin), output)\n        elif command == 'replace':\n            self.view.replace(edit, region, output)\n        elif command == 'erase':\n            self.view.erase(edit, region)\n        else:\n            print('Invalid command: ', command)\n            raise\n\n\nclass VcsCommand(object):\n    may_change_files = False\n\n    def __init__(self, *args, **kwargs):\n        self.settings = get_settings()\n        super(VcsCommand, self).__init__(*args, **kwargs)\n\n    def log(self, *args, **kwargs):\n        return log(settings=self.settings, *args, **kwargs)\n\n    def run_command(self, command, callback=None, show_status=False,\n                    filter_empty_args=True, **kwargs):\n        if filter_empty_args:\n            command = [arg for arg in command if arg]\n        if 'working_dir' not in kwargs:\n            kwargs['working_dir'] = self.get_working_dir()\n        if 'fallback_encoding' not in kwargs and self.active_view() and self.active_view().settings().get('fallback_encoding'):\n            kwargs['fallback_encoding'] = self.active_view().settings().get('fallback_encoding').rpartition('(')[2].rpartition(')')[0]\n        kwargs['console_encoding'] = self.settings.get('console_encoding')\n\n        autosave = self.settings.get('autosave', True)\n        if self.active_view() and self.active_view().is_dirty() and autosave:\n            self.active_view().run_command('save')\n        if not callback:\n            callback = self.generic_done\n\n        log('run command:', ' '.join(command))\n        thread = CommandThread(command, callback, **kwargs)\n        thread.start()\n\n        if show_status:\n            message = kwargs.get('status_message', False) or ' '.join(command)\n            sublime.status_message(message + 'wef')\n\n    def generic_done(self, result):\n        self.log('generic_done', result)\n        if self.may_change_files and self.active_view() and self.active_view().file_name():\n            if self.active_view().is_dirty():\n                result = \"WARNING: Current view is dirty.\\n\\n\"\n            else:\n                # just asking the current file to be re-opened doesn't do anything\n                print(\"reverting\")\n                position = self.active_view().viewport_position()\n                self.active_view().run_command('revert')\n                do_when(lambda: not self.active_view().is_loading(),\n                        lambda: self.active_view().set_viewport_position(position, False))\n\n        if not result.strip():\n            return\n        self.panel(result)\n\n    def _output_to_view(self, output_file, output, clear=False,\n                        syntax=\"Packages/Diff/Diff.tmLanguage\"):\n        output_file.set_syntax_file(syntax)\n        if clear:\n            output_file.run_command('edit_view', dict(command='replace', region=[0, self.output_view.size()], output=output))\n        else:\n            output_file.run_command('edit_view', dict(command='insert', output=output))\n∏\n    def scratch(self, output, title=False, position=None, **kwargs):\n        scratch_file = self.get_window().new_file()\n        if title:\n            scratch_file.set_name(title)\n        scratch_file.set_scratch(True)\n        self._output_to_view(scratch_file, output, **kwargs)\n        scratch_file.set_read_only(True)\n        if position:\n            sublime.set_timeout(lambda: scratch_file.set_viewport_position(position), 0)\n        return scratch_file\n\n    def panel(self, output, **kwargs):\n        if not hasattr(self, 'output_view'):\n            self.output_view = self.get_window().get_output_panel(\"vcs\")\n        self.output_view.set_read_only(False)\n        self._output_to_view(self.output_view, output, clear=True, **kwargs)\n        self.output_view.set_read_only(True)\n        self.get_window().run_command(\"show_panel\", {\"panel\": \"output.vcs\"})\n\n    def _active_file_name(self):\n        view = self.active_view()\n        if view and view.file_name() and len(view.file_name()) > 0:\n            return view.file_name()\n\n    def active_view(self):\n        return self.view\n\n    def get_window(self):\n        if (hasattr(self, 'view') and hasattr(self.view, 'window')):\n            return self.view.window()\n        else:\n            return sublime.active_window()\n\n    def get_working_dir(self):\n        return os.path.dirname(self._active_file_name())\n\n    def is_enabled(self):\n        file_name = self._active_file_name()\n        if file_name and os.path.exists(file_name):\n            return bool(get_vcs(self.get_working_dir()))\n        return False\n\n\n\nclass ToggleHighlightChangesCommand(sublime_plugin.TextCommand):\n    def run(self, edit):\n        setting_name = \"highlight_changes\"\n        settings = get_settings()\n        is_on = settings.get(setting_name)\n\n        if is_on:\n            # remove highlighting\n            [self.view.erase_regions(k) for k in ('inserted', 'changed', 'deleted')]\n        else:\n            self.view.run_command('hl_changes')\n\n        settings.set(setting_name, not is_on)\n        sublime.save_settings(\"Codehealth.sublime-settings\")\n\n\n    \n",
+			"file": "codehealth.py",
+			"file_size": 9362,
+			"file_write_time": 131078397500000000,
+			"settings":
+			{
+				"buffer_size": 9363,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+			"settings":
+			{
+				"buffer_size": 648,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/Default (OSX).sublime-keymap",
+			"settings":
+			{
+				"buffer_size": 467,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "common.py",
+			"settings":
+			{
+				"buffer_size": 1595,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "c_parser.py",
+			"settings":
+			{
+				"buffer_size": 3007,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Default (OSX).sublime-keymap",
+			"settings":
+			{
+				"buffer_size": 564,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Modific.py",
+			"settings":
+			{
+				"buffer_size": 28762,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nSublimeLinter\n-------------\n\n  \n    ____        _     _ _                _     _       _\n   / ___| _   _| |__ | (_)_ __ ___   ___| |   (_)_ __ | |_ ___ _ __\n   \\___ \\| | | | '_ \\| | | '_ ` _ \\ / _ \\ |   | | '_ \\| __/ _ \\ '__|\n    ___) | |_| | |_) | | | | | | | |  __/ |___| | | | | ||  __/ |\n   |____/ \\__,_|_.__/|_|_|_| |_| |_|\\___|_____|_|_| |_|\\__\\___|_|\n  \n  \n  Welcome to SublimeLinter, a linter framework for Sublime Text 3.\n  \n                   * * * IMPORTANT! * * *\n  \n          SublimeLinter 3 is NOT a drop-in replacement for\n          earlier versions.\n  \n          Linters *NOT* included with SublimeLinter 3, \n          they must be installed separately.\n  \n          The settings are different.\n  \n                  * * * READ THE DOCS! * * *\n  \n  Otherwise you will never know how to install linters, nor will\n  you know about all of the great new features in SublimeLinter 3.\n  \n  For complete documentation on how to install and use SublimeLinter,\n  please see:\n  \n  http://www.sublimelinter.com\n  \n  \n                   _   _      _       _\n                  | | | | ___| |_ __ | |\n                  | |_| |/ _ \\ | '_ \\| |\n                  |  _  |  __/ | |_) |_|\n                  |_| |_|\\___|_| .__/(_)\n                               |_|\n  \n  \n  Hundreds of hours have been spent writing and documenting SublimeLinter\n  to make it the best it can be — easy to use, easy to configure,\n  easy to update, easy to extend. If you use SublimeLinter and feel\n  it is making your coding life better and easier, please consider\n  making a donation to help fund development and support.\n  \n  To donate: https://github.com/SublimeLinter/SublimeLinter3#share-the-love\n  \n  Thank you!\n\n\nSublimeLinter-pep8\n------------------\n\n  SublimeLinter-pep8\n  -------------------------------\n  This linter plugin for SublimeLinter provides an interface to pep8.\n  \n  ** IMPORTANT! **\n  \n  Before this plugin will activate, you *must*\n  follow the installation instructions here:\n  \n  https://github.com/SublimeLinter/SublimeLinter-pep8\n",
+			"settings":
+			{
+				"buffer_size": 2085,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"file": "tests/WordCount.java",
+			"settings":
+			{
+				"buffer_size": 6189,
+				"line_ending": "Unix",
+				"name": "import java.io.File;"
+			}
+		},
+		{
+			"file": "tests/freq.c",
+			"settings":
+			{
+				"buffer_size": 671,
+				"line_ending": "Unix",
+				"name": "#include <stdio.h>"
+			}
+		},
+		{
+			"contents": "--- /Users/cbono/Documents/code/codehealth/comment.py\n+++ (clipboard)\n@@ -1,3 +1,4 @@\n+#!/usr/bin/python\n \"\"\"This module provides constructs common to all comment parsers.\"\"\"\n \n \n@@ -16,7 +17,7 @@\n     pass\n \n \n-class Comment:\n+class Comment(object):\n     \"\"\"Represents comments found in source files.\"\"\"\n \n     def __init__(self, text, line_number, multiline=False):\n@@ -62,4 +63,4 @@\n         if isinstance(other, self.__class__):\n             if self.__dict__ == other.__dict__:\n                 return True\n-        return False\n+        return False\n",
+			"settings":
+			{
+				"buffer_size": 555,
+				"line_ending": "Unix",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "// You can set a command like this\n// \"cmd\": [\"command\", \"$file1\", \"$file2\"]\n\n// You can also include other command line parameters like this\n// \"cmd\": [\"command\", \"-parameter1\", \"-parameter2\", \"$file1\", \"$file2\"]\n\n{\n  // just uncomment one of the examples\n  // or write your own command\n  // NOTE: Copy/paste example below or write your own command in: Package Settings --> FileDiffs --> Settings - User\n  // This file will be overwritten if the package is updated.\n\n  // The \"command\" argument is different depending on your system, for instance\n  // you might need to prefix /usr/local/bin, or use another explicit path.\n\n  // opendiff (FileMerge)\n  // \"cmd\": [\"opendiff\", \"$file1\", \"$file2\"]\n\n  // ksdiff (Kaleidoscope)\n  // \"cmd\": [\"ksdiff\", \"$file1\", \"$file2\"]\n\n  // \"open_in_sublime\": false\n  // twdiff (Textwrangler)\n  // \"cmd\": [\"twdiff\", \"$file1\", \"$file2\"]\n\n  // bbdiff (BBEdit) NOTE: Use example below if you receive error.\n  // \"cmd\": [\"bbdiff\", \"$file1\", \"$file2\"]\n\n  // bbdiff (BBEdit)\n  // \"cmd\" [\"/usr/local/bin/bbdiff\", \"$file1\", \"$file2\"]\n\n  // deltawalker (DeltaWalker)\n  // \"cmd\": [\"deltawalker\", \"-nosplash\", \"$file1\", \"$file2\"]\n\n  // bcomp (Beyond Compare)\n  // Install Beyond Compare Command Line Tools:\n  // Beyond Compare > Install Command Line Tools\n  // \"cmd\": [\"/usr/local/bin/bcomp\",  \"$file1\", \"$file2\"]\n\n  // \"trim_trailing_white_space_before_diff\": false\n  // \"expand_full_file_name_in_tab\": false\n  // \"apply_tempfile_changes_after_diff_tool\": false\n  // \"limit\": 1000\n}\n",
+			"file": "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/FileDiffs/FileDiffs.sublime-settings",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 1505,
+				"line_ending": "Unix",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python3.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/Python3.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/algs-compile.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					"Clean up Files"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/LaTeXing/LaTeX.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python3.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/Python3.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/Python3.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/Python3.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 167.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"linter",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"i",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"display",
+				"Anaconda: Display object docs"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/cbono/Documents/code/codehealth",
+		"/Users/cbono/Documents/code/codehealth/comment_parser",
+		"/Users/cbono/Documents/code/codehealth/comment_parser/comment_parser",
+		"/Users/cbono/Documents/code/codehealth/comment_parser/comment_parser/parsers",
+		"/Users/cbono/Documents/code/codehealth/docs",
+		"/Users/cbono/Documents/code/codehealth/tests"
+	],
+	"file_history":
+	[
+		"/Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/FileDiffs.sublime-settings",
+		"/Users/cbono/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/cbono/Documents/code/condl/docs/readme.md",
+		"/Users/cbono/Documents/code/python/gitapi.py",
+		"/Users/cbono/Documents/code/codehealth/codehealth.py",
+		"/Users/cbono/Documents/code/codehealth/tests/gitapi.py",
+		"/Users/cbono/Documents/code/codehealth/HelloWorld_plugin.py",
+		"/Users/cbono/Documents/code/codehealth/gitapi.py",
+		"/Users/cbono/Documents/code/condl/tests/calc.py",
+		"/Users/cbono/Documents/code/pyreflect/pyreflect/project_1.json",
+		"/Users/cbono/Documents/code/pyreflect/plyj_examples/class_attributes.txt",
+		"/Users/cbono/Documents/code/pyreflect/pyreflect/smellutil.py",
+		"/Users/cbono/Documents/code/pyreflect/pyreflect/codesniffer.py",
+		"/Users/cbono/Documents/code/pyreflect/README.md",
+		"/Users/cbono/Documents/code/pyreflect/pyreflect/pyreflect.py",
+		"/Users/cbono/Documents/code/pyreflect/tests/code-smell-medium/AccountType.java",
+		"/Users/cbono/Documents/code/pyreflect/pyreflect/codevisualizer.py",
+		"/Users/cbono/Documents/code/pyreflect/website/app/scripts/services/angularfsreader.js",
+		"/Users/cbono/Documents/code/pyreflect/website/README.md",
+		"/Users/cbono/Documents/code/pyreflect/website/app/scripts/directives/treegraph.js",
+		"/Users/cbono/Documents/code/pyreflect/visualize/tree.html",
+		"/Users/cbono/Documents/code/pyreflect/website/app/styles/main.scss",
+		"/Users/cbono/Documents/code/pyreflect/website/app/trees/tree1.json",
+		"/Users/cbono/Documents/classes/cs230/new_questions",
+		"/Users/cbono/Documents/classes/cs230/all_questions.txt",
+		"/Users/cbono/miniconda2/lib/python2.7/functools.py",
+		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/functools.py",
+		"/Users/cbono/Documents/code/pyreflect/tests/code-smell-JHotDraw7.0.6/PMD_report",
+		"/Users/cbono/Documents/code/pyreflect/pyreflect/GodClassRule.java",
+		"/Users/cbono/Documents/research/breathe-android-app/codeiris/codeIrisExport.json",
+		"/Users/cbono/papers",
+		"/Users/cbono/Documents/code/angular/.s",
+		"/Users/cbono/GoogleDrive/UCLA/cs230_project/project_paper.tex",
+		"/Users/cbono/Documents/code/pyreflect/visualize/output_tree4.json",
+		"/Users/cbono/Documents/classes/cs237b/presentation_notes.txt",
+		"/Users/cbono/Downloads/Sensordata.txt",
+		"/Users/cbono/Downloads/RawSensordata.txt",
+		"/Users/cbono/Library/Android/sdk/platform-tools/pull.sh",
+		"/Users/cbono/Documents/code/research/api.py",
+		"/Users/cbono/Library/Android/sdk/platform-tools/stats.sh",
+		"/Users/cbono/Downloads/Breathe70.txt",
+		"/Users/cbono/Downloads/Breathe69.txt",
+		"/Users/cbono/Downloads/brea*",
+		"/Users/cbono/Documents/classes/cs237b/notes.txt",
+		"/Users/cbono/Documents/research/AccelMe/README.md",
+		"/Users/cbono/Documents/research/breathe-android-app/README.md",
+		"/Users/cbono/Downloads/decrypt.py",
+		"/Users/cbono/Downloads/client_id.json",
+		"/Users/cbono/Documents/classes/cs230/2_questions",
+		"/Users/cbono/Documents/classes/cs230/1_questions",
+		"/Users/cbono/Downloads/pubkey.pem",
+		"/Users/cbono/Downloads/Encrypter.java",
+		"/Users/cbono/Documents/classes/cs131/project/server.py",
+		"/Users/cbono/Documents/classes/cs131/project/test.sh",
+		"/Users/cbono/Downloads/register.py",
+		"/Users/cbono/GoogleDrive/code/leetcode/allsolutions/codesmith_3_26.js",
+		"/Users/cbono/Library/Android/sdk/platform-tools/debug.sh",
+		"/decode.py",
+		"/test/bluetooth.py",
+		"/Users/cbono/GoogleDrive/code/tradingcode/motley_predictor/.s",
+		"/Users/cbono/GoogleDrive/UCLA/cs131/final_material/prolog_examples",
+		"/Users/cbono/GoogleDrive/UCLA/cs131/final_material/continuation-sol.txt",
+		"/Users/cbono/Documents/classes/cs237a/my_code/log/tests-part2.js",
+		"/Users/cbono/GoogleDrive/CS201_wi16_reports.txt",
+		"/Users/cbono/Documents/classes/cs237a/my_code/log/test.py",
+		"/Users/cbono/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/cbono/Documents/classes/cs237a/my_code/log/particleData.csv",
+		"/Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/cbono/Documents/classes/cs237a/my_code/oo/mytrans.js",
+		"/Users/cbono/Documents/classes/cs237a/my_code/,",
+		"/Users/cbono/Documents/classes/cs237a/my_code/o",
+		"/Users/cbono/Documents/api_test.py",
+		"/Users/cbono/Documents/classes/cs237a/my_code/oo/trans_hw5_old.js",
+		"/Users/cbono/Documents/libermate/matcompat.py",
+		"/Users/cbono/Documents/libermate/hw_170a/scree_plot.py",
+		"/Users/cbono/Documents/libermate/hw_170a/removingNoise.py",
+		"/Users/cbono/Documents/libermate/hw_170a/plot_spectrum.py",
+		"/Users/cbono/Documents/libermate/hw_170a/kthOrderApproximation.py",
+		"/Users/cbono/Documents/libermate/hw_170a/face_descriptions.py",
+		"/Users/cbono/Documents/libermate/hw_170a/eigenfaces.py",
+		"/Users/cbono/Documents/libermate/Tests/colon.py",
+		"/Users/cbono/Downloads/hw3-4 (1)/eigenfaces/face_descriptions.m",
+		"/Users/cbono/Documents/classes/cs281/scribe.sty",
+		"/Users/cbono/Documents/classes/cs281/midterm/midterm_Chris_Buonocore.tex",
+		"/Users/cbono/GoogleDrive/code/tradingcode/motley_predictor/classifier_example.py",
+		"/Users/cbono/GoogleDrive/code/tradingcode/motley_predictor/volatility_trade.py",
+		"/Users/cbono/GoogleDrive/code/tradingcode/motley_predictor/market_clustering.py",
+		"/Users/cbono/Documents/classes/cs131/hw4/examples/likes.pl",
+		"/Users/cbono/Documents/classes/cs237a/my_code/oo/O.js",
+		"/Users/cbono/Documents/classes/cs237a/my_code/oo/index.html",
+		"/Users/cbono/Documents/classes/cs131/hw4/kenken.pl",
+		"/Users/cbono/Downloads/publickey.pem",
+		"/Users/cbono/Desktop/Bernie Sanders.",
+		"/Users/cbono/Documents/classes/cs237a/pm",
+		"/Users/cbono/Downloads/JEOPARDY_QUESTIONS1.json",
+		"/Users/cbono/Downloads/imagesvd (1).m",
+		"/Users/cbono/Documents/classes/cs237a/my_code/pm/tests_orig.js",
+		"/Users/cbono/Documents/classes/cs237a/my_code/pm/match_orig",
+		"/Users/cbono/GoogleDrive/UCLA/cs131/sp15/hw3/jmmplus/BetterSafeState.java",
+		"/Users/cbono/Documents/classes/cs131/disc/review.ml",
+		"/Users/cbono/Documents/classes/cs131/disc/misc.ml",
+		"/Users/cbono/Documents/classes/cs131/hw1/hw1test.ml",
+		"/Users/cbono/Documents/classes/cs131/hw1/hw1.ml",
+		"/Users/cbono/Documents/classes/cs237a/repo_code/pm/tests.js",
+		"/Users/cbono/Downloads/a2.scm",
+		"/Users/cbono/Documents/classes/cs131/hw3/Synchronized.java",
+		"/Users/cbono/GoogleDrive/UCLA/cs131/my_prog.ml",
+		"/Users/cbono/Documents/slate_project/three.min.js",
+		"/Users/cbono/GoogleDrive/UCLA/cs23",
+		"/Users/cbono/Documents/classes/cs131/disc/review:",
+		"/Users/cbono/Downloads/interp (4).js",
+		"/Users/cbono/Downloads/hw2test.ml",
+		"/Users/cbono/Downloads/hw2.txt",
+		"/Users/cbono/Downloads/hw2.ml",
+		"/Users/cbono/Documents/classes/cs170a/hw1/904587506.txt",
+		"/Users/cbono/Documents/classes/cs237a/repo_code/func/interp_red.js",
+		"/Users/cbono/Documents/classes/cs237a/repo_code/calc/C.js",
+		"/Users/cbono/Documents/classes/cs237a/repo_code/func/hw1-tests-expanded.js",
+		"/Users/cbono/Documents/classes/cs237a/repo_code/func/interp_ref.js",
+		"/Users/cbono/Documents/classes/cs237a/repo_code/func/classes.js",
+		"/Users/cbono/Documents/classes/cs237a/repo_code/func/hw2-tests.js",
+		"/Users/cbono/Documents/classes/cs237a/repo_code/func/hw1-tests2.js",
+		"/Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/Users/cbono/Documents/classes/cs170a/examples/ex",
+		"/Users/cbono/Documents/classes/cs",
+		"/Users/cbono/Documents/classes/cs237a/calc/calc.js",
+		"/Users/cbono/Documents/classes/cs237a/calc/test.py",
+		"/Users/cbono/Downloads/hw1.ml"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 98.0,
+		"where_history":
+		[
+			"<current file>",
+			"<current directory>",
+			"<current file>",
+			"<current directory>",
+			"<current file>",
+			"<current directory>",
+			"<current file>",
+			"/Users/cbono/GoogleDrive/UCLA/cs143/best-cho/project-2",
+			"/Users/cbono/Documents/vmfolder/cs111/lab3",
+			"/Users/cbono/vmfolder/cs111/lab3",
+			"/Users/cbono/Code/csgsc",
+			"/Users/cbono/GoogleDrive/UCLA/cs111/wi14/Minilab 2",
+			"/Users/cbono/GoogleDrive/UCLA/cs111/wi14/Minilab2",
+			"/Users/cbono/Documents/vmfolder/cs111/minilab2",
+			"/Users/cbono/Documents/vmfolder/cs143/proj2",
+			"/Users/cbono/Documents/vmfolder/cs111/lab2",
+			"/Users/cbono/Documents/igrouply",
+			"/Users/cbono/Documents/vmfolder/cs111/lab1",
+			"/Users/cbono/Documents/igrouply",
+			"/Users/cbono/Documents/vmfolder/cs111/minilab1/code",
+			"/Users/cbono/Documents/vmfolder/cs143/hw",
+			"/Users/cbono/Documents/vmfolder/cs111/lab1",
+			"/Users/cbono/GoogleDrive/react/babrouter",
+			"/Users/cbono/GoogleDrive/ucla/appbuilders/babwebsite",
+			"/Users/cbono/Documents/vmfolder/cs111/lab1",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"hl_lines",
+			"git_diff_command",
+			"git_diff_comm",
+			"get_user_command",
+			"comment.",
+			"common",
+			"af5",
+			"CommandThread",
+			"modific",
+			"Modific",
+			"Return\\(result=",
+			"self.__class__.",
+			"totalMethodPairs",
+			"Invocation",
+			"get_method_length",
+			"padding",
+			"x0",
+			"click",
+			"root",
+			"friend",
+			"build",
+			"RandomString",
+			"project1/",
+			"/home",
+			"part1.cpp",
+			"240",
+			"countMethodPairs",
+			"atfd",
+			"wmcCount",
+			"MethodInv",
+			"get_body_length",
+			"check_lazy_class",
+			"CodeSniffer",
+			"analyze",
+			"print \"",
+			"MyVisitor",
+			"04-29 16:05:59.772 2011-2011/com.breatheplatform.beta D/MainActivity: ",
+			"04-29 16:05:59.771 2011-2011/com.breatheplatform.beta D/MainActivity: ",
+			"04-29 16:05:59.770 2011-2011/com.breatheplatform.beta D/MainActivity: ",
+			"true",
+			"Return",
+			"pe_arguments=[Type(name=Name(value='E')",
+			"target=Name(value='con')), rhs=InstanceCreation(type=Type(name=Name(value='LinkedList'), type_arguments=[Type(name=Name(value='E'), type_arguments=[], enclosed_in=None, dimensions=0)], enclosed_in=No",
+			"Assignment",
+			"if_true",
+			"handlebars",
+			"post",
+			"READ_SIZE",
+			" \\)",
+			"\\)",
+			"\\( ",
+			"( ",
+			"key2",
+			"private_key",
+			"author",
+			"id\":7",
+			"v\":",
+			"id\":7",
+			"reorderlist",
+			"subarray",
+			"productsubarray",
+			"palindrome",
+			"oddeven",
+			"reconstruct",
+			"selfcrossing",
+			"\\it",
+			"\\textit",
+			"../",
+			"solver",
+			"is",
+			"Num",
+			"graph",
+			"opChar",
+			"midterm",
+			"\nProgram.prototype.solve = function() {\n  var cur_solver = 0, rest_solver = null;\n  var rules = this.rules, queries = this.query;\n  var xsub = arguments.length > 0 ? arguments[0] : new Subst();\n\n  return {next : function() {\n    if(rest_solver != null) {\n      var nres = rest_solver.next();\n      if(nres != null) return nres;\n      rest_solver = null;\n    }\n\n    for(cur_solver; cur_solver < rules.length; ++cur_solver) {\n      if(rules[cur_solver].head.name != queries[0].name) continue;\n\n      var res = xsub.clone(), nrule = rules[cur_solver].makeCopyWithFreshVarNames();\n      try { res.unify(queries[0], nrule.head); } catch(e) { continue; }\n\n      var nqueries = nrule.body.concat(queries.slice(1));\n      if(nqueries.length == 0) {\n        rest_solver = null;\n        ++cur_solver;\n        return res;\n      }\n\n      rest_solver = new Program(rules, nqueries).solve(res);\n      var nres = rest_solver.next();\n      if(nres != null) {\n          ++cur_solver;\n          return nres;\n      }\n      rest_solver = null;\n    }\n\n    return null;\n  }};\n};\n\n\n",
+			"sub2_val",
+			"sub_val",
+			"sub2_val",
+			"sub1_val",
+			"particle",
+			"version_num",
+			"freshVarNames",
+			"final:",
+			"results",
+			"handleClientUpdate",
+			"SomeServer",
+			"getPage",
+			"Chat",
+			"assignPorts",
+			"cons",
+			"NLR",
+			".apply",
+			"new NLR",
+			"return null",
+			"primValue",
+			"NLR",
+			"res",
+			"Block",
+			"getClass",
+			"toString()",
+			"primValue",
+			"send",
+			"throw new",
+			"mySend",
+			"IllegalArgumentException",
+			"isPrimitive",
+			"op_",
+			"vals",
+			"function\\(\\)",
+			"function",
+			"function()",
+			"function",
+			"Primitive",
+			"trans(",
+			"mySend",
+			"getClass",
+			"mySend",
+			"getClassFor",
+			"getClass",
+			"getClass(",
+			"send",
+			"getMethod",
+			"getClass",
+			"Send",
+			"getClass",
+			"checkMethod",
+			"current_class",
+			"getClass"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"common.",
+			"common.c",
+			"comment",
+			"codehealth",
+			"Codehealth",
+			"",
+			"total_method_pairs",
+			"file",
+			"HelloWorld",
+			"",
+			"RandomString.java",
+			"237B",
+			"count_method_pairs",
+			"get_class_length",
+			"get_body_length",
+			"self.__class__",
+			"print(\"",
+			"MethodVisitor",
+			"",
+			")",
+			"(",
+			"dec_key",
+			"token",
+			"./",
+			"solveRecursive",
+			"subval2",
+			"subval",
+			"subval2",
+			"sub_val2",
+			"sub_val1",
+			"counter",
+			"rename",
+			"Places",
+			"GP",
+			"comm",
+			"val",
+			"send",
+			"NLR",
+			"__",
+			"stmts",
+			"() => ",
+			"() =>",
+			"Object",
+			"makeMethod",
+			"",
+			"; ;===>",
+			"\\n ;===>",
+			"check_set",
+			"#plt.show",
+			"max_matcompat",
+			"size_matcompat",
+			"max_matcompat",
+			"section{Question ",
+			"MAX_SCORE",
+			"STOCK_FILE",
+			"STOCK_URL",
+			"STOCK_FILE",
+			"class_properties",
+			"current_class",
+			"checkClass",
+			"var",
+			"vars",
+			"cName(this.C)",
+			"tl",
+			"translate",
+			"tr",
+			".proto",
+			"",
+			"delay/force",
+			"",
+			"nested",
+			"v_length",
+			"BetterSafe",
+			"BetterSorry",
+			"sub_env",
+			"val_array",
+			"expr",
+			"checkMatch",
+			"env",
+			"p_cur",
+			"p_val",
+			"sub_match",
+			"pred",
+			"get",
+			"",
+			"function(env)",
+			"t_rules",
+			"good_rules",
+			"cons_terminal_list",
+			"is_right_terminal",
+			"",
+			"eval_expr",
+			"eval_expression",
+			"interp_helper",
+			"exp",
+			"nodes",
+			"\\\"",
+			"",
+			"CS GSC",
+			"csApp",
+			"'",
+			"\"",
+			"=*((int *) kstart)",
+			"char *kstart",
+			"char *end",
+			"int *end",
+			"sizeof(",
+			"RID_SIZE",
+			"RI_SIZE",
+			"PID_SIZE",
+			"{\n	\n	return 0;\n}",
+			"{\n	return 0;\n}",
+			"dead_list",
+			"write_list",
+			"read_list",
+			"if (debug) print_osprd(d)",
+			"(&d->mutex",
+			"POST",
+			"actorRes",
+			"movieRes",
+			"directorRes",
+			"did",
+			"first",
+			"director",
+			"Director",
+			"",
+			"Result",
+			"conn"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "docs/readme.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3419,
+								3419
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 144.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "codehealth.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9363,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7265,
+								7265
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2614.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								571,
+								571
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/Default (OSX).sublime-keymap",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								464,
+								2
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "common.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1595,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								251,
+								251
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "c_parser.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								560,
+								560
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Default (OSX).sublime-keymap",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 564,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								564,
+								563
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Modific.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 28762,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								19560,
+								19599
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6297.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2085,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2084,
+								2031
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "tests/WordCount.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6189,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								6189
+							]
+						],
+						"settings":
+						{
+							"auto_name": "import java.io.File;",
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "tests/freq.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 671,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								204,
+								204
+							]
+						],
+						"settings":
+						{
+							"auto_name": "#include <stdio.h>",
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 555,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								555,
+								555
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Diff/Diff.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/FileDiffs/FileDiffs.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1505,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1505,
+								1505
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 271.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "codehealth.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"https",
+				"node_modules/fsevents/node_modules/http-signature/http_signing.md"
+			],
+			[
+				"custom",
+				"assets/css/custom.css"
+			],
+			[
+				"sqlparse",
+				"SqlParser.y"
+			],
+			[
+				"sqlen",
+				"bruinbase/SqlEngine.cc"
+			],
+			[
+				"app.js",
+				"ReactViews/src/App.js"
+			],
+			[
+				"make",
+				"Makefile"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 278.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
