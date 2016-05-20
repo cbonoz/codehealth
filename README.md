@@ -3,7 +3,8 @@ Codehealth
 
 Codehealth is a Sublime Text 2/3 plugin that analyzes the health of code comments.
 
-For now it supports **Git** version control
+in progress
+<!-- For now it supports **Git** version control -->
 
 Install
 -------
@@ -40,12 +41,10 @@ To do that on Windows, open `Control Panel -> System -> Advanced system settings
 Directions for Install
 ----------------------
 
-1. Add codehealth.py to your Sublime Packages folder (ex: /Library/Application Support/Sublime Text 3/Packages/User/)
-2. Insert contents of codehealth.tmTheme into your current Sublime theme file (usually located in the same folder as above). Your current selected theme can be discovered by going to Sublime Preferences and navigating to the checked option.
+1. Add **codehealth.py** to your Sublime Packages folder (ex: /Library/Application Support/Sublime Text 3/Packages/User/)
+2. Insert contents of **codehealth.tmTheme** into your current Sublime theme file (usually located in the same folder as above). Your current selected theme can be found by going to Sublime Preferences and navigating to the checked option.
 
-![Tooltip Light](http://postimg.org/image/suwq02fgh/)
-
-
+![Tooltip Light](http://s32.postimg.org/r33r55w3p/Screen_Shot_2016_05_19_at_10_22_33_PM.png)
 
 
 
@@ -56,7 +55,7 @@ If the plugin is successfully activated, you should be able to toggle the commen
 
 Should highlight similar to the below.
 
-![Tooltip Light](http://postimg.org/image/5hgrhymrl/)
+![Tooltip Light](http://s32.postimg.org/ywmfqyrb9/Screen_Shot_2016_05_19_at_10_12_35_PM.png)
 
 Note the comment health highlight scores are indicated by color (also numerically for color-impaired). 
 
@@ -71,12 +70,12 @@ Configuring
 Open `Preferences -> Package Settings -> Codehealth -> Settings - Default` and look for available settings.
 
 If you want to change something, don't do it in this file. Open `Preferences -> Package Settings -> Codehealth -> Settings - User` and put there your configuration.
-
+<!-- 
 You can configure is a type of icon (dot, circle or bookmark) and path for your VCS binaries (or leave them as is, if you have them in your PATH). It's also possible to set priority for VCS used (when you have more than one simultaneously) by reordering their definitions.
 
 If some sacred punishment has been bestowed upon you, and you have no other choice but to use OS, where console has non-UTF8 encoding, you can set console_encoding parameter to the name of your beloved encoding. This parameter is specifically designed for Windows XP users, who have their git repositories in folders with cyrillic path. Since russian XP uses CP1251 as default encoding (including console), VCS diff commands will be encoded appropriately, when using this parameter.
 ifferencing mechanism that may be specified for use in the user's runtime configuration.
-
+ -->
 ### Line endings
 Codehealth takes into account `default_line_ending` setting that you can change in your "User Settings" (or per project/file basis).  
 It determines what characters to use to join lines when Codehealth does "Revert change" action.  
