@@ -2,52 +2,63 @@ import difflib
 import sys
 from redbaron import RedBaron
 
+class Comment:
+    def __init__(self, comment, score = 1):
+        self.comment = comment
+        self.score = score
+
 def ldiff(s1, s2, offset = 1):
     diff = difflib.ndiff(s1.splitlines(1), s2.splitlines(1))
     additions = set()
-    changed = False
+    
     current = offset
+    
+    total = 0        # Number of lines in the old file.
+    changes = 0      # Number of changes, relative to the old file.
+    changed = False
+    
     for x in diff:
         if x.startswith('+ '):
             additions.add(current)
-            changed = True
             current = current + 1
+            changes = changes + 1
+            changed = True
         elif x.startswith('- '):
+            total = total + 1
+            changes = changes + 1
             changed = True
         else:
+            total = total + 1
             current = current + 1
-    return additions, changed
+    return (additions,
+            float(changes) / total if total > 0 else 0)  
 
 def compare(s1, s2):
     red1 = RedBaron(s1)
     red2 = RedBaron(s2)
-    fresh_comments = []
-    stale_comments = []
+    comments = []
     
     for f2 in red2.find_all('def'):
         f1 = red1.find('def', name = f2.name)        
         if f1 is not None:
-            print f2.dumps()
-            print f1.dumps()
-            additions, changed = ldiff(f1.dumps(), f2.dumps(),
-                                       f2.absolute_bounding_box.top_left.line)
-            
-            # We aren't concerned with functions that didn't change.
-            if not changed:
-                continue
-                                           
+            additions, cratio = ldiff(f1.dumps(), f2.dumps(),
+                                f2.absolute_bounding_box.top_left.line)
+            health = (1 - cratio) if cratio < 1 else 1
+                                                       
             for c in f2.find_all('comment'):
-                if c.absolute_bounding_box.top_left.line in additions:
-                    fresh_comments.append(c)
+                if cratio == 0 or \
+                   c.absolute_bounding_box.top_left.line in additions:
+                    comments.append(Comment(c))
                 else:
-                    stale_comments.append(c)
+                    comments.append(Comment(c, health))
         else:
             for c in f2.find_all('comment'):
-                fresh_comments.append(c)
-
-    print [x.absolute_bounding_box for x in fresh_comments]
-    print [x.absolute_bounding_box for x in stale_comments]
-    return fresh_comments, stale_comments
+                comments.append(Comment(c))
+    
+    for c in comments:
+        print c.comment
+        print c.score
+    return comments
     
 if __name__ == '__main__':
     f1 = open(sys.argv[1], "r")
