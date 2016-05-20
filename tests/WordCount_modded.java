@@ -1,4 +1,4 @@
-import java.io.File;f
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,8 +16,8 @@ public class WordCount {
         countWordsViaGUI();
     }
 
-dsfs
-    // allow multiffffffffffffffffffffffffffffffffffff
+
+    // allow multiple pggicksffdsfsdf
     public static void countWordsViaGUI() {
         setLookAndFeel();
         try {
@@ -118,11 +118,11 @@ dsfs
 
 
     // pre: titles != null, elements of titles refer to files in the
-    // same path as this program,fddfdffffffff numExp gfdgdgdg>= 0sdfafasfsdffdsfsdffddsfsdf
-    // read words from files and printddddffffffffffffff
-    sdfsdffdfdfs average time to cound words.
+    // same path as this prograasdfsdafdsafsadfm,fddfdffffffff numExp >= 0sdfafasfsdffdsfsdffddsfsdf
+    // read words from files and print average time to cound words.
     private static void timingExpWithArrayList(String[] titles, int numExp) {
         try {
+            int i = 0;
             double[] times = new double[titles.length];
             for(int i = 0; i < numExp; i++) {
                 for(int j = 0; j < titles.length; j++) {
@@ -150,7 +150,7 @@ dsfs
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         }
         catch(Exception e) {
-            System.out.println("Unable to set look at feel to local settings. " +
+            System.out.println("setLookAndFeel Unable to set look at feel to local settings. " +
             "Continuing with default Java look and feel.");
         }
     }

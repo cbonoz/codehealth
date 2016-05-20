@@ -1,5 +1,5 @@
 import difflib
-import sys
+import sys, json
 from redbaron import RedBaron
 
 class Comment:
@@ -55,11 +55,8 @@ def compare(s1, s2):
             for c in f2.find_all('comment'):
                 comments.append(Comment(c))
     
-    for c in comments:
-        print c.comment
-        print c.score
     return comments
-    
+
 if __name__ == '__main__':
     f1 = open(sys.argv[1], "r")
     f2 = open(sys.argv[2], "r")
