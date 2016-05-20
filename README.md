@@ -37,8 +37,32 @@ The "Packages" directory is located at:
 
 To do that on Windows, open `Control Panel -> System -> Advanced system settings -> Environment variables -> System Variables`, find PATH, click "Edit" and append `;C:\path\to\VCS\binaries` for every VCS you will use (or make sure it's already there). -->
 
+Directions for Install
+----------------------
+
+1. Add codehealth.py to your Sublime Packages folder (ex: /Library/Application Support/Sublime Text 3/Packages/User/)
+2. Insert contents of codehealth.tmTheme into your current Sublime theme file (usually located in the same folder as above). Your current selected theme can be discovered by going to Sublime Preferences and navigating to the checked option.
+
+![Tooltip Light](http://postimg.org/image/suwq02fgh/)
+
+
+
+
+
 Features / Usage
 ----------------
+
+If the plugin is successfully activated, you should be able to toggle the comment health highlighting on/off via a simple command. *note: right now this is triggered automatically*
+
+Should highlight similar to the below.
+
+![Tooltip Light](http://postimg.org/image/5hgrhymrl/)
+
+Note the comment health highlight scores are indicated by color (also numerically for color-impaired). 
+
+**Red**: Bad Comment Health (highly likely to be outdated)
+**Orange**: Medium Health (possibly outdated)
+**Green**: Good Health (should be safe)
 
 
 Configuring

@@ -5,14 +5,14 @@ int main()
 {
    char string[100];
    int c = 0, count[26] = {0};
- 
+ sdfsadfs
    printf("Enter a string\n");
    gets(string);
- 
-   //iterate over the characters in the string
+fdsf dasfsafsdfasf
+   //iterate over the charactsafdsafdsfdsfsafsfers in the strdsfsadsafadasddsfing
    while (string[c] != '\0')
-   {
-      /** Considering characters from 'a' to 'z' only
+   {df
+      /** Considering characters from 'a' sdfsdsfsfsfsdfsfsfsafasfsffsdfsdftdfasdsdfsdfsdffsdfsdfsfsdfsdfsdfdfsfsdsfsdfsfsdfsdsfsfddfsfsffdddfsdfsddsafdasfdfdfddddfssfssfsfsfsfsfsdfddddddddddsdfsdfsafsffffffffffffdsfsfdfdffdfsfdsfsfsfsdfdfdfffffffffffsdfsfddsfdsfdsfafsaffffffffffffffffffffffffffffffsafsfsfsdfdsafdsfdsfsfsfsfsfdsfsfasfsfsfasfsfddsfdsfdsfsdfsdfsfdsfsdfsffdsfsfdsdfssfsfdsfsfdsfdfdsfsfsddfsfsddfddfdffsdfdfdfdfsdffasfo 'z' only
           and ignoring others */
  
       if (string[c] >= 'a' && string[c] <= 'z') 
@@ -20,11 +20,11 @@ int main()
  
       c++;
    }
- 
+
    for (c = 0; c < 26; c++)
    {
-      /** Printing only those characters 
-          whose count is at least 1 */
+      /** Printing only thosedfdfdfdf dfsdfsdfsdffsfdfdfcdsfsdfdfsdfsfharsadfasdsfsdfsfddsffsfacters 
+          whose count is at sdfsafsafdsfsafdleasdfsfsfst fdfdsfsfdsfsfdfdfdffddfdsfsdfdddfdsdfsfsfsffdfdffdfdfdfsfsdfsdfsdfsdfsfff1 */
 
  
       if (count[c] != 0)

@@ -17,8 +17,7 @@ public class WordCount {
     }
 
 
-    // allow user to pick file to exam via GUI.
-    // allow multiple picks
+    // allow multiple pggicks
     public static void countWordsViaGUI() {
         setLookAndFeel();
         try {
@@ -45,7 +44,7 @@ public class WordCount {
     }
 
 
-    // determine distinct words in a file using an array list
+    // determine distinct words ifd a file using an array list
     private static ArrayList<String> countWordsWithArrayList(Scanner fileScanner) {
 
 
@@ -55,7 +54,7 @@ public class WordCount {
     }
 
 
-    // determine distinct words in a file and frequency of each word with a Map
+    // determine distinct words in a fifffle and frequency of each word with a Map
     private static Map<String, Integer> countWordsWithMap(Scanner fileScanner) {
 
 
@@ -78,7 +77,7 @@ public class WordCount {
     }
 
 
-    // perform a series of experiments on files. Determine average time to
+    // perform a series of experiments on ffiles. Determine average time to
     // count words in files of various sizes
     private static void performExp() {
         String[] smallerWorks = {"smallWords.txt", "2BR02B.txt", "Alice.txt", "SherlockHolmes.txt"};;
@@ -119,8 +118,8 @@ public class WordCount {
 
 
     // pre: titles != null, elements of titles refer to files in the
-    // same path as this program, numExp >= 0
-    // read words from files and print average time to cound words.
+    // same path as this program, numExp >= 0sdfafasfsdffdsfsdffddsfsdf
+    // read words from files and printddddfff average time to cound words.
     private static void timingExpWithArrayList(String[] titles, int numExp) {
         try {
             double[] times = new double[titles.length];
@@ -144,7 +143,7 @@ public class WordCount {
     }
 
 
-    // try to set look and feel to same as system
+    // try to set look and feel to same dfdfdfdas system
     private static void setLookAndFeel() {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
