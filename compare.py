@@ -4,8 +4,25 @@ from redbaron import RedBaron
 
 class Comment:
     def __init__(self, comment, score = 1):
-        self.comment = comment
-        self.score = score
+        self._comment = comment
+        self._score = score
+        
+    def left_bounds(self):
+        return (self._comment.absolute_bounding_box.top_left.line,
+                self._comment.absolute_bounding_box.top_left.column)
+    
+    def right_bounds(self):
+        return (self._comment.absolute_bounding_box.bottom_right.line,
+                self._comment.absolute_bounding_box.bottom_right.column)
+        
+    def score(self):
+        return self._score
+        
+    def __str__(self):
+        return '<Comment left_bounds:{0} right_bounds:{1} score:{2}>'.format(
+            self.left_bounds(),
+            self.right_bounds(),
+            self.score())
 
 def ldiff(s1, s2, offset = 1):
     diff = difflib.ndiff(s1.splitlines(1), s2.splitlines(1))
