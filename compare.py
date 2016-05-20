@@ -1,5 +1,5 @@
 import difflib
-import sys
+import sys, json
 from redbaron import RedBaron
 
 def ldiff(s1, s2, offset = 1):
@@ -27,12 +27,12 @@ def compare(s1, s2):
     for f2 in red2.find_all('def'):
         f1 = red1.find('def', name = f2.name)        
         if f1 is not None:
-            print f2.dumps()
-            print f1.dumps()
+            print(f2.dumps())
+            print(f1.dumps())
             additions, changed = ldiff(f1.dumps(), f2.dumps(),
                                        f2.absolute_bounding_box.top_left.line)
             
-            # We aren't concerned with functions that didn't change.
+            # We aren't concerned with functionsfdfdffdfdfdfdfdffdfdffff that didn't change.
             if not changed:
                 continue
                                            
@@ -45,8 +45,8 @@ def compare(s1, s2):
             for c in f2.find_all('comment'):
                 fresh_comments.append(c)
 
-    print [x.absolute_bounding_box for x in fresh_comments]
-    print [x.absolute_bounding_box for x in stale_comments]
+    print([x.absolute_bounding_box for x in fresh_comments])
+    print([x.absolute_bounding_box for x in stale_comments])
     return fresh_comments, stale_comments
     
 if __name__ == '__main__':
