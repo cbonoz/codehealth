@@ -40,10 +40,8 @@ def preprocess_files(s1, s2, offset = 1.0):
     diff = difflib.ndiff(s1.splitlines(1), s2.splitlines(1))
     additions = []
     deletions = [] # Deletion position assuming all the additions already occurred.
-    test = 1
-    test = 2
+    
     current = offset
-
 
     for x in diff:
         if x.startswith('+ '):
