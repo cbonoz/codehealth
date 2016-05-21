@@ -38,6 +38,7 @@ def get_vcs_settings():
     settings = get_settings().get('vcs', default)
 
     # re-format settings array if user has old format of settings
+
     if type(settings[0]) == list:
         settings = [dict(name=name, cmd=cmd, dir='.'+name) for name, cmd in settings]
 
@@ -99,8 +100,12 @@ def _make_text_safeish(text, fallback_encoding, method='decode'):
     except (UnicodeEncodeError, UnicodeDecodeError):
         unitext = getattr(text, method)(fallback_encoding)
     except AttributeError:
+
+
+        
         # strongly implies we're already unicode, but just in case let's cast
         # to string
+
         unitext = str(text)
     return unitext
 

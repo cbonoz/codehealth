@@ -1,0 +1,73 @@
+Activate Health - compare.py True
+cmd: git show HEAD:compare.py
+clear_colors called with
+{}
+compare result: [<User.codehealth.Comment object at 0x10e4def50>, [<User.codehealth.Comment object at 0x10d921090>], <User.codehealth.Comment object at 0x10c158ed0>, <User.codehealth.Comment object at 0x10e4defd0>]
+our_health_render
+
+<Comment left_bounds:(21, 9) right_bounds:(21, 18) score:96>
+[<User.codehealth.Comment object at 0x10d921090>]
+<Comment left_bounds:(56, 19) right_bounds:(56, 87) score:98>
+<Comment left_bounds:(114, 9) right_bounds:(114, 43) score:84>
+Traceback (most recent call last):
+  File "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/codehealth.py", line 301, in run
+    our_health_render(self, view,cs)
+  File "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/codehealth.py", line 210, in our_health_render
+    view.text_point(c.right_bounds[0]-1, c.right_bounds[1])),c._score) for c in cs]
+  File "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/codehealth.py", line 210, in <listcomp>
+    view.text_point(c.right_bounds[0]-1, c.right_bounds[1])),c._score) for c in cs]
+AttributeError: 'list' object has no attribute 'left_bounds'
+
+Activate Health - compare.py True
+cmd: git show HEAD:compare.py
+clear_colors called with
+{}
+compare result: [<User.codehealth.Comment object at 0x10e572d90>, [<User.codehealth.Comment object at 0x10e092810>], <User.codehealth.Comment object at 0x10dca4d10>, <User.codehealth.Comment object at 0x10d834910>]
+our_health_render
+
+<Comment left_bounds:(21, 9) right_bounds:(21, 18) score:96>
+[<User.codehealth.Comment object at 0x10e092810>]
+<Comment left_bounds:(56, 19) right_bounds:(56, 87) score:98>
+<Comment left_bounds:(114, 9) right_bounds:(114, 43) score:84>
+Activate Health - codehealth.py True
+cmd: git show HEAD:codehealth.py
+clear_colors called with
+{}
+CommentHealth compare error: Unexpected 'space' token:
+
+   1 /Users/cbono/Library/Application <--- here
+
+Should have been grouped on either ('NAME', 'Application') (before) or ('NAME', 'Support') (after) token.
+our_health_render
+
+Activate Health - compare.py True
+cmd: git show HEAD:compare.py
+clear_colors called with
+{}
+compare result: [<User.codehealth.Comment object at 0x10e11b450>, [<User.codehealth.Comment object at 0x10d892e10>], <User.codehealth.Comment object at 0x10dc07a90>, <User.codehealth.Comment object at 0x10bfe6c90>]
+our_health_render
+
+<Comment left_bounds:(21, 9) right_bounds:(21, 18) score:0>
+[<User.codehealth.Comment object at 0x10d892e10>]
+<Comment left_bounds:(56, 19) right_bounds:(56, 87) score:63>
+<Comment left_bounds:(114, 9) right_bounds:(114, 43) score:0>
+Activate Health - compare.py True
+cmd: git show HEAD:compare.py
+clear_colors called with
+{}
+compare result: [<User.codehealth.Comment object at 0x10e109050>, [<User.codehealth.Comment object at 0x10e109690>], <User.codehealth.Comment object at 0x10e109810>, <User.codehealth.Comment object at 0x10c15ac90>]
+our_health_render
+
+<Comment left_bounds:(21, 9) right_bounds:(21, 18) score:0>
+[<User.codehealth.Comment object at 0x10e109690>]
+<Comment left_bounds:(56, 19) right_bounds:(56, 87) score:63>
+<Comment left_bounds:(114, 9) right_bounds:(114, 43) score:0>
+Traceback (most recent call last):
+  File "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/codehealth.py", line 302, in run
+    our_health_render(self, view,cs)
+  File "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/codehealth.py", line 211, in our_health_render
+    view.text_point(c.right_bounds[0]-1, c.right_bounds[1])),c._score) for c in cs]
+  File "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/codehealth.py", line 211, in <listcomp>
+    view.text_point(c.right_bounds[0]-1, c.right_bounds[1])),c._score) for c in cs]
+AttributeError: 'list' object has no attribute 'left_bounds'
+

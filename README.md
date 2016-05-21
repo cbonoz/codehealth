@@ -54,7 +54,15 @@ Directions for Install
 
 ![Tooltip Light](http://s32.postimg.org/r33r55w3p/Screen_Shot_2016_05_19_at_10_22_33_PM.png)
 
-3. If the plugin is successfully activated, you should be able to toggle the comment health highlighting on/off via a simple command. *note: right now this is triggered automatically*
+3. Add the following commands to your User key bindings (can change commands if desired)
+
+[
+    { "keys": ["ctrl+alt+c"], "command": "activate_health" },
+    { "keys": ["ctrl+alt+r"], "command": "remove_health" }
+]
+
+
+If the plugin is successfully activated, you should be able to toggle the comment health highlighting on/off via the activate_health and remove_health commands.
 
 Should highlight similar to the below.
 

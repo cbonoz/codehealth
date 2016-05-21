@@ -1,4 +1,5 @@
 import compare
+# import codehealth as compare
 import unittest
 
 class PreprocessFilesTestCase(unittest.TestCase):
@@ -64,6 +65,7 @@ class PreprocessFilesTestCase(unittest.TestCase):
         self.assertEqual(additions[0], 4)
         self.assertEqual(additions[1], 6)
         self.assertEqual(deletions[0], 6) 
+        test = 1
 
 class CompareTestCase(unittest.TestCase):
     def test_additions(self):

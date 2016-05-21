@@ -1,0 +1,1050 @@
+Activate Health - themegen.py True
+Activate Health - themegen.py True
+Activate Health - themegen.py True
+cmd: git show HEAD:themegen.py
+Activate Health - themegen.py True
+Activate Health - themegen.py True
+Activate Health - themegen.py True
+b'/Users/cbono/Documents/code/codehealth\n'
+Activate Health - themegen.py True
+cmd: git show HEAD:resources/themegen.py
+Activate Health - themegen.py True
+cmd: git show HEAD:resources/themegen.py
+Activate Health - themegen.py True
+cmd: git show HEAD:resources/themegen.py
+git error: Can't convert 'bytes' object to str implicitly
+Activate Health - themegen.py True
+cmd: git show HEAD:resources/themegen.py
+clear_colors called with
+
+{}
+
+1---current text
+"""
+file: themegen.py
+generates the scheme theme settings to be added for the different health background color highlights
+
+
+"""
+# <dict>
+#     <key>name</key>
+#     <string>String</string>ç
+#     <key>scope</key>
+#     <string>string</string>
+#     <key>settings</key>
+#     <dict>
+#         <key>foreground</key>
+#         <string>#E6DB74</string>
+#     </dict>
+# </dict>
+
+import math
+def get_health_color(val):
+    if val<0:
+        val = 0
+    elif val>100:
+        val = 100
+        
+    hue = math.floor((100 - val) * 120 / 100);  # go from green to red
+    saturation =abs(val - 50)/50;   # fade to white as it approaches 50
+    return (hue,saturation,val)
+
+def element_string(index,color):
+    return """<dict>
+        <key>name</key>
+        <string>Color_"""+ str(index) + """</string>
+        <key>scope</key>
+        <string>color_""" + str(index) + """</string>
+        <key>settings</key>
+        <dict>
+            <key>background</key>
+            <string>""" + str(color) + """</string>
+        </dict>
+    </dict>"""
+
+def percent_to_rgb(percent):
+    percent = 100 - percent
+    if (percent == 100):
+        percent = 99
+    
+    r,g,b=0,0,0
+
+    if (percent < 50):
+        #green to yellow
+        r = math.floor(255 * (percent / 50));
+        g = 255;
+
+    else:
+        #yellow to red
+        r = 255;
+        g = math.floor(255 * ((50 - percent % 50) / 50));
+    
+    b = 0;
+
+
+
+    # res = struct.pack('BBB',*rgb).encode('hex')
+    return '#%02x%02x%02x' % (r,g,b)
+    # return "rgb(" + str(r) + "," + str(g) + "," + str(b) + ")";
+
+for i in range(100,-1,-1):
+    color = percent_to_rgb(i)
+    s = element_string(i,color)
+    print(s)
+
+
+2---head
+"""
+file: themegen.py
+generates the scheme theme settings to be added for the different health background color highlights
+
+
+"""
+# <dict>
+#     <key>name</key>
+#     <string>String</string>
+#     <key>scope</key>
+#     <string>string</string>
+#     <key>settings</key>
+#     <dict>
+#         <key>foreground</key>
+#         <string>#E6DB74</string>
+#     </dict>
+# </dict>
+
+import math
+def get_health_color(val):
+    if val<0:
+        val = 0
+    elif val>100:
+        val = 100
+        
+    hue = math.floor((100 - val) * 120 / 100);  # go from green to red
+    saturation =abs(val - 50)/50;   # fade to white as it approaches 50
+    return (hue,saturation,val)
+
+def element_string(index,color):
+    return """<dict>
+        <key>name</key>
+        <string>Color_"""+ str(index) + """</string>
+        <key>scope</key>
+        <string>color_""" + str(index) + """</string>
+        <key>settings</key>
+        <dict>
+            <key>background</key>
+            <string>""" + str(color) + """</string>
+        </dict>
+    </dict>"""
+
+def percent_to_rgb(percent):
+    percent = 100 - percent
+    if (percent == 100):
+        percent = 99
+    
+    r,g,b=0,0,0
+
+    if (percent < 50):
+        #green to yellow
+        r = math.floor(255 * (percent / 50));
+        g = 255;
+
+    else:
+        #yellow to red
+        r = 255;
+        g = math.floor(255 * ((50 - percent % 50) / 50));
+    
+    b = 0;
+
+
+
+    # res = struct.pack('BBB',*rgb).encode('hex')
+    return '#%02x%02x%02x' % (r,g,b)
+    # return "rgb(" + str(r) + "," + str(g) + "," + str(b) + ")";
+
+for i in range(100,-1,-1):
+    color = percent_to_rgb(i)
+    s = element_string(i,color)
+    print(s)
+
+compare result: [<User.codehealth.Comment object at 0x10d6d2590>, <User.codehealth.Comment object at 0x10e4aa390>, <User.codehealth.Comment object at 0x10e4aab90>, <User.codehealth.Comment object at 0x10d83a410>, <User.codehealth.Comment object at 0x10deb7b10>, <User.codehealth.Comment object at 0x10b910790>]
+c_health_render
+
+<Comment left_bounds:(26, 49) right_bounds:(26, 70) score:100>
+<Comment left_bounds:(27, 37) right_bounds:(27, 71) score:100>
+<Comment left_bounds:(51, 9) right_bounds:(51, 24) score:100>
+<Comment left_bounds:(56, 9) right_bounds:(56, 22) score:100>
+<Comment left_bounds:(64, 5) right_bounds:(64, 49) score:100>
+<Comment left_bounds:(66, 5) right_bounds:(66, 65) score:100>
+clear_colors called with
+
+{}
+Activate Health - themegen.py True
+cmd: git show HEAD:resources/themegen.py
+clear_colors called with
+
+{}
+
+1---current text
+"""
+file: themegen.py
+generates the scheme theme settings to be added for the different health background color highlights
+
+
+"""
+# <dict>
+#     <key>name</key>
+#     <string>String</string>ç
+#     <key>scope</key>
+#     <string>string</string>
+#     <key>settings</key>
+#     <dict>
+#         <key>foreground</key>
+#         <string>#E6DB74</string>
+#     </dict>
+# </dict>
+
+import math
+def get_health_color(val):
+    if val<0:
+        val = 0
+    elif val>100:
+        val = 100
+        
+    hue = math.floor((100 - val) * 120 / 100);  # go from green to red
+    saturation =abs(val - 50)/50;   # fade to white as it approaches 50
+    return (hue,saturation,val)
+
+def element_string(index,color):
+    return """<dict>
+        <key>name</key>
+        <string>Color_"""+ str(index) + """</string>
+        <key>scope</key>
+        <string>color_""" + str(index) + """</string>
+        <key>settings</key>
+        <dict>
+            <key>background</key>
+            <string>""" + str(color) + """</string>
+        </dict>
+    </dict>"""
+
+def percent_to_rgb(percent):
+    percent = 100 - percent
+    if (percent == 100):
+        percent = 99
+    
+    r,g,b=0,0,0
+
+    if (percent < 50):
+        #green to yellow
+        r = math.floor(255 * (percent / 50));
+        g = 255;
+
+    else:
+        #yellow to red
+        r = 255;
+        g = math.floor(255 * ((50 - percent % 50) / 50));
+    
+    b = 0;
+
+
+
+    # res = struct.pack('BBB',*rgb).encode('hex')
+    return '#%02x%02x%02x' % (r,g,b)
+    # return "rgb(" + str(r) + "," + str(g) + "," + str(b) + ")";
+    test = 1
+
+for i in range(100,-1,-1):
+    color = percent_to_rgb(i)
+    s = element_string(i,color)
+    print(s)
+
+
+2---head
+"""
+file: themegen.py
+generates the scheme theme settings to be added for the different health background color highlights
+
+
+"""
+# <dict>
+#     <key>name</key>
+#     <string>String</string>
+#     <key>scope</key>
+#     <string>string</string>
+#     <key>settings</key>
+#     <dict>
+#         <key>foreground</key>
+#         <string>#E6DB74</string>
+#     </dict>
+# </dict>
+
+import math
+def get_health_color(val):
+    if val<0:
+        val = 0
+    elif val>100:
+        val = 100
+        
+    hue = math.floor((100 - val) * 120 / 100);  # go from green to red
+    saturation =abs(val - 50)/50;   # fade to white as it approaches 50
+    return (hue,saturation,val)
+
+def element_string(index,color):
+    return """<dict>
+        <key>name</key>
+        <string>Color_"""+ str(index) + """</string>
+        <key>scope</key>
+        <string>color_""" + str(index) + """</string>
+        <key>settings</key>
+        <dict>
+            <key>background</key>
+            <string>""" + str(color) + """</string>
+        </dict>
+    </dict>"""
+
+def percent_to_rgb(percent):
+    percent = 100 - percent
+    if (percent == 100):
+        percent = 99
+    
+    r,g,b=0,0,0
+
+    if (percent < 50):
+        #green to yellow
+        r = math.floor(255 * (percent / 50));
+        g = 255;
+
+    else:
+        #yellow to red
+        r = 255;
+        g = math.floor(255 * ((50 - percent % 50) / 50));
+    
+    b = 0;
+
+
+
+    # res = struct.pack('BBB',*rgb).encode('hex')
+    return '#%02x%02x%02x' % (r,g,b)
+    # return "rgb(" + str(r) + "," + str(g) + "," + str(b) + ")";
+
+for i in range(100,-1,-1):
+    color = percent_to_rgb(i)
+    s = element_string(i,color)
+    print(s)
+
+compare result: [<User.codehealth.Comment object at 0x10deb7250>, <User.codehealth.Comment object at 0x10d7012d0>, <User.codehealth.Comment object at 0x10d6e7f10>, <User.codehealth.Comment object at 0x10c10a250>, <User.codehealth.Comment object at 0x10c10a490>, <User.codehealth.Comment object at 0x10c1300d0>]
+c_health_render
+
+<Comment left_bounds:(26, 49) right_bounds:(26, 70) score:100>
+<Comment left_bounds:(27, 37) right_bounds:(27, 71) score:100>
+<Comment left_bounds:(51, 9) right_bounds:(51, 24) score:31>
+<Comment left_bounds:(56, 9) right_bounds:(56, 22) score:51>
+<Comment left_bounds:(64, 5) right_bounds:(64, 49) score:68>
+<Comment left_bounds:(66, 5) right_bounds:(66, 65) score:71>
+clear_colors called with
+
+{}
+Activate Health - themegen.py True
+cmd: git show HEAD:resources/themegen.py
+clear_colors called with
+
+{}
+
+1---current text
+"""
+file: themegen.py
+generates the scheme theme settings to be added for the different health background color highlights
+
+
+"""
+# <dict>
+#     <key>name</key>
+#     <string>String</string>ç
+#     <key>scope</key>
+#     <string>string</string>
+#     <key>settings</key>
+#     <dict>
+#         <key>foreground</key>
+#         <string>#E6DB74</string>
+#     </dict>
+# </dict>
+
+import math
+def get_health_color(val):
+    if val<0:
+        val = 0
+    elif val>100:
+        val = 100
+        
+    hue = math.floor((100 - val) * 120 / 100);  # go from green to red
+    saturation =abs(val - 50)/50;   # fade to white as it approaches 50
+    return (hue,saturation,val)
+
+def element_string(index,color):
+    return """<dict>
+        <key>name</key>
+        <string>Color_"""+ str(index) + """</string>
+        <key>scope</key>
+        <string>color_""" + str(index) + """</string>
+        <key>settings</key>
+        <dict>
+            <key>background</key>
+            <string>""" + str(color) + """</string>
+        </dict>
+    </dict>"""
+
+def percent_to_rgb(percent):
+    percent = 100 - percent
+    if (percent == 100):
+        percent = 99
+    
+    r,g,b=0,0,0
+
+    if (percent < 50):
+        #green to yellow
+        r = math.floor(255 * (percent / 50));
+        g = 255;
+
+    else:
+        #yellow to red
+        r = 255;
+        g = math.floor(255 * ((50 - percent % 50) / 50));
+    
+    b = 0;
+
+
+
+    # res = struct.pack('BBB',*rgb).encode('hex')
+    return '#%02x%02x%02x' % (r,g,b)
+    # return "rgb(" + str(r) + "," + str(g) + "," + str(b) + ")";
+
+
+for i in range(100,-1,-1):
+    color = percent_to_rgb(i)
+    s = element_string(i,color)
+    print(s)
+
+
+2---head
+"""
+file: themegen.py
+generates the scheme theme settings to be added for the different health background color highlights
+
+
+"""
+# <dict>
+#     <key>name</key>
+#     <string>String</string>
+#     <key>scope</key>
+#     <string>string</string>
+#     <key>settings</key>
+#     <dict>
+#         <key>foreground</key>
+#         <string>#E6DB74</string>
+#     </dict>
+# </dict>
+
+import math
+def get_health_color(val):
+    if val<0:
+        val = 0
+    elif val>100:
+        val = 100
+        
+    hue = math.floor((100 - val) * 120 / 100);  # go from green to red
+    saturation =abs(val - 50)/50;   # fade to white as it approaches 50
+    return (hue,saturation,val)
+
+def element_string(index,color):
+    return """<dict>
+        <key>name</key>
+        <string>Color_"""+ str(index) + """</string>
+        <key>scope</key>
+        <string>color_""" + str(index) + """</string>
+        <key>settings</key>
+        <dict>
+            <key>background</key>
+            <string>""" + str(color) + """</string>
+        </dict>
+    </dict>"""
+
+def percent_to_rgb(percent):
+    percent = 100 - percent
+    if (percent == 100):
+        percent = 99
+    
+    r,g,b=0,0,0
+
+    if (percent < 50):
+        #green to yellow
+        r = math.floor(255 * (percent / 50));
+        g = 255;
+
+    else:
+        #yellow to red
+        r = 255;
+        g = math.floor(255 * ((50 - percent % 50) / 50));
+    
+    b = 0;
+
+
+
+    # res = struct.pack('BBB',*rgb).encode('hex')
+    return '#%02x%02x%02x' % (r,g,b)
+    # return "rgb(" + str(r) + "," + str(g) + "," + str(b) + ")";
+
+for i in range(100,-1,-1):
+    color = percent_to_rgb(i)
+    s = element_string(i,color)
+    print(s)
+
+compare result: [<User.codehealth.Comment object at 0x10d82d590>, <User.codehealth.Comment object at 0x10de0d590>, <User.codehealth.Comment object at 0x10d80abd0>, <User.codehealth.Comment object at 0x10dea1910>, <User.codehealth.Comment object at 0x10dea19d0>, <User.codehealth.Comment object at 0x10dde3b10>]
+c_health_render
+
+<Comment left_bounds:(26, 49) right_bounds:(26, 70) score:100>
+<Comment left_bounds:(27, 37) right_bounds:(27, 71) score:100>
+<Comment left_bounds:(51, 9) right_bounds:(51, 24) score:26>
+<Comment left_bounds:(56, 9) right_bounds:(56, 22) score:47>
+<Comment left_bounds:(64, 5) right_bounds:(64, 49) score:67>
+<Comment left_bounds:(66, 5) right_bounds:(66, 65) score:70>
+clear_colors called with
+
+{}
+Activate Health - themegen.py True
+cmd: git show HEAD:resources/themegen.py
+clear_colors called with
+
+{}
+
+1---current text
+"""
+file: themegen.py
+generates the scheme theme settings to be added for the different health background color highlights
+
+
+"""
+# <dict>
+#     <key>name</key>
+#     <string>String</string>
+#     <key>scope</key>
+#     <string>string</string>
+#     <key>settings</key>
+#     <dict>
+#         <key>foreground</key>
+#         <string>#E6DB74</string>
+#     </dict>
+# </dict>
+
+import math
+def get_health_color(val):
+    if val<0:
+        val = 0
+    elif val>100:
+        val = 100
+        
+    hue = math.floor((100 - val) * 120 / 100);  # go from green to red
+    saturation =abs(val - 50)/50;   # fade to white as it approaches 50
+    return (hue,saturation,val)
+
+def element_string(index,color):
+    return """<dict>
+        <key>name</key>
+        <string>Color_"""+ str(index) + """</string>
+        <key>scope</key>
+        <string>color_""" + str(index) + """</string>
+        <key>settings</key>
+        <dict>
+            <key>background</key>
+            <string>""" + str(color) + """</string>
+        </dict>
+    </dict>"""
+
+def percent_to_rgb(percent):
+    percent = 100 - percent
+    if (percent == 100):
+        percent = 99
+    
+    r,g,b=0,0,0
+
+    if (percent < 50):
+        #green to yellow
+        r = math.floor(255 * (percent / 50));
+        g = 255;
+
+    else:
+        #yellow to red
+        r = 255;
+        g = math.floor(255 * ((50 - percent % 50) / 50));
+    
+    b = 0;
+
+
+
+    # res = struct.pack('BBB',*rgb).encode('hex')
+    return '#%02x%02x%02x' % (r,g,b)
+    # return "rgb(" + str(r) + "," + str(g) + "," + str(b) + ")";
+
+for i in range(100,-1,-1):
+    color = percent_to_rgb(i)
+    s = element_string(i,color)
+    print(s)
+
+
+2---head
+"""
+file: themegen.py
+generates the scheme theme settings to be added for the different health background color highlights
+
+
+"""
+# <dict>
+#     <key>name</key>
+#     <string>String</string>
+#     <key>scope</key>
+#     <string>string</string>
+#     <key>settings</key>
+#     <dict>
+#         <key>foreground</key>
+#         <string>#E6DB74</string>
+#     </dict>
+# </dict>
+
+import math
+def get_health_color(val):
+    if val<0:
+        val = 0
+    elif val>100:
+        val = 100
+        
+    hue = math.floor((100 - val) * 120 / 100);  # go from green to red
+    saturation =abs(val - 50)/50;   # fade to white as it approaches 50
+    return (hue,saturation,val)
+
+def element_string(index,color):
+    return """<dict>
+        <key>name</key>
+        <string>Color_"""+ str(index) + """</string>
+        <key>scope</key>
+        <string>color_""" + str(index) + """</string>
+        <key>settings</key>
+        <dict>
+            <key>background</key>
+            <string>""" + str(color) + """</string>
+        </dict>
+    </dict>"""
+
+def percent_to_rgb(percent):
+    percent = 100 - percent
+    if (percent == 100):
+        percent = 99
+    
+    r,g,b=0,0,0
+
+    if (percent < 50):
+        #green to yellow
+        r = math.floor(255 * (percent / 50));
+        g = 255;
+
+    else:
+        #yellow to red
+        r = 255;
+        g = math.floor(255 * ((50 - percent % 50) / 50));
+    
+    b = 0;
+
+
+
+    # res = struct.pack('BBB',*rgb).encode('hex')
+    return '#%02x%02x%02x' % (r,g,b)
+    # return "rgb(" + str(r) + "," + str(g) + "," + str(b) + ")";
+
+for i in range(100,-1,-1):
+    color = percent_to_rgb(i)
+    s = element_string(i,color)
+    print(s)
+
+compare result: [<User.codehealth.Comment object at 0x10ab18d10>, <User.codehealth.Comment object at 0x10e4c6810>, <User.codehealth.Comment object at 0x10df0ec90>, <User.codehealth.Comment object at 0x10d88db90>, <User.codehealth.Comment object at 0x10e1c5a50>, <User.codehealth.Comment object at 0x10d7ebbd0>]
+c_health_render
+
+<Comment left_bounds:(26, 49) right_bounds:(26, 70) score:100>
+<Comment left_bounds:(27, 37) right_bounds:(27, 71) score:100>
+<Comment left_bounds:(51, 9) right_bounds:(51, 24) score:100>
+<Comment left_bounds:(56, 9) right_bounds:(56, 22) score:100>
+<Comment left_bounds:(64, 5) right_bounds:(64, 49) score:100>
+<Comment left_bounds:(66, 5) right_bounds:(66, 65) score:100>
+clear_colors called with
+
+{}
+Activate Health - themegen.py True
+cmd: git show HEAD:resources/themegen.py
+clear_colors called with
+
+{}
+
+1---current text
+"""
+file: themegen.py
+generates the scheme theme settings to be added for the different health background color highlights
+
+
+"""
+# <dict>
+#     <key>name</key>
+#     <string>String</string>
+#     <key>scope</key>
+#     <string>string</string>
+#     <key>settings</key>
+#     <dict>
+#         <key>foreground</key>
+#         <string>#E6DB74</string>
+#     </dict>
+# </dict>
+
+import math
+def get_health_color(val):
+    if val<0:
+        val = 0
+    elif val>100:
+        val = 100
+        
+    hue = math.floor((100 - val) * 120 / 100);  # go from green to red
+    saturation =abs(val - 50)/50;   # fade to white as it approaches 50
+    return (hue,saturation,val)
+
+def element_string(index,color):
+    return """<dict>
+        <key>name</key>
+        <string>Color_"""+ str(index) + """</string>
+        <key>scope</key>
+        <string>color_""" + str(index) + """</string>
+        <key>settings</key>
+        <dict>
+            <key>background</key>
+            <string>""" + str(color) + """</string>
+        </dict>
+    </dict>"""
+
+def percent_to_rgb(percent):
+    percent = 100 - percent
+    if (percent == 100):
+        percent = 99
+    
+    r,g,b=0,0,0
+
+    if (percent < 50):
+        #green to yellow
+        r = math.floor(255 * (percent / 50));
+        g = 255;
+
+    else:
+        #yellow to red
+        r = 255;
+        g = math.floor(255 * ((50 - percent % 50) / 50));
+    
+    b = 0;
+
+
+
+    # res = struct.pack('BBB',*rgb).encode('hex')
+    return '#%02x%02x%02x' % (r,g,b)
+    # return "rgb(" + str(r) + "," + str(g) + "," + str(b) + ")";
+    ADDED_THIS_LINE = 1
+
+for i in range(100,-1,-1):
+    color = percent_to_rgb(i)
+    s = element_string(i,color)
+    print(s)
+
+
+2---head
+"""
+file: themegen.py
+generates the scheme theme settings to be added for the different health background color highlights
+
+
+"""
+# <dict>
+#     <key>name</key>
+#     <string>String</string>
+#     <key>scope</key>
+#     <string>string</string>
+#     <key>settings</key>
+#     <dict>
+#         <key>foreground</key>
+#         <string>#E6DB74</string>
+#     </dict>
+# </dict>
+
+import math
+def get_health_color(val):
+    if val<0:
+        val = 0
+    elif val>100:
+        val = 100
+        
+    hue = math.floor((100 - val) * 120 / 100);  # go from green to red
+    saturation =abs(val - 50)/50;   # fade to white as it approaches 50
+    return (hue,saturation,val)
+
+def element_string(index,color):
+    return """<dict>
+        <key>name</key>
+        <string>Color_"""+ str(index) + """</string>
+        <key>scope</key>
+        <string>color_""" + str(index) + """</string>
+        <key>settings</key>
+        <dict>
+            <key>background</key>
+            <string>""" + str(color) + """</string>
+        </dict>
+    </dict>"""
+
+def percent_to_rgb(percent):
+    percent = 100 - percent
+    if (percent == 100):
+        percent = 99
+    
+    r,g,b=0,0,0
+
+    if (percent < 50):
+        #green to yellow
+        r = math.floor(255 * (percent / 50));
+        g = 255;
+
+    else:
+        #yellow to red
+        r = 255;
+        g = math.floor(255 * ((50 - percent % 50) / 50));
+    
+    b = 0;
+
+
+
+    # res = struct.pack('BBB',*rgb).encode('hex')
+    return '#%02x%02x%02x' % (r,g,b)
+    # return "rgb(" + str(r) + "," + str(g) + "," + str(b) + ")";
+
+for i in range(100,-1,-1):
+    color = percent_to_rgb(i)
+    s = element_string(i,color)
+    print(s)
+
+compare result: [<User.codehealth.Comment object at 0x10d7fa110>, <User.codehealth.Comment object at 0x10d834890>, <User.codehealth.Comment object at 0x10be7fc90>, <User.codehealth.Comment object at 0x10b59a6d0>, <User.codehealth.Comment object at 0x10e543e90>, <User.codehealth.Comment object at 0x10debc850>]
+c_health_render
+
+<Comment left_bounds:(26, 49) right_bounds:(26, 70) score:100>
+<Comment left_bounds:(27, 37) right_bounds:(27, 71) score:100>
+<Comment left_bounds:(51, 9) right_bounds:(51, 24) score:31>
+<Comment left_bounds:(56, 9) right_bounds:(56, 22) score:51>
+<Comment left_bounds:(64, 5) right_bounds:(64, 49) score:68>
+<Comment left_bounds:(66, 5) right_bounds:(66, 65) score:71>
+clear_colors called with
+
+{}
+Activate Health - themegen.py True
+cmd: git show HEAD:resources/themegen.py
+clear_colors called with
+
+{}
+
+1---current text
+"""
+file: themegen.py
+generates the scheme theme settings to be added for the different health background color highlights
+
+
+"""
+# <dict>
+#     <key>name</key>
+#     <string>String</string>
+#     <key>scope</key>
+#     <string>string</string>
+#     <key>settings</key>
+#     <dict>
+#         <key>foreground</key>
+#         <string>#E6DB74</string>
+#     </dict>
+# </dict>
+
+import math
+def get_health_color(val):
+    if val<0:
+        val = 0
+    elif val>100:
+        val = 100
+        
+    hue = math.floor((100 - val) * 120 / 100);  # go from green to red
+    saturation =abs(val - 50)/50;   # fade to white as it approaches 50
+    return (hue,saturation,val)
+
+def element_string(index,color):
+    return """<dict>
+        <key>name</key>
+        <string>Color_"""+ str(index) + """</string>
+        <key>scope</key>
+        <string>color_""" + str(index) + """</string>
+        <key>settings</key>
+        <dict>
+            <key>background</key>
+            <string>""" + str(color) + """</string>
+        </dict>
+    </dict>"""
+
+def percent_to_rgb(percent):
+    percent = 100 - percent
+    if (percent == 100):
+        percent = 99
+    
+    r,g,b=0,0,0
+
+    if (percent < 50):
+        #green to yellow
+        r = math.floor(255 * (percent / 50));
+        g = 255;
+
+    else:
+        #yellow to red
+        r = 255;
+        g = math.floor(255 * ((50 - percent % 50) / 50));
+    
+    b = 0;
+
+
+
+    # res = struct.pack('BBB',*rgb).encode('hex')
+    return '#%02x%02x%02x' % (r,g,b)
+    # return "rgb(" + str(r) + "," + str(g) + "," + str(b) + ")";
+
+for i in range(100,-1,-1):
+    color = percent_to_rgb(i)
+    s = element_string(i,color)
+    print(s)
+
+
+2---head
+"""
+file: themegen.py
+generates the scheme theme settings to be added for the different health background color highlights
+
+
+"""
+# <dict>
+#     <key>name</key>
+#     <string>String</string>
+#     <key>scope</key>
+#     <string>string</string>
+#     <key>settings</key>
+#     <dict>
+#         <key>foreground</key>
+#         <string>#E6DB74</string>
+#     </dict>
+# </dict>
+
+import math
+def get_health_color(val):
+    if val<0:
+        val = 0
+    elif val>100:
+        val = 100
+        
+    hue = math.floor((100 - val) * 120 / 100);  # go from green to red
+    saturation =abs(val - 50)/50;   # fade to white as it approaches 50
+    return (hue,saturation,val)
+
+def element_string(index,color):
+    return """<dict>
+        <key>name</key>
+        <string>Color_"""+ str(index) + """</string>
+        <key>scope</key>
+        <string>color_""" + str(index) + """</string>
+        <key>settings</key>
+        <dict>
+            <key>background</key>
+            <string>""" + str(color) + """</string>
+        </dict>
+    </dict>"""
+
+def percent_to_rgb(percent):
+    percent = 100 - percent
+    if (percent == 100):
+        percent = 99
+    
+    r,g,b=0,0,0
+
+    if (percent < 50):
+        #green to yellow
+        r = math.floor(255 * (percent / 50));
+        g = 255;
+
+    else:
+        #yellow to red
+        r = 255;
+        g = math.floor(255 * ((50 - percent % 50) / 50));
+    
+    b = 0;
+
+
+
+    # res = struct.pack('BBB',*rgb).encode('hex')
+    return '#%02x%02x%02x' % (r,g,b)
+    # return "rgb(" + str(r) + "," + str(g) + "," + str(b) + ")";
+
+for i in range(100,-1,-1):
+    color = percent_to_rgb(i)
+    s = element_string(i,color)
+    print(s)
+
+compare result: [<User.codehealth.Comment object at 0x10d6da6d0>, <User.codehealth.Comment object at 0x10bfa6310>, <User.codehealth.Comment object at 0x10de10b50>, <User.codehealth.Comment object at 0x10d6da310>, <User.codehealth.Comment object at 0x10e484410>, <User.codehealth.Comment object at 0x10d828110>]
+c_health_render
+
+<Comment left_bounds:(26, 49) right_bounds:(26, 70) score:100>
+<Comment left_bounds:(27, 37) right_bounds:(27, 71) score:100>
+<Comment left_bounds:(51, 9) right_bounds:(51, 24) score:100>
+<Comment left_bounds:(56, 9) right_bounds:(56, 22) score:100>
+<Comment left_bounds:(64, 5) right_bounds:(64, 49) score:100>
+<Comment left_bounds:(66, 5) right_bounds:(66, 65) score:100>
+clear_colors called with
+
+{}
+Activate Health - codehealth.py True
+cmd: git show HEAD:t/Sublime Text 3/Packages/User/codehealth.py
+git error: Command 'git show HEAD:t/Sublime Text 3/Packages/User/codehealth.py' returned non-zero exit status 128
+Activate Health - themegen.py True
+cmd: git show HEAD:resources/themegen.py
+clear_colors called with
+{}
+compare result: [<User.codehealth.Comment object at 0x10d815450>, <User.codehealth.Comment object at 0x10de3ab10>, <User.codehealth.Comment object at 0x10de0b550>, <User.codehealth.Comment object at 0x10de3af50>, <User.codehealth.Comment object at 0x10e56a8d0>, <User.codehealth.Comment object at 0x10e549b90>]
+our_health_render
+
+<Comment left_bounds:(26, 49) right_bounds:(26, 70) score:100>
+<Comment left_bounds:(27, 37) right_bounds:(27, 71) score:100>
+<Comment left_bounds:(51, 9) right_bounds:(51, 24) score:100>
+<Comment left_bounds:(56, 9) right_bounds:(56, 22) score:100>
+<Comment left_bounds:(64, 5) right_bounds:(64, 49) score:100>
+<Comment left_bounds:(66, 5) right_bounds:(66, 65) score:100>
+Activate Health - themegen.py True
+cmd: git show HEAD:resources/themegen.py
+clear_colors called with
+{}
+compare result: [<User.codehealth.Comment object at 0x10dc1d790>, <User.codehealth.Comment object at 0x10dc1d090>, <User.codehealth.Comment object at 0x10dc12250>, <User.codehealth.Comment object at 0x10c161590>, <User.codehealth.Comment object at 0x10e4cbed0>, <User.codehealth.Comment object at 0x10b901d10>]
+our_health_render
+
+<Comment left_bounds:(26, 49) right_bounds:(26, 70) score:100>
+<Comment left_bounds:(27, 37) right_bounds:(27, 71) score:100>
+<Comment left_bounds:(51, 9) right_bounds:(51, 24) score:0>
+<Comment left_bounds:(56, 9) right_bounds:(56, 22) score:20>
+<Comment left_bounds:(64, 5) right_bounds:(64, 49) score:46>
+<Comment left_bounds:(66, 5) right_bounds:(66, 65) score:51>
+Activate Health - themegen.py True
+cmd: git show HEAD:resources/themegen.py
+clear_colors called with
+{}
+compare result: [<User.codehealth.Comment object at 0x10c113710>, <User.codehealth.Comment object at 0x10d906250>, <User.codehealth.Comment object at 0x10c17b250>, <User.codehealth.Comment object at 0x10aab3890>, <User.codehealth.Comment object at 0x10c105810>, <User.codehealth.Comment object at 0x10aab3310>]
+our_health_render
+
+<Comment left_bounds:(26, 49) right_bounds:(26, 70) score:100>
+<Comment left_bounds:(27, 37) right_bounds:(27, 71) score:100>
+<Comment left_bounds:(51, 9) right_bounds:(51, 24) score:47>
+<Comment left_bounds:(56, 9) right_bounds:(56, 22) score:61>
+<Comment left_bounds:(63, 5) right_bounds:(63, 49) score:72>
+<Comment left_bounds:(65, 5) right_bounds:(65, 65) score:75>

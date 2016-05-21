@@ -1,38 +1,22 @@
 import difflib
-import sys, json, math
+import math
+import sys
 from redbaron import RedBaron
 
-#scale used for calculating code decay amount
-DEFAULT_DECAY_FACTOR = 50000
-
-# DISTANCE_FACTOR = 5
-# on_activated_count = 1
-# on_load_count = 1
-
+DISTANCE_FACTOR = 1
 MAX_HEALTH = 100
-
-
-def print_to_log(txt):
-    with open("./log.txt","a+") as f:
-            f.write(str(txt) + "\n")
-
-def print_comments(comments):
-    for c in comments:
-        # print(c)
-        print_to_log(str(c))
-
-
-def print_progress(p):
-    return
-    # sublime.status_message("Running comment health...%s%%" % p)
 
 class Comment:
     def __init__(self, comment, score = MAX_HEALTH):
         self._comment = comment
         self._score = score
-        self.left_bounds = (self._comment.absolute_bounding_box.top_left.line,
+        
+    def left_bounds(self):
+        return (self._comment.absolute_bounding_box.top_left.line,
                 self._comment.absolute_bounding_box.top_left.column)
-        self.right_bounds = (self._comment.absolute_bounding_box.bottom_right.line,
+    
+    def right_bounds(self):
+        return (self._comment.absolute_bounding_box.bottom_right.line,
                 self._comment.absolute_bounding_box.bottom_right.column)
         
     def score(self):
@@ -43,18 +27,21 @@ class Comment:
         
     def __str__(self):
         return '<Comment left_bounds:{0} right_bounds:{1} score:{2}>'.format(
-            self.left_bounds,
-            self.right_bounds,
+            self.left_bounds(),
+            self.right_bounds(),
             self.score())
 
-
-
+def print_comments(comments):
+    for c in comments:
+        print(c)
 
 def preprocess_files(s1, s2, offset = 1.0):
     diff = difflib.ndiff(s1.splitlines(1), s2.splitlines(1))
     additions = []
-    deletions = [] # Deletion position assuming aldfsl the additions already occurred. 
+    deletions = [] # Deletion position assuming all the additions already occurred.
     current = offset
+    test = 1
+    test = 5
 
     for x in diff:
         if x.startswith('+ '):
@@ -69,57 +56,46 @@ def preprocess_files(s1, s2, offset = 1.0):
 
 def preprocess_comments(f, excludes):
     comments = []
-    exceptions = []
     for ast_c in f.find_all('comment'):
         comment = Comment(ast_c)
-        line, _ = comment.left_bounds
+        line, _ = comment.left_bounds()
         if line not in excludes:
             comments.append(comment)
-        else:
-            exceptions.append(comment)
         
-    return comments, exceptions
+    return comments
 
-def compare(s1, s2, decay_factor = DEFAULT_DECAY_FACTOR):
+def compare(s1, s2):
     red1 = RedBaron(s1)
     red2 = RedBaron(s2)
     result = []
-
-    defs = red2.find_all('def')
-    length = len(defs)
-    for ast_f2 in defs:
+    
+    for ast_f2 in red2.find_all('def'):
         ast_f1 = red1.find('def', name = ast_f2.name)        
         if ast_f1 is not None:
             additions, deletions = preprocess_files(ast_f1.dumps(),
                                                     ast_f2.dumps())
-            comments, exceptions = preprocess_comments(ast_f2, additions) 
+            comments = preprocess_comments(ast_f2, additions) 
             for a in additions:
                 for c in comments:
-                    line, _ = c.left_bounds
+                    line, _ = c.left_bounds()
                     distance = math.fabs(line - a)
-                    score = int(c.score() - float(decay_factor) / (distance * distance))
+                    score = int(c.score() - float(DISTANCE_FACTOR) / (distance * distance))
                     c.setScore(score if score > 0 else 0)
             for d in deletions:
                 for c in comments:
-                    line, _ = c.left_bounds
+                    line, _ = c.left_bounds()
                     line = line + 1 if line >= d else line
                     distance = math.fabs(line - d)
-                    score = int(c.score() - float(decay_factor) / (distance * distance))
-
+                    score = int(c.score() - float(DISTANCE_FACTOR) / (distance * distance))
                     c.setScore(score if score > 0 else 0)
             result.extend(comments)
-            result.extend(exceptions)
         else:
             result.extend(preprocess_comments(ast_f2, []))
-        # print_progress(int(index/length))
-
-    result = [r for r in result if r != []]
     
     return result
-
-
 
 if __name__ == '__main__':
     f1 = open(sys.argv[1], "r")
     f2 = open(sys.argv[2], "r")
     print_comments(compare(f1.read(), f2.read()))
+              

@@ -16,7 +16,8 @@ public class WordCount {
         countWordsViaGUI();
     }
 
-    //asdfasdfdddffffffgfgfgffdfdfdfdfdfdffdfsdfsdfsfdffd
+    //asdfsafdjsadfkljassadfsdfsdfdsfsdsafdsafsafdsadfsaddfdfdfkjdsafasdfsafsafdfasfsadfdsf
+    sadfsafdsafdafsafsd
     public static void countWordsViaGUI() {
         setLookAndFeel();
         try {
