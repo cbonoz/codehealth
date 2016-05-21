@@ -16,12 +16,11 @@ public class WordCount {
         countWordsViaGUI();
     }
 
-dsfs
-    // allow multiffffffffffffffffffffffffffffffffffff
+    //asdfasdfdddffffffgfgfgffdfdfdfdfdfdffdfsdfsdfsfdffd
     public static void countWordsViaGUI() {
         setLookAndFeel();
         try {
-            Scanner key = new Scanner(System.in);
+            Scanner key = new Scanffffffner(System.in);
             do {
                 System.out.println("Opening GUI to choose file.");
                 Scanner fileScanner = new Scanner(getFile());
@@ -144,7 +143,7 @@ dsfs
     }
 
 
-    // try to set look and feel to same dfdfdfdas system
+    // try to set look and feel tdfsdfdsfsdfso same dfdfdfdas system
     private static void setLookAndFeel() {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());

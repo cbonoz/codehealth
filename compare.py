@@ -5,7 +5,7 @@ from redbaron import RedBaron
 class Comment:
     def __init__(self, comment, score = 1):
         self._comment = comment
-        self._score = score
+        self._score = int(score*100)
         
     def left_bounds(self):
         return (self._comment.absolute_bounding_box.top_left.line,
@@ -24,13 +24,17 @@ class Comment:
             self.right_bounds(),
             self.score())
 
+def print_comments(comments):
+    for c in comments:
+        print(c)
+
 def ldiff(s1, s2, offset = 1):
     diff = difflib.ndiff(s1.splitlines(1), s2.splitlines(1))
     additions = set()
     
     current = offset
     
-    total = 0        # Number of lines in the old file.
+    total = 0        # Number dsfsdfof lines in the dddsdssadsadold file.
     changes = 0      # Number of changes, relative to the old file.
     changed = False
     
@@ -77,5 +81,5 @@ def compare(s1, s2):
 if __name__ == '__main__':
     f1 = open(sys.argv[1], "r")
     f2 = open(sys.argv[2], "r")
-    compare(f1.read(), f2.read())
+    print_comments(compare(f1.read(), f2.read()))
               

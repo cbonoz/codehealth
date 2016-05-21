@@ -1,22 +1,10 @@
 [
     {
-        "caption": "Codehealth: Show diff",
-        "command": "show_diff"
+        "caption": "CommentHealth: Activate Health",
+        "command": "activate_health"
     },
     {
-        "caption": "Codehealth: Show original part",
-        "command": "show_original_part"
-    },
-    {
-        "caption": "Codehealth: Revert modified part",
-        "command": "replace_modified_part"
-    },
-    {
-        "caption": "Codehealth: Show uncommitted files",
-        "command": "uncommitted_files"
-    },
-    {
-        "caption": "Codehealth: Toggle highlight changes",
-        "command": "toggle_highlight_changes"
+        "caption": "CommentHealth: Remove Health",
+        "command": "remove_health"
     }
 ]

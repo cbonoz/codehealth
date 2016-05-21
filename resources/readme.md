@@ -68,5 +68,24 @@ Sublime Plugin requires editing the sublime color theme file (color themes for h
   * Will need to create/edit new color themes (red/orange/green) for health ratings for comments.
     Adding sublime plugin files to packages folder. Tools -> Developer -> Plugins will show you where the plugins folder is. If you add a .py sublime-style plugin file to this, it will automatically be loaded and begin executing.
 
-Refer to https://www.sublimetext.com/docs/3/api_reference.html
+Refer to https://www.sublimetext.com/docs/3/api_reference.html.
+
+<!-- 
+
+"""
+should follow the style of this page:
+https://github.com/SublimeLinter/SublimeLinter3/blob/3f2973811f1fbb38568677be7be7bfbe77f7f4f4/lint/highlight.py
+
+
+sublime.DRAW_EMPTY. Draw empty regions with a vertical bar. By default, they aren't drawn at all.
+sublime.HIDE_ON_MINIMAP. Don't show the regions on the minimap.
+sublime.DRAW_EMPTY_AS_OVERWRITE. Draw empty regions with a horizontal bar instead of a vertical one.
+sublime.DRAW_NO_FILL. Disable filling the regions, leaving only the outline.
+sublime.DRAW_NO_OUTLINE. Disable drawing the outline of the regions.
+sublime.DRAW_SOLID_UNDERLINE. Draw a solid underline below the regions.
+sublime.DRAW_STIPPLED_UNDERLINE. Draw a stippled underline below the regions.
+sublime.DRAW_SQUIGGLY_UNDERLINE. Draw a squiggly underline below the regions.
+sublime.PERSISTENT. Save the regions in the session.
+sublime.HIDDEN. Don't draw the regions.
+"""  -->
 

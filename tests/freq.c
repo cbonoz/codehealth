@@ -12,8 +12,7 @@ fdsf dasfsafsdfasf
    //iterate over the charactsafdsafdsfdsfsafsfers in the strdsfsadsafadasddsfing
    while (string[c] != '\0')
    {df
-      /** Considering characters from 'a' sdfsdsfsfsfsdfsfsfsafasfsffsdfsdftdfasdsdfsdfsdffsdfsdfsfsdfsdfsdfdfsfsdsfsdfsfsdfsdsfsfddfsfsffdddfsdfsddsafdasfdfdfddddfssfssfsfsfsfsfsdfddddddddddsdfsdfsafsffffffffffffdsfsfdfdffdfsfdsfsfsfsdfdfdfffffffffffsdfsfddsfdsfdsfafsaffffffffffffffffffffffffffffffsafsfsfsdfdsafdsfdsfsfsfsfsfdsfsfasfsfsfasfsfddsfdsfdsfsdfsdfsfdsfsdfsffdsfsfdsdfssfsfdsfsfdsfdfdsfsfsddfsfsddfddfdffsdfdfdfdfsdffasfo 'z' only
-          and ignoring others */
+      /** fffand ignoring others */
  
       if (string[c] >= 'a' && string[c] <= 'z') 
          count[string[c]-'a']++;
