@@ -4,11 +4,12 @@ import sys
 from redbaron import RedBaron
 
 DISTANCE_FACTOR = 1
+MAX_HEALTH = 100
 
 class Comment:
-    def __init__(self, comment, score = 1):
+    def __init__(self, comment, score = MAX_HEALTH):
         self._comment = comment
-        self._score = int(score*100)
+        self._score = score
         
     def left_bounds(self):
         return (self._comment.absolute_bounding_box.top_left.line,
@@ -30,20 +31,15 @@ class Comment:
             self.right_bounds(),
             self.score())
 
-
 def print_comments(comments):
     for c in comments:
         print(c)
 
 def preprocess_files(s1, s2, offset = 1.0):
-
     diff = difflib.ndiff(s1.splitlines(1), s2.splitlines(1))
     additions = []
     deletions = [] # Deletion position assuming all the additions already occurred.
-    test = 1
-    test = 2
     current = offset
-
 
     for x in diff:
         if x.startswith('+ '):
@@ -81,21 +77,19 @@ def compare(s1, s2):
                 for c in comments:
                     line, _ = c.left_bounds()
                     distance = math.fabs(line - a)
-                    score = c.score() - float(DISTANCE_FACTOR) / (distance * distance)
+                    score = int(c.score() - float(DISTANCE_FACTOR) / (distance * distance))
                     c.setScore(score if score > 0 else 0)
             for d in deletions:
                 for c in comments:
                     line, _ = c.left_bounds()
                     line = line + 1 if line >= d else line
                     distance = math.fabs(line - d)
-                    score = c.score() - float(DISTANCE_FACTOR) / (distance * distance)
+                    score = int(c.score() - float(DISTANCE_FACTOR) / (distance * distance))
                     c.setScore(score if score > 0 else 0)
             result.extend(comments)
         else:
             result.extend(preprocess_comments(ast_f2, []))
     
-    for c in result:
-        print c
     return result
 
 if __name__ == '__main__':
