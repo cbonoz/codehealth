@@ -3,7 +3,7 @@ import math
 import sys
 from redbaron import RedBaron
 
-DISTANCE_FACTOR = 1
+DEFAULT_DECAY_FACTOR = 1
 MAX_HEALTH = 100
 
 class Comment:
@@ -62,7 +62,7 @@ def preprocess_comments(f, excludes):
         
     return comments
 
-def compare(s1, s2):
+def compare(s1, s2, decay_factor = DEFAULT_DECAY_FACTOR):
     red1 = RedBaron(s1)
     red2 = RedBaron(s2)
     result = []
@@ -77,14 +77,14 @@ def compare(s1, s2):
                 for c in comments:
                     line, _ = c.left_bounds()
                     distance = math.fabs(line - a)
-                    score = int(c.score() - float(DISTANCE_FACTOR) / (distance * distance))
+                    score = int(c.score() - float(decay_factor) / (distance * distance))
                     c.setScore(score if score > 0 else 0)
             for d in deletions:
                 for c in comments:
                     line, _ = c.left_bounds()
                     line = line + 1 if line >= d else line
                     distance = math.fabs(line - d)
-                    score = int(c.score() - float(DISTANCE_FACTOR) / (distance * distance))
+                    score = int(c.score() - float(decay_factor) / (distance * distance))
                     c.setScore(score if score > 0 else 0)
             result.extend(comments)
         else:
