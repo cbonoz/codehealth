@@ -1,6 +1,9 @@
 import difflib
-import sys, json
+import math
+import sys
 from redbaron import RedBaron
+
+DISTANCE_FACTOR = 1
 
 class Comment:
     def __init__(self, comment, score = 1):
@@ -18,61 +21,73 @@ class Comment:
     def score(self):
         return self._score
         
+    def setScore(self, score):
+        self._score = score
+        
     def __str__(self):
         return '<Comment left_bounds:{0} right_bounds:{1} score:{2}>'.format(
             self.left_bounds(),
             self.right_bounds(),
             self.score())
 
-def ldiff(s1, s2, offset = 1):
+def preprocess_files(s1, s2, offset = 1.0):
     diff = difflib.ndiff(s1.splitlines(1), s2.splitlines(1))
-    additions = set()
+    additions = []
+    deletions = [] # Deletion position assuming all the additions already occurred.
     
     current = offset
-    
-    total = 0        # Number of lines in the old file.
-    changes = 0      # Number of changes, relative to the old file.
-    changed = False
-    
     for x in diff:
         if x.startswith('+ '):
-            additions.add(current)
+            additions.append(current)
             current = current + 1
-            changes = changes + 1
-            changed = True
         elif x.startswith('- '):
-            total = total + 1
-            changes = changes + 1
-            changed = True
+            deletions.append(current)
         else:
-            total = total + 1
             current = current + 1
-    return (additions,
-            float(changes) / total if total > 0 else 0)  
+    
+    return additions, deletions
+
+def preprocess_comments(f, excludes):
+    comments = []
+    for ast_c in f.find_all('comment'):
+        comment = Comment(ast_c)
+        line, _ = comment.left_bounds()
+        if line not in excludes:
+            comments.append(comment)
+        
+    return comments
 
 def compare(s1, s2):
     red1 = RedBaron(s1)
     red2 = RedBaron(s2)
-    comments = []
+    result = []
     
-    for f2 in red2.find_all('def'):
-        f1 = red1.find('def', name = f2.name)        
-        if f1 is not None:
-            additions, cratio = ldiff(f1.dumps(), f2.dumps(),
-                                f2.absolute_bounding_box.top_left.line)
-            health = (1 - cratio) if cratio < 1 else 1
-                                                       
-            for c in f2.find_all('comment'):
-                if cratio == 0 or \
-                   c.absolute_bounding_box.top_left.line in additions:
-                    comments.append(Comment(c))
-                else:
-                    comments.append(Comment(c, health))
+    for ast_f2 in red2.find_all('def'):
+        ast_f1 = red1.find('def', name = ast_f2.name)        
+        if ast_f1 is not None:
+            additions, deletions = preprocess_files(ast_f1.dumps(),
+                                                    ast_f2.dumps())
+            comments = preprocess_comments(ast_f2, additions) 
+            for a in additions:
+                for c in comments:
+                    line, _ = c.left_bounds()
+                    distance = math.fabs(line - a)
+                    score = c.score() - float(DISTANCE_FACTOR) / (distance * distance)
+                    c.setScore(score if score > 0 else 0)
+            for d in deletions:
+                for c in comments:
+                    line, _ = c.left_bounds()
+                    line = line + 1 if line >= d else line
+                    distance = math.fabs(line - d)
+                    score = c.score() - float(DISTANCE_FACTOR) / (distance * distance)
+                    c.setScore(score if score > 0 else 0)
+            result.extend(comments)
         else:
-            for c in f2.find_all('comment'):
-                comments.append(Comment(c))
+            result.extend(preprocess_comments(ast_f2, []))
     
-    return comments
+    for c in result:
+        print c
+    return result
 
 if __name__ == '__main__':
     f1 = open(sys.argv[1], "r")
