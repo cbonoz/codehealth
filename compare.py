@@ -54,13 +54,16 @@ def preprocess_files(s1, s2, offset = 1.0):
 
 def preprocess_comments(f, excludes):
     comments = []
+    exceptions = []
     for ast_c in f.find_all('comment'):
         comment = Comment(ast_c)
         line, _ = comment.left_bounds()
         if line not in excludes:
             comments.append(comment)
+        else:
+            exceptions.append(comment)
         
-    return comments
+    return comments, exceptions
 
 def compare(s1, s2, decay_factor = DEFAULT_DECAY_FACTOR):
     red1 = RedBaron(s1)
@@ -72,7 +75,7 @@ def compare(s1, s2, decay_factor = DEFAULT_DECAY_FACTOR):
         if ast_f1 is not None:
             additions, deletions = preprocess_files(ast_f1.dumps(),
                                                     ast_f2.dumps())
-            comments = preprocess_comments(ast_f2, additions) 
+            comments, exceptions = preprocess_comments(ast_f2, additions) 
             for a in additions:
                 for c in comments:
                     line, _ = c.left_bounds()
@@ -87,6 +90,7 @@ def compare(s1, s2, decay_factor = DEFAULT_DECAY_FACTOR):
                     score = int(c.score() - float(decay_factor) / (distance * distance))
                     c.setScore(score if score > 0 else 0)
             result.extend(comments)
+            result.extend(exceptions)
         else:
             result.extend(preprocess_comments(ast_f2, []))
     
