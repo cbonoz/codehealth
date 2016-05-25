@@ -36,9 +36,6 @@ def compare_commits(repo, path, commit1, commit2):
     result = list(d.compare(content1, content2))
     pprint(result)
     return result
-    
-
-
 
 
 def get_content(repo, path, commit=None):

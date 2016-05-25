@@ -1,137 +1,115 @@
-Activate Health - freq.c False
+Activate Health - Element.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - Element.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - Element.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - Element.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - Element.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - Element.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount_modded.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount_modded.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount_modded.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount_modded.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
+Activate Health - WordCount.java False
 clear_colors called with
 {}
 parser_health_render
 
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-clear_colors called with
-{'34': [(473, 710)], '88': [(301, 337)], '50': [(183, 265)]}

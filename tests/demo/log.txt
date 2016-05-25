@@ -1,0 +1,8 @@
+Activate Health - test1.py True
+cmd: git show HEAD:tests/demo/test1.py
+git error: Command 'git show HEAD:tests/demo/test1.py' returned non-zero exit status 128
+clear_colors called with
+{}
+compare result: []
+our_health_render
+

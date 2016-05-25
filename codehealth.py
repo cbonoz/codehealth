@@ -1,7 +1,12 @@
+import sys
+sys.path.append(os.path.dirname(__file__))
+
+import difflib
+import json, math, os.path
+from redbaron import RedBaron
 import sublime, sublime_plugin
-import json,random, traceback
+import random, traceback
 from comment_parser import comment_parser
-import os.path
 
 
 import subprocess
@@ -17,9 +22,7 @@ PARSER_SUPPORTED = ["c","cpp","cc","java","js","go","sh"] #more here
 OUR_SUPPORTED = ["py"]
 
 
-import difflib
-import sys, json, math
-from redbaron import RedBaron
+
 
 #scale used for calculating code decay amount
 DEFAULT_DECAY_FACTOR = 50000
@@ -43,8 +46,11 @@ def print_comments(comments):
 def get_color(color):
     return "color_"+str(color)
 
-def bash_command(cmd):
-    return subprocess.check_output(cmd, shell=True)
+def bash_command(cmd, folder):
+    return subprocess.check_output(cmd, cwd=folder,shell=True)
+
+
+
 
 def print_progress(p):
     sublime.status_message("Running comment health...%s%%" % p)
@@ -223,14 +229,6 @@ def our_health_render(self, view, cs_list):
           sublime.PERSISTENT)
 
 
-# class HighlightHealthCommand(sublime_plugin.EventListener):
-#     # def on_post_save_async(self, view):
-#     def on_modified_async(self, view):
-#         # clear_colors(self,view)
-#         sublime.status_message("on_modified")
-#         cs = comment_parser.extract_comments(self.f_name)
-#         parser_health_render(self, view, cs)
-
 class ActivateHealthCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         activateHealthThread = ActivateHealthThread(self, edit)
@@ -250,55 +248,55 @@ class ActivateHealthThread(threading.Thread):
             colormap = {}
 
             view = self.view
-            self.f_name = view.file_name()
-            self.file_ext = os.path.splitext(self.f_name)[1][1:].strip().lower()
-            
-            self.parser_supported = self.file_ext in PARSER_SUPPORTED
-            self.our_supported = self.file_ext in OUR_SUPPORTED
-            self.f_name = view.file_name()
+            abs_file_name = view.file_name()
+            file_ext = os.path.splitext(abs_file_name)[1][1:].strip().lower()
+            file_name = os.path.basename(abs_file_name)
+            f_dir = os.path.dirname(abs_file_name)
 
-            file_name = os.path.basename(self.f_name)
-            print_to_log("Activate Health - " + file_name + " " + str(self.our_supported))
+            parser_supported = file_ext in PARSER_SUPPORTED
+            our_supported = file_ext in OUR_SUPPORTED
 
-            if self.our_supported:
+            print_to_log("Activate Health - " + file_name + " " + str(our_supported))
+
+            if our_supported:
                 #get the original file contents
                 try:
-                    git_root = bash_command("git rev-parse --show-toplevel")
+                    git_root = bash_command("git rev-parse --show-toplevel",f_dir)
 
-                    rel_file_name = self.f_name[len(git_root):]
+                    rel_file_name = abs_file_name[len(git_root):]
                     head_cmd = "git show HEAD:" + rel_file_name# + "> ~/.output_compare.py"
                     
                     print_to_log("cmd: " + head_cmd)
 
-                    res = bash_command(head_cmd)
-                    self.original_file_contents = str(res,'utf-8')
+                    res = bash_command(head_cmd,f_dir)
+                    original_file_contents = str(res,'utf-8')
 
-                    if (self.original_file_contents is None):
+                    if (original_file_contents is None):
                         err = "Comment Health: Unable to get " + file_name + " from git"
                         sublime.status_message(err)
                         return
                         
                 except Exception as e:
                     print_to_log("git error: " + str(e))
-                    self.original_file_contents = None
-                    self.supported = False
+                    original_file_contents = None
+                    supported = False
 
-            elif not self.parser_supported:
-                sublime.status_message("Comment Health - .%s not supported" % (self.file_ext))
+            elif not parser_supported:
+                sublime.status_message("Comment Health - .%s not supported" % (file_ext))
                 return
 
             clear_colors(self,view)
 
             # print_to_log("\n1---current text\n" + current_text)
-            # print_to_log("\n2---head\n"+str(self.original_file_contents))
+            # print_to_log("\n2---head\n"+str(original_file_contents))
 
             print_progress(0)
-            if self.parser_supported:
-                cs = comment_parser.extract_comments(self.f_name)
+            if parser_supported:
+                cs = comment_parser.extract_comments(abs_file_name)
                 parser_health_render(self, view, cs)
-            elif self.our_supported:
+            elif our_supported:
                 current_text = view.substr(sublime.Region(0, view.size()))
-                cs = compare(str(self.original_file_contents), str(current_text))
+                cs = compare(str(original_file_contents), str(current_text))
                 our_health_render(self, view,cs)
             print_progress(100)
 
@@ -315,4 +313,6 @@ class RemoveHealthCommand(sublime_plugin.TextCommand):
         sublime.status_message("Remove Health")
         clear_colors(self,view)
         return True
+
+
 

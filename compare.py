@@ -14,7 +14,7 @@ MAX_HEALTH = 100
 
 def print_to_log(txt):
     with open("./log.txt","a+") as f:
-            f.write(str(txt) + "\n")
+            f.write(str(txt) + "\n") 
 
 def print_comments(comments):
     for c in comments:
@@ -105,7 +105,6 @@ def compare(s1, s2, decay_factor = DEFAULT_DECAY_FACTOR):
                     line = line + 1 if line >= d else line
                     distance = math.fabs(line - d)
                     score = int(c.score() - float(decay_factor) / (distance * distance))
-
                     c.setScore(score if score > 0 else 0)
             result.extend(comments)
             result.extend(exceptions)
