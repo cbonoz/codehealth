@@ -5,6 +5,7 @@ def mergeSort(alist):
         lefthalf = alist[:mid]
         righthalf = alist[mid:]
 
+        # Merge the halves ...
         mergeSort(lefthalf)
         mergeSort(righthalf)
 
@@ -20,6 +21,7 @@ def mergeSort(alist):
                 j=j+1
             k=k+1
 
+        # While something ...
         while i < len(lefthalf):
             alist[k]=lefthalf[i]
             i=i+1
@@ -56,12 +58,14 @@ def partition(alist,first,last):
    done = False
    while not done:
 
+       # While something ...
        while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
            leftmark = leftmark + 1
 
        while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
            rightmark = rightmark -1
 
+        # If something ...
        if rightmark < leftmark:
            done = True
        else:
