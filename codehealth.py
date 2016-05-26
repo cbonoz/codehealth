@@ -172,16 +172,9 @@ colormap = {}
 
 
 def clear_colors(self, view):
-    global colormap
-
-    print_to_log("clear_colors called with")
-    print_to_log(str(colormap))
-    # maparser_keys = colormap.keys()
-    # for k in maparser_keys:
-    #     view.erase_regions(get_color(k))
     for k in range(COLOR_LIMIT+1):
         view.erase_regions(get_color(k))
-
+    global colormap
     colormap = {}
 
 def parser_health_render(self, view, cs):
@@ -191,6 +184,7 @@ def parser_health_render(self, view, cs):
 
     #right now just assigns a random health score to each comment in the scope
     comment_regions = [(view.full_line(s),random.randint(0, COLOR_LIMIT)) for s in comment_regions]
+
 
     for c,color in comment_regions:
         color = str(color)
@@ -256,7 +250,7 @@ class ActivateHealthThread(threading.Thread):
             parser_supported = file_ext in PARSER_SUPPORTED
             our_supported = file_ext in OUR_SUPPORTED
 
-            print_to_log("Activate Health - " + file_name + " " + str(our_supported))
+            # print_to_log("Activate Health - " + file_name + " " + str(our_supported))
 
             if our_supported:
                 #get the original file contents

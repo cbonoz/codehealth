@@ -1,148 +1,30 @@
-Activate Health - compare.py True
-None
-None
-git error: object of type 'NoneType' has no len()
-clear_colors called with
-{}
-compare result: [[<User.codehealth.Comment object at 0x1144fa1d0>], [<User.codehealth.Comment object at 0x112378110>], [<User.codehealth.Comment object at 0x11232ff50>], [<User.codehealth.Comment object at 0x11445cd10>]]
-our_health_render
-
-<Comment left_bounds:(21, 9) right_bounds:(21, 18) score:100>
-<Comment left_bounds:(27, 5) right_bounds:(27, 65) score:100>
-<Comment left_bounds:(56, 19) right_bounds:(56, 87) score:100>
-<Comment left_bounds:(113, 9) right_bounds:(113, 43) score:100>
 Activate Health - codehealth_ln.py True
-git error: [Errno 2] No such file or directory: 'git rev-parse --show-toplevel'
+cmd: git show HEAD:codehealth_ln.py
 clear_colors called with
 {}
-Activate Health - compare.py True
-git error: [Errno 2] No such file or directory: 'git rev-parse --show-toplevel'
-clear_colors called with
-{}
-compare result: [[<User.codehealth.Comment object at 0x11233ca50>], [<User.codehealth.Comment object at 0x11232dc10>], [<User.codehealth.Comment object at 0x114517550>], [<User.codehealth.Comment object at 0x112396b90>]]
+CommentHealth compare error: Unexpected 'space' token:
+
+   1 /Users/cbono/Library/Application <--- here
+
+Should have been grouped on either ('NAME', 'Application') (before) or ('NAME', 'Support') (after) token.
 our_health_render
 
-<Comment left_bounds:(21, 9) right_bounds:(21, 18) score:100>
-<Comment left_bounds:(27, 5) right_bounds:(27, 65) score:100>
-<Comment left_bounds:(56, 19) right_bounds:(56, 87) score:100>
-<Comment left_bounds:(113, 9) right_bounds:(113, 43) score:100>
-compare result: [[<User.codehealth.Comment object at 0x1144fbdd0>], [<User.codehealth.Comment object at 0x1144f0210>], [<User.codehealth.Comment object at 0x11401c990>], [<User.codehealth.Comment object at 0x113fb3d10>, <User.codehealth.Comment object at 0x113e9e0d0>, <User.codehealth.Comment object at 0x113ec8a10>], [<User.codehealth.Comment object at 0x1144763d0>], [<User.codehealth.Comment object at 0x11236bb90>], [<User.codehealth.Comment object at 0x112329b90>, <User.codehealth.Comment object at 0x1140cd150>, <User.codehealth.Comment object at 0x11251ce50>, <User.codehealth.Comment object at 0x11246cbd0>]]
-our_health_render
-
-<Comment left_bounds:(55, 5) right_bounds:(55, 53) score:100>
-<Comment left_bounds:(88, 19) right_bounds:(88, 87) score:100>
-<Comment left_bounds:(116, 5) right_bounds:(116, 36) score:100>
-<Comment left_bounds:(181, 5) right_bounds:(181, 37) score:100>
-<Comment left_bounds:(182, 5) right_bounds:(182, 29) score:100>
-<Comment left_bounds:(183, 5) right_bounds:(183, 42) score:100>
-<Comment left_bounds:(194, 5) right_bounds:(194, 78) score:100>
-<Comment left_bounds:(221, 5) right_bounds:(221, 35) score:100>
-<Comment left_bounds:(264, 17) right_bounds:(264, 47) score:100>
-<Comment left_bounds:(269, 64) right_bounds:(269, 91) score:100>
-<Comment left_bounds:(292, 13) right_bounds:(292, 65) score:100>
-<Comment left_bounds:(293, 13) right_bounds:(293, 70) score:100>
-Activate Health - compare.py True
-git error: [Errno 2] No such file or directory: 'git rev-parse --show-toplevel'
-clear_colors called with
-{}
-compare result: [[<User.codehealth.Comment object at 0x114445910>], [<User.codehealth.Comment object at 0x1122c4390>], [<User.codehealth.Comment object at 0x1122ae0d0>], [<User.codehealth.Comment object at 0x114445bd0>]]
-our_health_render
-
-<Comment left_bounds:(21, 9) right_bounds:(21, 18) score:100>
-<Comment left_bounds:(27, 5) right_bounds:(27, 65) score:100>
-<Comment left_bounds:(56, 19) right_bounds:(56, 87) score:100>
-<Comment left_bounds:(113, 9) right_bounds:(113, 43) score:100>
-Activate Health - compare.py True
-git error: [Errno 2] No such file or directory: 'git rev-parse --show-toplevel'
-clear_colors called with
-{}
-compare result: [[<User.codehealth.Comment object at 0x1140fe690>], [<User.codehealth.Comment object at 0x1123b3650>], [<User.codehealth.Comment object at 0x1140fd390>], [<User.codehealth.Comment object at 0x113e8b690>]]
-our_health_render
-
-<Comment left_bounds:(21, 9) right_bounds:(21, 18) score:100>
-<Comment left_bounds:(27, 5) right_bounds:(27, 65) score:100>
-<Comment left_bounds:(56, 19) right_bounds:(56, 87) score:100>
-<Comment left_bounds:(113, 9) right_bounds:(113, 43) score:100>
-Activate Health - compare.py True
-BASH_RESULT: git rev-parse --show-toplevel
-None
-None
-git error: object of type 'NoneType' has no len()
-clear_colors called with
-{}
-compare result: [[<User.codehealth.Comment object at 0x113f750d0>], [<User.codehealth.Comment object at 0x113f7c6d0>], [<User.codehealth.Comment object at 0x11448e890>], [<User.codehealth.Comment object at 0x113fe1a50>]]
-our_health_render
-
-<Comment left_bounds:(21, 9) right_bounds:(21, 18) score:100>
-<Comment left_bounds:(27, 5) right_bounds:(27, 65) score:100>
-<Comment left_bounds:(56, 19) right_bounds:(56, 87) score:100>
-<Comment left_bounds:(113, 9) right_bounds:(113, 43) score:100>
-Activate Health - compare.py True
-git error: Can't convert 'list' object to str implicitly
-clear_colors called with
-{}
-compare result: [[<User.codehealth.Comment object at 0x1140921d0>], [<User.codehealth.Comment object at 0x1123bc410>], [<User.codehealth.Comment object at 0x11251c190>], [<User.codehealth.Comment object at 0x114546e90>]]
-our_health_render
-
-<Comment left_bounds:(21, 9) right_bounds:(21, 18) score:100>
-<Comment left_bounds:(27, 5) right_bounds:(27, 65) score:100>
-<Comment left_bounds:(56, 19) right_bounds:(56, 87) score:100>
-<Comment left_bounds:(113, 9) right_bounds:(113, 43) score:100>
 Activate Health - codehealth_ln.py True
-BASH_RESULT: ['git', 'rev-parse', '--show-toplevel']
-None
-None
-git error: object of type 'NoneType' has no len()
+cmd: git show HEAD:codehealth_ln.py
 clear_colors called with
 {}
-compare result: [[<User.codehealth.Comment object at 0x1140d1710>], [<User.codehealth.Comment object at 0x114116510>], [<User.codehealth.Comment object at 0x114067f50>], [<User.codehealth.Comment object at 0x1143ee150>, <User.codehealth.Comment object at 0x11251ccd0>, <User.codehealth.Comment object at 0x11409fe50>], [<User.codehealth.Comment object at 0x114588110>], [<User.codehealth.Comment object at 0x113ed4650>], [<User.codehealth.Comment object at 0x112520250>, <User.codehealth.Comment object at 0x11444ca10>, <User.codehealth.Comment object at 0x1123b3550>, <User.codehealth.Comment object at 0x1123bce50>]]
+CommentHealth compare error: Unexpected 'space' token:
+
+   1 /Users/cbono/Library/Application <--- here
+
+Should have been grouped on either ('NAME', 'Application') (before) or ('NAME', 'Support') (after) token.
 our_health_render
 
-<Comment left_bounds:(56, 5) right_bounds:(56, 53) score:100>
-<Comment left_bounds:(89, 19) right_bounds:(89, 87) score:100>
-<Comment left_bounds:(117, 5) right_bounds:(117, 36) score:100>
-<Comment left_bounds:(182, 5) right_bounds:(182, 37) score:100>
-<Comment left_bounds:(183, 5) right_bounds:(183, 29) score:100>
-<Comment left_bounds:(184, 5) right_bounds:(184, 42) score:100>
-<Comment left_bounds:(195, 5) right_bounds:(195, 78) score:100>
-<Comment left_bounds:(222, 5) right_bounds:(222, 35) score:100>
-<Comment left_bounds:(265, 17) right_bounds:(265, 47) score:100>
-<Comment left_bounds:(270, 64) right_bounds:(270, 91) score:100>
-<Comment left_bounds:(293, 13) right_bounds:(293, 65) score:100>
-<Comment left_bounds:(294, 13) right_bounds:(294, 70) score:100>
 Activate Health - compare.py True
-BASH_RESULT: ['git', 'rev-parse', '--show-toplevel']
-<subprocess.Popen object at 0x114559d90>
-git error: object of type 'Popen' has no len()
+cmd: git show HEAD:compare.py
 clear_colors called with
 {}
-compare result: [[<User.codehealth.Comment object at 0x11409c290>], [<User.codehealth.Comment object at 0x114515510>], [<User.codehealth.Comment object at 0x113f5d690>], [<User.codehealth.Comment object at 0x11406cb90>]]
-our_health_render
-
-<Comment left_bounds:(21, 9) right_bounds:(21, 18) score:100>
-<Comment left_bounds:(27, 5) right_bounds:(27, 65) score:100>
-<Comment left_bounds:(56, 19) right_bounds:(56, 87) score:100>
-<Comment left_bounds:(113, 9) right_bounds:(113, 43) score:100>
-Activate Health - compare.py True
-BASH_RESULT: ['git', 'rev-parse', '--show-toplevel']
-None
-git error: object of type 'Popen' has no len()
-clear_colors called with
-{}
-compare result: [[<User.codehealth.Comment object at 0x11410d150>], [<User.codehealth.Comment object at 0x1140798d0>], [<User.codehealth.Comment object at 0x114559d90>], [<User.codehealth.Comment object at 0x11410d410>]]
-our_health_render
-
-<Comment left_bounds:(21, 9) right_bounds:(21, 18) score:100>
-<Comment left_bounds:(27, 5) right_bounds:(27, 65) score:100>
-<Comment left_bounds:(56, 19) right_bounds:(56, 87) score:100>
-<Comment left_bounds:(113, 9) right_bounds:(113, 43) score:100>
-Activate Health - compare.py True
-BASH_RESULT: ['git', 'rev-parse', '--show-toplevel']
-None
-git error: object of type 'Popen' has no len()
-clear_colors called with
-{}
-compare result: [[<User.codehealth.Comment object at 0x11401cc10>], [<User.codehealth.Comment object at 0x113ed7510>], [<User.codehealth.Comment object at 0x114495850>], [<User.codehealth.Comment object at 0x114089810>]]
+compare result: [<User.codehealth.Comment object at 0x112daf490>, <User.codehealth.Comment object at 0x112d90490>, <User.codehealth.Comment object at 0x112e18510>, <User.codehealth.Comment object at 0x10e787090>]
 our_health_render
 
 <Comment left_bounds:(21, 9) right_bounds:(21, 18) score:100>
@@ -153,47 +35,26 @@ Activate Health - compare.py True
 cmd: git show HEAD:compare.py
 clear_colors called with
 {}
-compare result: [<User.codehealth.Comment object at 0x1140c0bd0>, <User.codehealth.Comment object at 0x113f75450>, <User.codehealth.Comment object at 0x1123bccd0>, <User.codehealth.Comment object at 0x1144ff690>]
+compare result: [<User.codehealth.Comment object at 0x1128c9810>, <User.codehealth.Comment object at 0x11291d090>, <User.codehealth.Comment object at 0x11291d850>, <User.codehealth.Comment object at 0x112f113d0>]
 our_health_render
 
 <Comment left_bounds:(21, 9) right_bounds:(21, 18) score:100>
 <Comment left_bounds:(27, 5) right_bounds:(27, 65) score:100>
 <Comment left_bounds:(56, 19) right_bounds:(56, 87) score:100>
-<Comment left_bounds:(113, 9) right_bounds:(113, 43) score:93>
-Activate Health - compare.py True
-BASH_RESULT: git rev-parse --show-toplevel
-b'/Users/cbono/Documents/code/codehealth\n'
+<Comment left_bounds:(113, 9) right_bounds:(113, 43) score:100>
+cmd: git show HEAD:codehealth_ln.py
+CommentHealth compare error: Unexpected 'space' token:
+
+   1 /Users/cbono/Library/Application <--- here
+
+Should have been grouped on either ('NAME', 'Application') (before) or ('NAME', 'Support') (after) token.
+our_health_render
+
 cmd: git show HEAD:compare.py
-BASH_RESULT: git show HEAD:compare.py
-b'import difflib\nimport sys, json, math\nfrom redbaron import RedBaron\n\n#scale used for calculating code decay amount\nDEFAULT_DECAY_FACTOR = 50000\n\n# DISTANCE_FACTOR = 5\n# on_activated_count = 1\n# on_load_count = 1\n\nMAX_HEALTH = 100\n\n\ndef print_to_log(txt):\n    with open("./log.txt","a+") as f:\n            f.write(str(txt) + "\\n")\n\ndef print_comments(comments):\n    for c in comments:\n        # print(c)\n        print_to_log(str(c))\n\n\ndef print_progress(p):\n    return\n    # sublime.status_message("Running comment health...%s%%" % p)\n\nclass Comment:\n    def __init__(self, comment, score = MAX_HEALTH):\n        self._comment = comment\n        self._score = score\n        self.left_bounds = (self._comment.absolute_bounding_box.top_left.line,\n                self._comment.absolute_bounding_box.top_left.column)\n        self.right_bounds = (self._comment.absolute_bounding_box.bottom_right.line,\n                self._comment.absolute_bounding_box.bottom_right.column)\n        \n    def score(self):\n        return self._score\n        \n    def setScore(self, score):\n        self._score = score\n        \n    def __str__(self):\n        return \'<Comment left_bounds:{0} right_bounds:{1} score:{2}>\'.format(\n            self.left_bounds,\n            self.right_bounds,\n            self.score())\n\n\n\n\ndef preprocess_files(s1, s2, offset = 1.0):\n    diff = difflib.ndiff(s1.splitlines(1), s2.splitlines(1))\n    additions = []\n    deletions = [] # Deletion position assuming aldfsl the additions already occurred. \n    current = offset\n\n    for x in diff:\n        if x.startswith(\'+ \'):\n            additions.append(current)\n            current = current + 1\n        elif x.startswith(\'- \'):\n            deletions.append(current)\n        else:\n            current = current + 1\n    \n    return additions, deletions\n\ndef preprocess_comments(f, excludes):\n    comments = []\n    exceptions = []\n    for ast_c in f.find_all(\'comment\'):\n        comment = Comment(ast_c)\n        line, _ = comment.left_bounds\n        if line not in excludes:\n            comments.append(comment)\n        else:\n            exceptions.append(comment)\n        \n    return comments, exceptions\n\ndef compare(s1, s2, decay_factor = DEFAULT_DECAY_FACTOR):\n    red1 = RedBaron(s1)\n    red2 = RedBaron(s2)\n    result = []\n\n    defs = red2.find_all(\'def\')\n    length = len(defs)\n    for ast_f2 in defs:\n        ast_f1 = red1.find(\'def\', name = ast_f2.name)        \n        if ast_f1 is not None:\n            additions, deletions = preprocess_files(ast_f1.dumps(),\n                                                    ast_f2.dumps())\n            comments, exceptions = preprocess_comments(ast_f2, additions) \n            for a in additions:\n                for c in comments:\n                    line, _ = c.left_bounds\n                    distance = math.fabs(line - a)\n                    score = int(c.score() - float(decay_factor) / (distance * distance))\n                    c.setScore(score if score > 0 else 0)\n            for d in deletions:\n                for c in comments:\n                    line, _ = c.left_bounds\n                    line = line + 1 if line >= d else line\n                    distance = math.fabs(line - d)\n                    score = int(c.score() - float(decay_factor) / (distance * distance))\n\n                    c.setScore(score if score > 0 else 0)\n            result.extend(comments)\n            result.extend(exceptions)\n        else:\n            result.extend(preprocess_comments(ast_f2, []))\n        # print_progress(int(index/length))\n\n    result = [r for r in result if r != []]\n    \n    return result\n\n\n\nif __name__ == \'__main__\':\n    f1 = open(sys.argv[1], "r")\n    f2 = open(sys.argv[2], "r")\n    print_comments(compare(f1.read(), f2.read()))'
-clear_colors called with
-{}
-compare result: [<User.codehealth.Comment object at 0x114571d10>, <User.codehealth.Comment object at 0x114114290>, <User.codehealth.Comment object at 0x114455950>, <User.codehealth.Comment object at 0x11403b610>]
+compare result: [<User.codehealth.Comment object at 0x11298a850>, <User.codehealth.Comment object at 0x112971350>, <User.codehealth.Comment object at 0x112de5690>, <User.codehealth.Comment object at 0x112969510>]
 our_health_render
 
 <Comment left_bounds:(21, 9) right_bounds:(21, 18) score:100>
 <Comment left_bounds:(27, 5) right_bounds:(27, 65) score:100>
 <Comment left_bounds:(56, 19) right_bounds:(56, 87) score:100>
-<Comment left_bounds:(113, 9) right_bounds:(113, 43) score:93>
-Activate Health - compare.py True
-cmd: git show HEAD:compare.py
-clear_colors called with
-{}
-compare result: [<User.codehealth.Comment object at 0x112291190>, <User.codehealth.Comment object at 0x1140897d0>, <User.codehealth.Comment object at 0x11117b390>, <User.codehealth.Comment object at 0x113f8f5d0>]
-our_health_render
-
-<Comment left_bounds:(21, 9) right_bounds:(21, 18) score:100>
-<Comment left_bounds:(27, 5) right_bounds:(27, 65) score:100>
-<Comment left_bounds:(56, 19) right_bounds:(56, 87) score:100>
-<Comment left_bounds:(113, 9) right_bounds:(113, 43) score:93>
-Activate Health - compare.py True
-cmd: git show HEAD:compare.py
-clear_colors called with
-{}
-compare result: [<User.codehealth.Comment object at 0x112289150>, <User.codehealth.Comment object at 0x113f8f090>, <User.codehealth.Comment object at 0x114475450>, <User.codehealth.Comment object at 0x11455d150>]
-our_health_render
-
-<Comment left_bounds:(21, 9) right_bounds:(21, 18) score:100>
-<Comment left_bounds:(27, 5) right_bounds:(27, 65) score:100>
-<Comment left_bounds:(56, 19) right_bounds:(56, 87) score:0>
-<Comment left_bounds:(119, 9) right_bounds:(119, 43) score:94>
+<Comment left_bounds:(113, 9) right_bounds:(113, 43) score:100>

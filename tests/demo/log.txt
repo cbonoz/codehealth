@@ -6,3 +6,7 @@ clear_colors called with
 compare result: []
 our_health_render
 
+cmd: git show HEAD:tests/demo/test1.py
+compare result: []
+our_health_render
+
