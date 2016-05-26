@@ -47,9 +47,6 @@ class Comment:
             self.right_bounds,
             self.score())
 
-
-
-
 def preprocess_files(s1, s2, offset = 1.0):
     diff = difflib.ndiff(s1.splitlines(1), s2.splitlines(1))
     additions = []
@@ -79,8 +76,14 @@ def preprocess_comments(f, excludes):
             exceptions.append(comment)
         
     return comments, exceptions
+    
+def compute_addition(c, distance):
+    return int(c.score() - float(DEFAULT_DECAY_FACTOR) / (distance * distance))
+    
+def compute_deletion(c, distance):
+    return int(c.score() - float(DEFAULT_DECAY_FACTOR) / (distance * distance * distance))
 
-def compare(s1, s2, decay_factor = DEFAULT_DECAY_FACTOR):
+def compare(s1, s2):
     red1 = RedBaron(s1)
     red2 = RedBaron(s2)
     result = []
@@ -97,14 +100,14 @@ def compare(s1, s2, decay_factor = DEFAULT_DECAY_FACTOR):
                 for c in comments:
                     line, _ = c.left_bounds
                     distance = math.fabs(line - a)
-                    score = int(c.score() - float(decay_factor) / (distance * distance))
+                    score = compute_addition(c, distance)
                     c.setScore(score if score > 0 else 0)
             for d in deletions:
                 for c in comments:
                     line, _ = c.left_bounds
                     line = line + 1 if line >= d else line
                     distance = math.fabs(line - d)
-                    score = int(c.score() - float(decay_factor) / (distance * distance))
+                    score = compute_deletion(c, distance)
                     c.setScore(score if score > 0 else 0)
             result.extend(comments)
             result.extend(exceptions)
