@@ -1,9 +1,8 @@
 """
 file: themegen.py
 generates the scheme theme settings to be added for the different health background color highlights
-
-
 """
+import math
 # <dict>
 #     <key>name</key>
 #     <string>String</string>
@@ -16,7 +15,7 @@ generates the scheme theme settings to be added for the different health backgro
 #     </dict>
 # </dict>
 
-import math
+
 def get_health_color(val):
     if val<0:
         val = 0
@@ -45,24 +44,20 @@ def percent_to_rgb(percent):
     if (percent == 100):
         percent = 99
     
-    r,g,b=0,0,0
+    r,g,b,a=0,0,0,96
 
     if (percent < 50):
         #green to yellow
-        r = math.floor(255 * (percent / 50));
-        g = 255;
+        r = math.floor(255 * (percent / 50))
+        g = 255
 
     else:
         #yellow to red
-        r = 255;
-        g = math.floor(255 * ((50 - percent % 50) / 50));
+        r = 255
+        g = math.floor(255 * ((50 - percent % 50) / 50))
     
-    b = 0;
-
-
-
     # res = struct.pack('BBB',*rgb).encode('hex')
-    return '#%02x%02x%02x' % (r,g,b)
+    return '#%02x%02x%02x%02x' % (r,g,b,a)
     # return "rgb(" + str(r) + "," + str(g) + "," + str(b) + ")";
 
 for i in range(100,-1,-1):

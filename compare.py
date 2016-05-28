@@ -25,6 +25,8 @@ def print_comments(comments):
 def print_progress(p):
     return
     # sublime.status_message("Running comment health...%s%%" % p)
+    #fdsfdsfdsffasfsdafsdaf
+
 
 class Comment:
     def __init__(self, comment, score = MAX_HEALTH):

@@ -1,23 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @cbonoz
- Watch 403
-  Star 2,221
- Fork 324 angular/material2
- Code  Issues 57  Pull requests 8  Wiki  Pulse  Graphs
-Branch: master Find file Copy path
-material2/scripts/release/inline-resources.js
-9e308a6  2 days ago
-@hansl hansl build: separate demo-app in its own directory. (#451)
-1 contributor
-RawBlameHistory     99 lines (87 sloc)  3.17 KB
-#!/usr/bin/env node
-'use strict';
-
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
@@ -73,7 +53,7 @@ for (let arg of process.argv.slice(2)) {
 
 /**
  * Inline the templates for a source file. Simply search for instances of `templateUrl: ...` and
- * replace with `template: ...` (withffffffffggfgfgfggdfdfdffdfdfdf the content of the file included).
+ * replace with `template: ...` and the content of the file included
  * @param filePath {string} The path of the source file.
  * @param content {string} The source file's content.
  * @return {string} The content with all templates inlined.
@@ -113,5 +93,3 @@ function inlineStyle(filePath, content) {
       + ']';
   });
 }
-Status API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Contact Help

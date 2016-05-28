@@ -1,137 +1,61 @@
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/tests/log.txt
+get_head_contents - log.txt False
+setup successful
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/tests/inline-resources.js
+get_head_contents - inline-resources.js True
+cmd: git show HEAD:tests/inline-resources.js
+setup successful
+Traceback (most recent call last):
+  File "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/codehealth.py", line 313, in render_health_scores
+    cs = comment_parser.extract_comments(current_file)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/comment_parser/comment_parser.py", line 69, in extract_comments
+    'Unsupported MIME type %s for file %s' % (mime, filename))
+comment_parser.comment_parser.UnsupportedError: Unsupported MIME type text/plain for file /Users/cbono/Documents/code/codehealth/tests/inline-resources.js
 
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
+HealthCommand: on_post_save_async called
+Traceback (most recent call last):
+  File "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/codehealth.py", line 313, in render_health_scores
+    cs = comment_parser.extract_comments(current_file)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/comment_parser/comment_parser.py", line 69, in extract_comments
+    'Unsupported MIME type %s for file %s' % (mime, filename))
+comment_parser.comment_parser.UnsupportedError: Unsupported MIME type text/plain for file /Users/cbono/Documents/code/codehealth/tests/inline-resources.js
 
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-Activate Health - freq.c False
-clear_colors called with
-{}
-parser_health_render
-
-clear_colors called with
-{'34': [(473, 710)], '88': [(301, 337)], '50': [(183, 265)]}
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/tests/freq.c
+get_head_contents - freq.c True
+cmd: git show HEAD:tests/freq.c
+setup successful
+(165, 212) 37
+(248, 281) 33
+(446, 518) 75
+HealthCommand: on_post_save_async called
+(165, 212) 37
+(248, 281) 33
+(446, 518) 75
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/tests/freq.c
+get_head_contents - freq.c True
+cmd: git show HEAD:tests/freq.c
+setup successful
+(165, 212) 37
+(248, 281) 33
+(446, 518) 75
+HealthCommand: on_post_save_async called
+(165, 212) 35
+(248, 281) 28
+(470, 542) 71
+HealthCommand: on_post_save_async called
+(165, 212) 33
+(248, 281) 27
+(499, 571) 70
+HealthCommand: on_post_save_async called
+(165, 212) 27
+(309, 329) 10
+(337, 370) 3
+(588, 660) 68
+HealthCommand: on_post_save_async called
+(165, 212) 37
+(248, 281) 31
+(446, 518) 71

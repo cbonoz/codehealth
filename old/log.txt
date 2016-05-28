@@ -103,3 +103,12 @@ our_health_render
 <Comment left_bounds:(107, 9) right_bounds:(107, 19) score:75>
 <Comment left_bounds:(196, 17) right_bounds:(196, 82) score:100>
 <Comment left_bounds:(266, 13) right_bounds:(266, 33) score:73>
+on_activated_async called
+Activate Health
+on_post_save_async called
+/Users/cbono/Documents/code/codehealth/codehealth_ln.py!=/Users/cbono/Documents/code/codehealth/old/HighlightUnsaved.py
+setup called
+get_head_contents - HighlightUnsaved.py True
+cmd: git show HEAD:old/HighlightUnsaved.py
+setup successful
+compare result: []

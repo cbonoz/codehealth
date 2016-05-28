@@ -1,12 +1,55 @@
-Activate Health - test1.py True
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/tests/demo/log.txt
+get_head_contents - log.txt False
+setup successful
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/tests/demo/test1.py
+get_head_contents - test1.py True
 cmd: git show HEAD:tests/demo/test1.py
-git error: Command 'git show HEAD:tests/demo/test1.py' returned non-zero exit status 128
-clear_colors called with
-{}
-compare result: []
-our_health_render
+setup successful
+compare result: [<User.codehealth.Comment object at 0x105cb7690>]
+<Comment left_bounds:(4, 5) right_bounds:(4, 53) score:100>
+HealthCommand: on_post_save_async called
+CommentHealth compare error: Error, got an unexpected token NAME here:
 
-cmd: git show HEAD:tests/demo/test1.py
-compare result: []
-our_health_render
+   1 #!/usr/bin/env python3
+   2 
+   3 def do_stuff():
+   4     #this function returns the arguments passed to it
+   5     fdsfdsfdsffasfsdafsdafsdf
+   6     import spdb ; spdb.start()fd<---- here
 
+The token NAME should be one of those: AMPER_EQUAL, CIRCUMFLEX_EQUAL, COLON, COMMA, COMMENT, DOUBLE_SLASH_EQUAL, DOUBLE_STAR_EQUAL, ENDL, EQUAL, LEFT_SHIFT_EQUAL, MINUS_EQUAL, PERCENT_EQUAL, PLUS_EQUAL, RIGHT_PARENTHESIS, RIGHT_SHIFT_EQUAL, SEMICOLON, SLASH_EQUAL, STAR_EQUAL, VBAR_EQUAL
+
+It is not normal that you see this error, it means that Baron has failed to parse valid Python code. It would be kind if you can extract the snippet of your code that makes Baron fail and open a bug here: https://github.com/Psycojoker/baron/issues
+
+Sorry for the inconvenience.
+HealthCommand: on_post_save_async called
+compare result: [<User.codehealth.Comment object at 0x10569bb10>]
+<Comment left_bounds:(4, 5) right_bounds:(4, 53) score:100>
+HealthCommand: on_post_save_async called
+CommentHealth compare error: Error, got an unexpected token NAME here:
+
+   1 #!/usr/bin/env python3
+   2 
+   3 def do_stuff():
+   4     #this function returns the arguments passed to it
+   5     fdsfdsfdsffasfsdafsdafsdf
+   6     dfdsffdsaf
+   7     sdfsdffdfdfssf
+   8     import spdb ; spdb.start()df<---- here
+
+The token NAME should be one of those: AMPER_EQUAL, CIRCUMFLEX_EQUAL, COLON, COMMA, COMMENT, DOUBLE_SLASH_EQUAL, DOUBLE_STAR_EQUAL, ENDL, EQUAL, LEFT_SHIFT_EQUAL, MINUS_EQUAL, PERCENT_EQUAL, PLUS_EQUAL, RIGHT_PARENTHESIS, RIGHT_SHIFT_EQUAL, SEMICOLON, SLASH_EQUAL, STAR_EQUAL, VBAR_EQUAL
+
+It is not normal that you see this error, it means that Baron has failed to parse valid Python code. It would be kind if you can extract the snippet of your code that makes Baron fail and open a bug here: https://github.com/Psycojoker/baron/issues
+
+Sorry for the inconvenience.
+HealthCommand: on_post_save_async called
+compare result: [<User.codehealth.Comment object at 0x105683510>]
+<Comment left_bounds:(4, 5) right_bounds:(4, 53) score:100>
+HealthCommand: on_post_save_async called
+compare result: [<User.codehealth.Comment object at 0x105683a10>]
+<Comment left_bounds:(4, 5) right_bounds:(4, 53) score:100>
+HealthCommand: on_post_save_async called
+compare result: [<User.codehealth.Comment object at 0x104880850>]
+<Comment left_bounds:(4, 5) right_bounds:(4, 53) score:100>
