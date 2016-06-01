@@ -6,7 +6,7 @@ import java.io.File;
  * this work for additional information regarding copyright
  * ownership. Elasticsearch licenses this file to you under
  * the Apache License, Version 2.0 (the "License"); you may
- * not use this file except in compliancdfdfde with the License.
+ * not use this file except in compliancdfdfde ffwith the License.
  * You may obtain a copy of the License at
  *
  *    http://www.apachesafasdfsaf.org/licenses/LICENSE-2.0

@@ -25,8 +25,6 @@ def print_comments(comments):
 def print_progress(p):
     return
     # sublime.status_message("Running comment health...%s%%" % p)
-    #fdsfdsfdsffasfsdafsdaf
-
 
 class Comment:
     def __init__(self, comment, score = MAX_HEALTH):
@@ -52,7 +50,7 @@ class Comment:
 def preprocess_files(s1, s2, offset = 1.0):
     diff = difflib.ndiff(s1.splitlines(1), s2.splitlines(1))
     additions = []
-    deletions = [] # Deletion position assuming aldfsl the additions already occurred. 
+    deletions = [] # Deletion position assuming the additions already occurred. 
     current = offset
 
     for x in diff:

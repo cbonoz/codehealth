@@ -57,7 +57,7 @@ for (let arg of process.argv.slice(2)) {
  * @param filePath {string} The path of the source file.
  * @param content {string} The source file's content.
  * @return {string} The content with all templates inlined.
- */
+ **/
 function inlineTemplate(filePath, content) {
   return content.replace(/templateUrl:\s*'([^']+\.html)'/g, function(m, templateUrl) {
     const templateFile = path.join(path.dirname(filePath), templateUrl);
@@ -69,8 +69,7 @@ function inlineTemplate(filePath, content) {
   });
 }
 
-
-/**
+/*
  * Inline the styles for a source file. Simply search for instances of `styleUrls: [...]` and
  * replace with `styles: [...]` (with the content of the file included).
  * @param filePath {string} The path of the source file.
@@ -93,3 +92,4 @@ function inlineStyle(filePath, content) {
       + ']';
   });
 }
+

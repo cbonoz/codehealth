@@ -17,7 +17,7 @@ public class WordCount {
     }
 
 
-    // allow multiple pggicksffdsfsdf
+    // allow multiple fpggicksffdsfsdf
     public static void countWordsViaGUI() {
         setLookAndFeel();
         try {

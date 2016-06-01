@@ -1,22 +1,31 @@
 import sys,os, os.path
 sys.path.append(os.path.dirname(__file__))
+# sys.path.append(os.path.join(os.path.dirname(__file__), "env", "lib", "python3.5","site-packages"))
 
 import difflib
 import json, math
 from redbaron import RedBaron
-import sublime, sublime_plugin
+
 import random, traceback
-from comment_parser import comment_parser
+
+
+#edit this parser from the sublime packages directory directly
+# /Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/parsers
+from parsers import comment_parse
+# from comment_parser import comment_parser
+
 
 import subprocess, time
 # import threading
+
+import sublime, sublime_plugin
 
 #granularity for color scopes
 COLOR_LIMIT = 100
 
 #scale used for calculating code decay amount
 OUR_DECAY_FACTOR = 8000
-
+PARSER_DECAY_FACTOR = 20
 #max health value
 MAX_HEALTH = 100
 
@@ -26,9 +35,12 @@ colormap = {}
 #indicates if the plugin highlighting is active (toggled via sublime commands)
 ACTIVE = True
 
+PRINT_TO_LOG = False
+
 def print_to_log(txt):
-    with open("./log.txt","a+") as f:
-            f.write(str(txt) + "\n")
+    if PRINT_TO_LOG:
+        with open("./log.txt","a+") as f:
+                f.write(str(txt) + "\n")
 
 def print_comments(comments):
     for c in comments:
@@ -134,7 +146,7 @@ def compare(s1, s2, decay_factor = OUR_DECAY_FACTOR):
                 result.extend(preprocess_comments(ast_f2, []))
 
         result = [r for r in result if r != []]
-        print_to_log("compare result: " + str(result))
+        # print_to_log("compare result: " + str(result))
         return result
 
     except Exception as e:
@@ -169,11 +181,15 @@ def get_score_function(head_text, current_text):
     # diff = list(difflib.ndiff(head_text.splitlines(), current_text.splitlines()))
     try:
         diff = DIFFER.compare(current_text.splitlines(), head_text.splitlines())
+        #print diff to log
         # deltas = '\n'.join(diff)
+        
+        print_to_log("diff: " + str(diff))
         lineNum = 0
         line_deltas = list()
         for line in diff:
             # split off the code
+            print_to_log("line: " + str(line))
             code = line[:2]
             # if the  line is in both files or just b, increment the line number.
             # if code in ("  ", "+ "):
@@ -183,11 +199,11 @@ def get_score_function(head_text, current_text):
                 line_deltas.append(lineNum)
                 # line_deltas.append("%d: %s" % (lineNum, line[2:].strip()))
 
+        print_to_log("line_deltas: " + str(line_deltas))
         def f(line_number):
-            # return 0
-            decay_factor = 20
-            decays = list(map(lambda x: int(decay_factor/(abs(x - line_number))), [x for x in line_deltas if x != line_number]))
-            # print_to_log("comment line %s, decays: %s" % (line_number, str(decays)))
+            global PARSER_DECAY_FACTOR
+            decays = list(map(lambda x: int(PARSER_DECAY_FACTOR/(abs(x - line_number))), [x for x in line_deltas if x != line_number]))
+            print_to_log("comment line %s, decays: %s" % (line_number, str(decays)))
            
             return max(MAX_HEALTH-sum(decays),0)
 
@@ -310,9 +326,18 @@ class HealthCommand(sublime_plugin.EventListener):
             print_progress(0)
             if self.parser_supported:
                 # comment_parser works off saved version! not local version (can't use on_modified)
-                cs = comment_parser.extract_comments(current_file) 
-                score_function = get_score_function(HealthCommand.last_file_contents, current_text)
-                parser_health_render(self, view, cs, score_function)
+                # my comment_parse does not have this restriction
+                try:
+                    print_to_log("parser '%s' current text len: %d" % (self.file_ext, len(current_text)))
+                    cs = comment_parse.extract_comments(current_text, self.file_ext)
+                    if len(cs) == 1:
+                        print_to_log(cs[0])
+                    score_function = get_score_function(HealthCommand.last_file_contents, current_text)
+                    print_to_log("parser cs: " + str(cs))
+                    parser_health_render(self, view, cs, score_function)
+                except Exception as e:
+                    print_to_log(e)
+                    return
             elif self.our_supported:
                 cs = compare(HealthCommand.last_file_contents, current_text)
                 our_health_render(self, view, cs)
@@ -323,12 +348,15 @@ class HealthCommand(sublime_plugin.EventListener):
             print_to_log(traceback.format_exc())
             pass
 
+    #real-time updates on non-python (non-AST comment parsed) files
     def on_modified_async(self, view):
         #need to clear contents as insertion of new characters will shift current code health highlighted regions - unless a more clever way to do this
-        # clear_colors(self, view)
-        # self.render_health_scores(view)
+        if self.parser_supported:
+            clear_colors(self, view)
+            self.render_health_scores(view)
         return
 
+    #run for all parsers
     def on_post_save_async(self, view):
         print_to_log("HealthCommand: on_post_save_async called")
         clear_colors(self,view)
@@ -353,3 +381,8 @@ class RemoveHealthCommand(sublime_plugin.TextCommand):
         global ACTIVE
         ACTIVE = False
         sublime.status_message("Remove Health Trigger")
+
+
+
+
+

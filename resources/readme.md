@@ -70,6 +70,20 @@ Sublime Plugin requires editing the sublime color theme file (color themes for h
 
 Refer to https://www.sublimetext.com/docs/3/api_reference.html.
 
+
+### Resources
+https://github.com/Colorsublime/Colorsublime-Plugin/blob/master/colorsublime/reloader.py
+http://stackoverflow.com/questions/15180537/how-to-include-third-party-python-packages-in-sublime-text-2-plugins
+http://code.tutsplus.com/tutorials/how-to-create-a-sublime-text-2-plugin--net-22685
+
+<!--
+You don't even need to use rm in this case if you are afraid. Use find:
+
+find . -name "*.bak" -type f -delete
+But use it with precaution. Run first:
+
+find . -name "*.bak" -type f
+-->
 <!-- 
 
 """

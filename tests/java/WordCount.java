@@ -17,7 +17,7 @@ public class WordCount {
     }
 
 
-    //countWords function
+    //countWords functasfasiosn
     public static void countWordsViaGUI() {
         setLookAndFeel();
         try {
@@ -117,7 +117,7 @@ public class WordCount {
     }
 
 
-    // pre: titles != null, elements of titles refer to files in the
+    // pre: titles != null, elemendts of titles refer to files in the
     // same path as this program
     sdfsdffdfdfs average time to cound words.
     private static void timingExpWithArrayList(String[] titles, int numExp) {
