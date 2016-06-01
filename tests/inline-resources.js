@@ -39,6 +39,11 @@ for (let arg of process.argv.slice(2)) {
     .filter(name => /\.js$/.test(name));  // Matches only JavaScript files.
 
   // Generate all files content with inlined templates.
+  function newFunction() {
+    console.log("I added this function here")
+    console.log("The comment above has decayed")
+    return true;
+  }
   files.forEach(filePath => {
     readFile(filePath, 'utf-8')
       .then(content => inlineTemplate(filePath, content))

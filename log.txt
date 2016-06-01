@@ -1,0 +1,250 @@
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+health not active
+HealthCommand: on_post_save_async called
+health not active
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/codehealth_ln.py
+get_head_contents - codehealth_ln.py True
+cmd: git show HEAD:codehealth_ln.py
+setup successful
+CommentHealth compare error: Unexpected 'space' token:
+
+   1 /Users/cbono/Library/Application <--- here
+
+Should have been grouped on either ('NAME', 'Application') (before) or ('NAME', 'Support') (after) token.
+HealthCommand: on_post_save_async called
+CommentHealth compare error: Unexpected 'space' token:
+
+   1 /Users/cbono/Library/Application <--- here
+
+Should have been grouped on either ('NAME', 'Application') (before) or ('NAME', 'Support') (after) token.
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/codehealth_ln.py
+get_head_contents - codehealth_ln.py True
+cmd: git show HEAD:codehealth_ln.py
+setup successful
+CommentHealth compare error: Unexpected 'space' token:
+
+   1 /Users/cbono/Library/Application <--- here
+
+Should have been grouped on either ('NAME', 'Application') (before) or ('NAME', 'Support') (after) token.
+HealthCommand: on_post_save_async called
+Traceback (most recent call last):
+  File "/Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/codehealth.py", line 327, in render_health_scores
+    # comment_parser works off saved version! not local version (can't use on_modified)
+AttributeError: 'HealthCommand' object has no attribute 'parser_supported'
+
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/codehealth_ln.py
+get_head_contents - codehealth_ln.py True
+cmd: git show HEAD:codehealth_ln.py
+setup successful
+CommentHealth compare error: Unexpected 'space' token:
+
+   1 /Users/cbono/Library/Application <--- here
+
+Should have been grouped on either ('NAME', 'Application') (before) or ('NAME', 'Support') (after) token.
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/codehealth_ln.py
+get_head_contents - codehealth_ln.py True
+cmd: git show HEAD:codehealth_ln.py
+setup successful
+CommentHealth compare error: Unexpected 'space' token:
+
+   1 /Users/cbono/Library/Application <--- here
+
+Should have been grouped on either ('NAME', 'Application') (before) or ('NAME', 'Support') (after) token.
+on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/codehealth_ln.py
+get_head_contents - codehealth_ln.py True
+cmd: git show HEAD:codehealth_ln.py
+setup successful
+CommentHealth compare error: Unexpected 'space' token:
+
+   1 /Users/cbono/Library/Application <--- here
+
+Should have been grouped on either ('NAME', 'Application') (before) or ('NAME', 'Support') (after) token.
+on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/codehealth_ln.py
+get_head_contents - codehealth_ln.py True
+cmd: git show HEAD:codehealth_ln.py
+setup successful
+CommentHealth compare error: Unexpected 'space' token:
+
+   1 /Users/cbono/Library/Application <--- here
+
+Should have been grouped on either ('NAME', 'Application') (before) or ('NAME', 'Support') (after) token.

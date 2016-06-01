@@ -1,0 +1,266 @@
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/tests/log.txt
+get_head_contents - log.txt False
+setup successful
+Activate Health
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/tests/freq.c
+get_head_contents - freq.c True
+cmd: git show HEAD:tests/freq.c
+setup successful
+parser 'c' current text len: 629
+line_deltas: []
+parser cs: [<parsers.parsers.common.Comment object at 0x10f791410>, <parsers.parsers.common.Comment object at 0x1119ba8d0>, <parsers.parsers.common.Comment object at 0x115f3f810>]
+comment line 12, decays: []
+comment line 16, decays: []
+comment line 26, decays: []
+(165, 212) 100
+(249, 283) 100
+(418, 490) 100
+loading contents: /Users/cbono/Documents/code/codehealth/tests/log.txt
+get_head_contents - log.txt False
+setup successful
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/tests/freq.c
+get_head_contents - freq.c True
+cmd: git show HEAD:tests/freq.c
+setup successful
+parser 'c' current text len: 765
+line_deltas: [16, 17, 18, 19]
+parser cs: [<parsers.parsers.common.Comment object at 0x1116b94d0>, <parsers.parsers.common.Comment object at 0x10f697f10>, <parsers.parsers.common.Comment object at 0x10f697850>, <parsers.parsers.common.Comment object at 0x10f697b50>, <parsers.parsers.common.Comment object at 0x10f6974d0>, <parsers.parsers.common.Comment object at 0x10f697450>, <parsers.parsers.common.Comment object at 0x10f6975d0>]
+comment line 12, decays: [5, 4, 3, 2]
+comment line 16, decays: [20, 10, 6]
+comment line 17, decays: [20, 20, 10]
+comment line 18, decays: [10, 20, 20]
+comment line 19, decays: [6, 10, 20]
+comment line 20, decays: [5, 6, 10, 20]
+comment line 30, decays: [1, 1, 1, 1]
+(165, 212) 86
+(249, 283) 64
+(283, 317) 50
+(317, 351) 50
+(351, 385) 64
+(385, 419) 59
+(554, 626) 96
+loading contents: /Users/cbono/Documents/code/codehealth/tests/log.txt
+get_head_contents - log.txt False
+setup successful
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/tests/freq.c
+get_head_contents - freq.c True
+cmd: git show HEAD:tests/freq.c
+setup successful
+parser 'c' current text len: 765
+line_deltas: [16, 17, 18, 19]
+parser cs: [<parsers.parsers.common.Comment object at 0x10f697790>, <parsers.parsers.common.Comment object at 0x10f697090>, <parsers.parsers.common.Comment object at 0x10f697b50>, <parsers.parsers.common.Comment object at 0x10f697e10>, <parsers.parsers.common.Comment object at 0x10f697e90>, <parsers.parsers.common.Comment object at 0x10f6977d0>, <parsers.parsers.common.Comment object at 0x10f697a10>]
+comment line 12, decays: [5, 4, 3, 2]
+comment line 16, decays: [20, 10, 6]
+comment line 17, decays: [20, 20, 10]
+comment line 18, decays: [10, 20, 20]
+comment line 19, decays: [6, 10, 20]
+comment line 20, decays: [5, 6, 10, 20]
+comment line 30, decays: [1, 1, 1, 1]
+(165, 212) 86
+(249, 283) 64
+(283, 317) 50
+(317, 351) 50
+(351, 385) 64
+(385, 419) 59
+(554, 626) 96
+loading contents: /Users/cbono/Documents/code/codehealth/tests/log.txt
+get_head_contents - log.txt False
+setup successful
+HealthCommand: on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/tests/freq.c
+get_head_contents - freq.c True
+cmd: git show HEAD:tests/freq.c
+setup successful
+parser 'c' current text len: 1127
+line_deltas: [17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]
+parser cs: [<parsers.parsers.common.Comment object at 0x11197e690>, <parsers.parsers.common.Comment object at 0x11197e510>, <parsers.parsers.common.Comment object at 0x10f761f90>, <parsers.parsers.common.Comment object at 0x10f761b50>, <parsers.parsers.common.Comment object at 0x10f761c50>, <parsers.parsers.common.Comment object at 0x10f761990>, <parsers.parsers.common.Comment object at 0x10f761890>, <parsers.parsers.common.Comment object at 0x10f761750>, <parsers.parsers.common.Comment object at 0x10f7610d0>, <parsers.parsers.common.Comment object at 0x10f761390>, <parsers.parsers.common.Comment object at 0x10f761e50>, <parsers.parsers.common.Comment object at 0x10f761f50>, <parsers.parsers.common.Comment object at 0x10f761090>, <parsers.parsers.common.Comment object at 0x10f761150>]
+comment line 12, decays: [4, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+comment line 16, decays: [20, 10, 6, 5, 4, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1]
+comment line 17, decays: [20, 10, 6, 5, 4, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1]
+comment line 18, decays: [20, 20, 10, 6, 5, 4, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1]
+comment line 19, decays: [10, 20, 20, 10, 6, 5, 4, 3, 2, 2, 2, 2, 1, 1, 1, 1]
+comment line 20, decays: [6, 10, 20, 20, 10, 6, 5, 4, 3, 2, 2, 2, 2, 1, 1, 1]
+comment line 21, decays: [5, 6, 10, 20, 20, 10, 6, 5, 4, 3, 2, 2, 2, 2, 1, 1]
+comment line 22, decays: [4, 5, 6, 10, 20, 20, 10, 6, 5, 4, 3, 2, 2, 2, 2, 1]
+comment line 23, decays: [3, 4, 5, 6, 10, 20, 20, 10, 6, 5, 4, 3, 2, 2, 2, 2]
+comment line 24, decays: [2, 3, 4, 5, 6, 10, 20, 20, 10, 6, 5, 4, 3, 2, 2, 2]
+comment line 25, decays: [2, 2, 3, 4, 5, 6, 10, 20, 20, 10, 6, 5, 4, 3, 2, 2]
+comment line 26, decays: [2, 2, 2, 3, 4, 5, 6, 10, 20, 20, 10, 6, 5, 4, 3, 2]
+comment line 27, decays: [2, 2, 2, 2, 3, 4, 5, 6, 10, 20, 20, 10, 6, 5, 4, 3]
+comment line 43, decays: [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]
+(165, 212) 75
+(249, 283) 37
+(283, 317) 38
+(317, 351) 19
+(351, 385) 10
+(385, 419) 5
+(419, 453) 1
+(453, 487) 0
+(487, 521) 0
+(521, 555) 0
+(555, 589) 0
+(589, 623) 0
+(623, 657) 0
+(916, 988) 88
+HealthCommand: on_post_save_async called
+parser 'c' current text len: 765
+line_deltas: [16, 17, 18, 19]
+parser cs: [<parsers.parsers.common.Comment object at 0x11197e690>, <parsers.parsers.common.Comment object at 0x10f681bd0>, <parsers.parsers.common.Comment object at 0x10f681050>, <parsers.parsers.common.Comment object at 0x10f681dd0>, <parsers.parsers.common.Comment object at 0x10f761890>, <parsers.parsers.common.Comment object at 0x10f761690>, <parsers.parsers.common.Comment object at 0x10f761f50>]
+comment line 12, decays: [5, 4, 3, 2]
+comment line 16, decays: [20, 10, 6]
+comment line 17, decays: [20, 20, 10]
+comment line 18, decays: [10, 20, 20]
+comment line 19, decays: [6, 10, 20]
+comment line 20, decays: [5, 6, 10, 20]
+comment line 30, decays: [1, 1, 1, 1]
+(165, 212) 86
+(249, 283) 64
+(283, 317) 50
+(317, 351) 50
+(351, 385) 64
+(385, 419) 59
+(554, 626) 96
+on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/tests/freq.c
+get_head_contents - freq.c True
+cmd: git show HEAD:tests/freq.c
+setup successful
+parser 'c' current text len: 765
+line_deltas: [16, 17, 18, 19]
+parser cs: [<parsers.parsers.common.Comment object at 0x115ed9150>, <parsers.parsers.common.Comment object at 0x10f678b50>, <parsers.parsers.common.Comment object at 0x10f678b90>, <parsers.parsers.common.Comment object at 0x10f678110>, <parsers.parsers.common.Comment object at 0x10f678290>, <parsers.parsers.common.Comment object at 0x111737610>, <parsers.parsers.common.Comment object at 0x10f75b690>]
+comment line 12, decays: [5, 4, 3, 2]
+comment line 16, decays: [20, 10, 6]
+comment line 17, decays: [20, 20, 10]
+comment line 18, decays: [10, 20, 20]
+comment line 19, decays: [6, 10, 20]
+comment line 20, decays: [5, 6, 10, 20]
+comment line 30, decays: [1, 1, 1, 1]
+(165, 212) 86
+(249, 283) 64
+(283, 317) 50
+(317, 351) 50
+(351, 385) 64
+(385, 419) 59
+(554, 626) 96
+on_post_save_async called
+parser 'c' current text len: 844
+line_deltas: [17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+parser cs: [<parsers.parsers.common.Comment object at 0x10f75b990>, <parsers.parsers.common.Comment object at 0x10f75b410>, <parsers.parsers.common.Comment object at 0x10f75b6d0>, <parsers.parsers.common.Comment object at 0x10f75b350>, <parsers.parsers.common.Comment object at 0x10f75ba10>, <parsers.parsers.common.Comment object at 0x10f75b590>, <parsers.parsers.common.Comment object at 0x10f75bd10>]
+comment line 12, decays: [4, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1]
+comment line 16, decays: [20, 10, 6, 5, 4, 3, 2, 2, 2, 2, 1]
+comment line 17, decays: [20, 10, 6, 5, 4, 3, 2, 2, 2, 2]
+comment line 18, decays: [20, 20, 10, 6, 5, 4, 3, 2, 2, 2]
+comment line 19, decays: [10, 20, 20, 10, 6, 5, 4, 3, 2, 2]
+comment line 20, decays: [6, 10, 20, 20, 10, 6, 5, 4, 3, 2]
+comment line 35, decays: [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2]
+(165, 212) 80
+(249, 283) 43
+(283, 317) 44
+(317, 351) 26
+(351, 385) 18
+(385, 419) 14
+(633, 705) 86
+on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/tests/inline-resources.js
+get_head_contents - inline-resources.js True
+cmd: git show HEAD:tests/inline-resources.js
+setup successful
+parser 'js' current text len: 3355
+line_deltas: [42, 43, 44, 45, 46]
+parser cs: [<parsers.parsers.common.Comment object at 0x10f7562d0>, <parsers.parsers.common.Comment object at 0x10f756f50>, <parsers.parsers.common.Comment object at 0x10f756c50>, <parsers.parsers.common.Comment object at 0x10f756290>, <parsers.parsers.common.Comment object at 0x115ed9150>, <parsers.parsers.common.Comment object at 0x115ed9f10>]
+comment line 5, decays: [0, 0, 0, 0, 0]
+comment line 29, decays: [1, 1, 1, 1, 1]
+comment line 34, decays: [2, 2, 2, 1, 1]
+comment line 39, decays: [6, 5, 4, 3, 2]
+comment line 41, decays: [20, 10, 6, 5, 4]
+comment line 59, decays: [1, 1, 1, 1, 1]
+(87, 322) 100
+(731, 827) 95
+(898, 979) 92
+(1056, 1132) 80
+(1133, 1189) 55
+(1652, 1998) 95
+on_post_save_async called
+parser 'js' current text len: 3355
+line_deltas: [42, 43, 44, 45, 46]
+parser cs: [<parsers.parsers.common.Comment object at 0x115ed9150>, <parsers.parsers.common.Comment object at 0x115ef4f50>, <parsers.parsers.common.Comment object at 0x10f75bf10>, <parsers.parsers.common.Comment object at 0x10f75bed0>, <parsers.parsers.common.Comment object at 0x10f75b190>, <parsers.parsers.common.Comment object at 0x10f75b450>]
+comment line 5, decays: [0, 0, 0, 0, 0]
+comment line 29, decays: [1, 1, 1, 1, 1]
+comment line 34, decays: [2, 2, 2, 1, 1]
+comment line 39, decays: [6, 5, 4, 3, 2]
+comment line 41, decays: [20, 10, 6, 5, 4]
+comment line 59, decays: [1, 1, 1, 1, 1]
+(87, 322) 100
+(731, 827) 95
+(898, 979) 92
+(1056, 1132) 80
+(1133, 1189) 55
+(1652, 1998) 95
+on_post_save_async called
+loading contents: /Users/cbono/Documents/code/codehealth/tests/freq.c
+get_head_contents - freq.c True
+cmd: git show HEAD:tests/freq.c
+setup successful
+parser 'c' current text len: 643
+line_deltas: [17, 18, 19]
+parser cs: [<parsers.parsers.common.Comment object at 0x111764350>, <parsers.parsers.common.Comment object at 0x11129cdd0>, <parsers.parsers.common.Comment object at 0x11129c050>]
+comment line 12, decays: [4, 3, 2]
+comment line 16, decays: [20, 10, 6]
+comment line 27, decays: [2, 2, 2]
+(165, 212) 91
+(249, 283) 64
+(432, 504) 94
+on_post_save_async called
+parser 'c' current text len: 642
+line_deltas: [17, 18, 19]
+parser cs: [<parsers.parsers.common.Comment object at 0x10f7561d0>, <parsers.parsers.common.Comment object at 0x10f756fd0>, <parsers.parsers.common.Comment object at 0x10f756210>]
+comment line 12, decays: [4, 3, 2]
+comment line 16, decays: [20, 10, 6]
+comment line 27, decays: [2, 2, 2]
+(165, 212) 91
+(249, 283) 64
+(431, 503) 94
+on_post_save_async called
+parser 'c' current text len: 641
+line_deltas: [17, 18]
+parser cs: [<parsers.parsers.common.Comment object at 0x11606cc90>, <parsers.parsers.common.Comment object at 0x11606c290>, <parsers.parsers.common.Comment object at 0x10f75bd10>]
+comment line 12, decays: [4, 3]
+comment line 16, decays: [20, 10]
+comment line 26, decays: [2, 2]
+(165, 212) 93
+(249, 283) 70
+(430, 502) 96
+on_post_save_async called
+parser 'c' current text len: 631
+line_deltas: [17, 18, 28, 29]
+parser cs: [<parsers.parsers.common.Comment object at 0x10f75b290>, <parsers.parsers.common.Comment object at 0x10f75b190>, <parsers.parsers.common.Comment object at 0x115f6e8d0>]
+comment line 12, decays: [4, 3, 1, 1]
+comment line 16, decays: [20, 10, 1, 1]
+comment line 26, decays: [2, 2, 10, 6]
+(165, 212) 91
+(249, 283) 68
+(430, 502) 80
+on_post_save_async called
+parser 'c' current text len: 630
+line_deltas: [17, 18, 28, 29]
+parser cs: [<parsers.parsers.common.Comment object at 0x1115f6390>, <parsers.parsers.common.Comment object at 0x11164bc50>, <parsers.parsers.common.Comment object at 0x11164ba10>]
+comment line 12, decays: [4, 3, 1, 1]
+comment line 16, decays: [20, 10, 1, 1]
+comment line 26, decays: [2, 2, 10, 6]
+(165, 212) 91
+(249, 283) 68
+(430, 502) 80
+on_post_save_async called
+parser 'c' current text len: 629
+line_deltas: [17, 18, 28]
+parser cs: [<parsers.parsers.common.Comment object at 0x11606cc90>, <parsers.parsers.common.Comment object at 0x11606c290>, <parsers.parsers.common.Comment object at 0x11606c050>]
+comment line 12, decays: [4, 3, 1]
+comment line 16, decays: [20, 10, 1]
+comment line 26, decays: [2, 2, 10]
+(165, 212) 92
+(249, 283) 69
+(430, 502) 86
