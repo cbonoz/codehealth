@@ -31,6 +31,9 @@ class Comment(object):
         self._text = text
         self._line_number = line_number
         self._multiline = multiline
+        # self._lines = 1
+        # if self._multiline:
+        #     self._lines += text.count('\n')
 
     def text(self):
         """Returns the comment's text.

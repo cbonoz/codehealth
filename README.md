@@ -117,4 +117,7 @@ Valid values: `system` (OS-dependent), `windows` (CRLF) and `unix` (LF).
 * global radiation
 * radiation calculation on save
 
+### bugs
+<!-- moving commment downwards affects  -->
+
 

@@ -1,30 +1,16 @@
 import difflib
-import sys, json, math
+import json, math, sys
 from redbaron import RedBaron
 
-#scale used for calculating code decay amount
-DEFAULT_DECAY_FACTOR = 50000
+"""
+Compare.py
+"""
 
-# DISTANCE_FACTOR = 5
-# on_activated_count = 1
-# on_load_count = 1
-
+#max health value
 MAX_HEALTH = 100
 
-
-def print_to_log(txt):
-    with open("./log.txt","a+") as f:
-            f.write(str(txt) + "\n") 
-
-def print_comments(comments):
-    for c in comments:
-        # print(c)
-        print_to_log(str(c))
-
-
-def print_progress(p):
-    return
-    # sublime.status_message("Running comment health...%s%%" % p)
+#scale used for calculating code decay amount
+OUR_DECAY_FACTOR = 10
 
 class Comment:
     def __init__(self, comment, score = MAX_HEALTH):
@@ -50,7 +36,7 @@ class Comment:
 def preprocess_files(s1, s2, offset = 1.0):
     diff = difflib.ndiff(s1.splitlines(1), s2.splitlines(1))
     additions = []
-    deletions = [] # Deletion position assuming the additions already occurred. 
+    deletions = [] # Deletion position assuming aldfsl the additions already occurred. 
     current = offset
 
     for x in diff:
@@ -76,52 +62,46 @@ def preprocess_comments(f, excludes):
             exceptions.append(comment)
         
     return comments, exceptions
-    
-def compute_addition(c, distance):
-    return int(c.score() - float(DEFAULT_DECAY_FACTOR) / (distance * distance))
-    
-def compute_deletion(c, distance):
-    return int(c.score() - float(DEFAULT_DECAY_FACTOR) / (distance * distance * distance))
 
-def compare(s1, s2):
-    red1 = RedBaron(s1)
-    red2 = RedBaron(s2)
-    result = []
+def compare(s1, s2, decay_factor = OUR_DECAY_FACTOR):
+    try:
+        red1 = RedBaron(s1)
+        red2 = RedBaron(s2)
+        result = []
 
-    defs = red2.find_all('def')
-    length = len(defs)
-    for ast_f2 in defs:
-        ast_f1 = red1.find('def', name = ast_f2.name)        
-        if ast_f1 is not None:
-            additions, deletions = preprocess_files(ast_f1.dumps(),
-                                                    ast_f2.dumps())
-            comments, exceptions = preprocess_comments(ast_f2, additions) 
-            for a in additions:
-                for c in comments:
-                    line, _ = c.left_bounds
-                    distance = math.fabs(line - a)
-                    score = compute_addition(c, distance)
-                    c.setScore(score if score > 0 else 0)
-            for d in deletions:
-                for c in comments:
-                    line, _ = c.left_bounds
-                    line = line + 1 if line >= d else line
-                    distance = math.fabs(line - d)
-                    score = compute_deletion(c, distance)
-                    c.setScore(score if score > 0 else 0)
-            result.extend(comments)
-            result.extend(exceptions)
-        else:
-            result.extend(preprocess_comments(ast_f2, []))
-        # print_progress(int(index/length))
+        defs = red2.find_all('def')
+        length = len(defs)
+        for ast_f2 in defs:
+            ast_f1 = red1.find('def', name = ast_f2.name)        
+            if ast_f1 is not None:
+                additions, deletions = preprocess_files(ast_f1.dumps(),
+                                                        ast_f2.dumps())
+                comments, exceptions = preprocess_comments(ast_f2, additions) 
+                for a in additions:
+                    for c in comments:
+                        line, _ = c.left_bounds
+                        distance = math.fabs(line - a)
+                        score = int(c.score() - float(decay_factor) / (distance * distance))
+                        c.setScore(score if score > 0 else 0)
+                for d in deletions:
+                    for c in comments:
+                        line, _ = c.left_bounds
+                        line = line + 1 if line >= d else line
+                        distance = math.fabs(line - d)
+                        score = int(c.score() - float(decay_factor) / (distance * distance))
 
-    result = [r for r in result if r != []]
-    
-    return result
+                        c.setScore(score if score > 0 else 0)
+                result.extend(comments)
+                result.extend(exceptions)
+            else:
+                result.extend(preprocess_comments(ast_f2, []))
 
+        result = [r for r in result if r != []]
+        return result
 
+    except Exception as e:
+        err = "CommentHealth compare error: " + str(e)
+        # sublime.status_message(err)
+        return []
+        
 
-if __name__ == '__main__':
-    f1 = open(sys.argv[1], "r")
-    f2 = open(sys.argv[2], "r")
-    print_comments(compare(f1.read(), f2.read()))

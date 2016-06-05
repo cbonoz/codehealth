@@ -12,7 +12,7 @@ int main()
    //iterate over the characters in the string
 
    while (string[c] != '\0')
-   {df
+   {
       /** and ignoring others **/
             
       if (string[c] >= 'a' && string[c] <= 'z') 
