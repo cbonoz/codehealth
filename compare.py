@@ -1,6 +1,6 @@
 import difflib
 import sys, json, math
-from redbaron import RedBaron
+from .redbaron import RedBaron
 
 #scale used for calculating code decay amount
 PYTHON_DECAY_FACTOR = 50
