@@ -12,7 +12,7 @@ PYTHON_DECAY_FACTOR = 50
 MAX_HEALTH = 100
 
 def print_to_log(txt):
-    with open("~/codehealth_log.txt","a+") as f:
+    with open("codehealth_log.txt","a+") as f:
             f.write(str(txt) + "\n") 
 
 def print_comments(comments):
@@ -114,7 +114,7 @@ def compare(s1, s2, decay_factor = PYTHON_DECAY_FACTOR):
             else:
                 comments, _ = preprocess_comments(ast_f2, [])
                 result.extend(comments)
-        
+
         print_to_log('Result: ' + str(result))
         return result
 

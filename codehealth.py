@@ -23,7 +23,7 @@ colormap = {}
 ACTIVE = True
 
 PRINT_TO_LOG = True
-LOG_FILE = "./log.txt"
+LOG_FILE = "log.txt"
 def print_to_log(txt):
 
     if PRINT_TO_LOG:
@@ -136,8 +136,6 @@ def parser_health_render(self, view, cs, score_function):
 
 #renders the list of comments/scores on the sublime view (using python parsing engine)
 def python_health_render(self, view, cs):
-    cs = flatten(cs)
-
     print_to_log("cs: " + str(cs))
 
     print_comments(cs)
