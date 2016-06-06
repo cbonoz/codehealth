@@ -1,45 +1,33 @@
-import sys,os, os.path
+import sys, os, os.path
 sys.path.append(os.path.dirname(__file__))
-# sys.path.append(os.path.join(os.path.dirname(__file__), "env", "lib", "python3.5","site-packages"))
-
 import difflib
-import json, math
+import json, math, sys
 from redbaron import RedBaron
-
+import compare
+import comment_parse
 import random, traceback
-
-
-#edit this parser from the sublime packages directory directly
-# /Users/cbono/Library/Application Support/Sublime Text 3/Packages/User/parsers
-from parsers import comment_parse
-# from comment_parser import comment_parser
-
-
 import subprocess, time
-# import threading
-
 import sublime, sublime_plugin
+
+def flatten(l): return flatten(l[0]) + (flatten(l[1:]) if len(l) > 1 else []) if type(l) is list else [l]
 
 #granularity for color scopes
 COLOR_LIMIT = 100
 
-#scale used for calculating code decay amount
-OUR_DECAY_FACTOR = 8000
+#decay factor for other non-AST highlighted languages (non-python)
 PARSER_DECAY_FACTOR = 20
-#max health value
-MAX_HEALTH = 100
 
 # global to share between activate and deactivate commands
 colormap = {}
-
 #indicates if the plugin highlighting is active (toggled via sublime commands)
 ACTIVE = True
 
-PRINT_TO_LOG = False
-
+PRINT_TO_LOG = True
+LOG_FILE = "./log.txt"
 def print_to_log(txt):
+
     if PRINT_TO_LOG:
-        with open("./log.txt","a+") as f:
+        with open(LOG_FILE,"a+") as f:
                 f.write(str(txt) + "\n")
 
 def print_comments(comments):
@@ -55,112 +43,6 @@ def bash_command(cmd, folder):
 
 def print_progress(p):
     sublime.status_message("Running comment health...%s%%" % p)
-
-"""
-Compare.py
-"""
-
-class Comment:
-    def __init__(self, comment, score = MAX_HEALTH):
-        self._comment = comment
-        self._score = score
-        self.left_bounds = (self._comment.absolute_bounding_box.top_left.line,
-                self._comment.absolute_bounding_box.top_left.column)
-        self.right_bounds = (self._comment.absolute_bounding_box.bottom_right.line,
-                self._comment.absolute_bounding_box.bottom_right.column)
-        
-    def score(self):
-        return self._score
-        
-    def setScore(self, score):
-        self._score = score
-        
-    def __str__(self):
-        return '<Comment left_bounds:{0} right_bounds:{1} score:{2}>'.format(
-            self.left_bounds,
-            self.right_bounds,
-            self.score())
-
-def preprocess_files(s1, s2, offset = 1.0):
-    diff = difflib.ndiff(s1.splitlines(1), s2.splitlines(1))
-    additions = []
-    deletions = [] # Deletion position assuming aldfsl the additions already occurred. 
-    current = offset
-
-    for x in diff:
-        if x.startswith('+ '):
-            additions.append(current)
-            current = current + 1
-        elif x.startswith('- '):
-            deletions.append(current)
-        else:
-            current = current + 1
-    
-    return additions, deletions
-
-def preprocess_comments(f, excludes):
-    comments = []
-    exceptions = []
-    for ast_c in f.find_all('comment'):
-        comment = Comment(ast_c)
-        line, _ = comment.left_bounds
-        if line not in excludes:
-            comments.append(comment)
-        else:
-            exceptions.append(comment)
-        
-    return comments, exceptions
-
-def compare(s1, s2, decay_factor = OUR_DECAY_FACTOR):
-    # print_to_log("called compare")
-    try:
-        red1 = RedBaron(s1)
-        red2 = RedBaron(s2)
-        result = []
-
-        defs = red2.find_all('def')
-        length = len(defs)
-        for ast_f2 in defs:
-            ast_f1 = red1.find('def', name = ast_f2.name)        
-            if ast_f1 is not None:
-                additions, deletions = preprocess_files(ast_f1.dumps(),
-                                                        ast_f2.dumps())
-                comments, exceptions = preprocess_comments(ast_f2, additions) 
-                for a in additions:
-                    for c in comments:
-                        line, _ = c.left_bounds
-                        distance = math.fabs(line - a)
-                        score = int(c.score() - float(decay_factor) / (distance * distance))
-                        c.setScore(score if score > 0 else 0)
-                for d in deletions:
-                    for c in comments:
-                        line, _ = c.left_bounds
-                        line = line + 1 if line >= d else line
-                        distance = math.fabs(line - d)
-                        score = int(c.score() - float(decay_factor) / (distance * distance))
-
-                        c.setScore(score if score > 0 else 0)
-                result.extend(comments)
-                result.extend(exceptions)
-            else:
-                result.extend(preprocess_comments(ast_f2, []))
-
-        result = [r for r in result if r != []]
-        # print_to_log("compare result: " + str(result))
-        return result
-
-    except Exception as e:
-        err = "CommentHealth compare error: " + str(e)
-        print_to_log(err)
-        sublime.status_message(err)
-        return []
-        
-
-if __name__ == '__main__':
-    f1 = open(sys.argv[1], "r")
-    f2 = open(sys.argv[2], "r")
-    print_comments(compare(f1.read(), f2.read()))
-
 
 """
 START PLUGIN CODE
@@ -180,36 +62,58 @@ def get_score_function(head_text, current_text):
 
     # diff = list(difflib.ndiff(head_text.splitlines(), current_text.splitlines()))
     try:
-        diff = DIFFER.compare(current_text.splitlines(), head_text.splitlines())
-        #print diff to log
-        # deltas = '\n'.join(diff)
-        
-        print_to_log("diff: " + str(diff))
-        lineNum = 0
-        line_deltas = list()
-        for line in diff:
-            # split off the code
-            print_to_log("line: " + str(line))
+        diff = DIFFER.compare(head_text.splitlines(), current_text.splitlines())
+        deltas = ('\n'.join(diff)).split("\n")
+        # print_to_log("diff: %s, len %d" % (str(deltas), len(deltas)))
+        print_to_log("diff len: %d" % (len(deltas)))
+
+
+
+        line_num = 0
+        line_deltas = set()
+        exceptions = set()
+        for line in deltas:
+            # split off the diff type code
             code = line[:2]
-            # if the  line is in both files or just b, increment the line number.
-            # if code in ("  ", "+ "):
-            lineNum += 1
-            # if this line is only in b, print the line number and the text on the line
-            if code == "+ " or code == "- ":
-                line_deltas.append(lineNum)
+            
+            #if line addition or deletion mark as change
+            if code == "+ ":
+                line_num +=1
+                # line_deltas.append(line_num)
+                exceptions.add(line_num)
+                line_deltas.add(line_num)
+                # print_to_log("line %s: %s" % (str(line_num),str(line)))
+            elif code == "- ":
+                line_deltas.add(line_num)
+            else:
+                line_num += 1
+                # print_to_log("line %s: %s" % (str(line_num),str(line)))
                 # line_deltas.append("%d: %s" % (lineNum, line[2:].strip()))
 
-        print_to_log("line_deltas: " + str(line_deltas))
-        def f(line_number):
-            global PARSER_DECAY_FACTOR
-            decays = list(map(lambda x: int(PARSER_DECAY_FACTOR/(abs(x - line_number))), [x for x in line_deltas if x != line_number]))
-            print_to_log("comment line %s, decays: %s" % (line_number, str(decays)))
-           
-            return max(MAX_HEALTH-sum(decays),0)
+        print_to_log("line_deltas: %s\nexceptions: %s" % (str(line_deltas), str(exceptions)))
 
-        return f
+        def scoring_func(c):
+            lines = c._text.count("\n")
+            line_start = c._line_number
+            line_end = line_start + lines
+            line_numbers = set(range(line_start, line_end + 1))
+
+
+            #if comment intersections an exception
+            intersect = line_numbers.intersection(exceptions)
+            if len(intersect)>0:
+                print_to_log("comment %s healthy (line %s modified)" % (str(line_numbers),intersect))
+                return compare.MAX_HEALTH
+
+            decays = list(map(lambda x: int(PARSER_DECAY_FACTOR/(min(abs(x - line_start),abs(x - line_end)))), [x for x in line_deltas]))
+
+            print_to_log("comment lines %s, decays: %s" % (str(line_numbers), str(decays)))
+           
+            return max(compare.MAX_HEALTH-sum(decays),0)
+
+        return scoring_func
     except Exception as e:
-        sublime.status_message("Error: " + str(e))
+        sublime.status_message("get_score_function, Error: " + str(e))
         print_to_log(traceback.format_exc())
         return None
 
@@ -217,7 +121,7 @@ def get_score_function(head_text, current_text):
 #right now just assigns a random health score to each comment in the scope
 def parser_health_render(self, view, cs, score_function):
     comment_regions = [
-        (view.full_line(sublime.Region(view.text_point(c._line_number-1, 0),view.text_point(c._line_number-1, len(c._text)+1))), score_function(c._line_number))
+        (view.full_line(sublime.Region(view.text_point(c._line_number-1, 0),view.text_point(c._line_number-1, len(c._text)+1))), score_function(c))
         for c in cs]
     #random.randint(0, COLOR_LIMIT)) 
     for c,color in comment_regions:
@@ -230,14 +134,11 @@ def parser_health_render(self, view, cs, score_function):
         view.add_regions(get_color(color), colormap[color], get_color(color), "dot", 
             sublime.PERSISTENT)
 
-#renders the list of comments/scores on the sublime view (using our parsing engine)
-def our_health_render(self, view, cs_list):
-    cs = None
-    #flatten the list if needed
-    try:
-        cs = [item for sublist in cs_list for item in sublist]
-    except Exception as e:
-        cs = cs_list
+#renders the list of comments/scores on the sublime view (using python parsing engine)
+def python_health_render(self, view, cs):
+    cs = flatten(cs)
+
+    print_to_log("cs: " + str(cs))
 
     print_comments(cs)
 
@@ -259,14 +160,12 @@ class HealthCommand(sublime_plugin.EventListener):
     # PARSER_SUPPORTED filetypes use python package comment engine 
     PARSER_SUPPORTED = ["c","cpp","cc","java","js","go","sh"]
 
-    #OUR_SUPPORTED filetypes use our comment engine 
-    OUR_SUPPORTED = ["py"]
-    # TIME_DIFF = 5000 #ms for running again
+    #python_SUPPORTED filetypes use python comment engine 
+    python_SUPPORTED = ["py"]
 
-    #static content variables
+    #static file content variables
     last_file = ""
     last_file_contents = None
-    last_execute = 0
 
     def setup(self, abs_file_name):
         # print_to_log("setup called")
@@ -275,20 +174,23 @@ class HealthCommand(sublime_plugin.EventListener):
             self.file_ext = os.path.splitext(abs_file_name)[1][1:].strip().lower()
             self.f_dir = os.path.dirname(abs_file_name)
             self.parser_supported = self.file_ext in HealthCommand.PARSER_SUPPORTED
-            self.our_supported = self.file_ext in HealthCommand.OUR_SUPPORTED
+            self.python_supported = self.file_ext in HealthCommand.python_SUPPORTED
 
-            self.get_head_contents(abs_file_name)
+            success = self.get_head_contents(abs_file_name)
             HealthCommand.last_file = abs_file_name
 
             print_to_log("setup successful")
         except Exception as e:
-            sublime.status_message("Error: " + str(e))
+            sublime.status_message("setup, Error: " + str(e))
             print_to_log(traceback.format_exc())
             pass
 
+        return success
+
+
 
     def get_head_contents(self, abs_file_name):
-        supported = self.parser_supported or self.our_supported
+        supported = self.parser_supported or self.python_supported
         print_to_log("get_head_contents - " + self.file_name + " " + str(supported))
 
         if supported:
@@ -303,24 +205,28 @@ class HealthCommand(sublime_plugin.EventListener):
             if (HealthCommand.last_file_contents is None):
                 err = "Comment Health: Unable to get " + self.file_name + " from git"
                 sublime.status_message(err)
+                return False
+
+            return True
                     
         else:
             sublime.status_message("Comment Health - .%s not supported" % (self.file_ext))
+            return False
 
 
     
     def render_health_scores(self, view):
-        global ACTIVE
         if not ACTIVE:
-            print_to_log("health not active")
+            # print_to_log("CodeHealth not active")
             return
 
         try:
             current_file = view.file_name()
 
-            if (HealthCommand.last_file != current_file):
+            if (HealthCommand.last_file != current_file) or (not hasattr(self,"parser_supported")):
                 print_to_log("loading contents: " + current_file)
-                self.setup(current_file)
+                if not self.setup(current_file):
+                    sublime.status_message("File " + current_file + " not supported by CH")
 
             current_text = view.substr(sublime.Region(0, view.size()))
             print_progress(0)
@@ -331,34 +237,39 @@ class HealthCommand(sublime_plugin.EventListener):
                     print_to_log("parser '%s' current text len: %d" % (self.file_ext, len(current_text)))
                     cs = comment_parse.extract_comments(current_text, self.file_ext)
                     if len(cs) == 1:
-                        print_to_log(cs[0])
+                        print_to_log(str(cs[0]))
                     score_function = get_score_function(HealthCommand.last_file_contents, current_text)
-                    print_to_log("parser cs: " + str(cs))
+                    print_to_log("parser comments _line_number (start lines): " + str([str(c._line_number) for c in cs]))
                     parser_health_render(self, view, cs, score_function)
                 except Exception as e:
-                    print_to_log(e)
+                    print_to_log(str(e))
                     return
-            elif self.our_supported:
-                cs = compare(HealthCommand.last_file_contents, current_text)
-                our_health_render(self, view, cs)
+            elif self.python_supported:
+                print_to_log("Running python comment analysis")
+                cs = compare.compare(HealthCommand.last_file_contents, current_text)
+                # print_to_log("python_supported: " + str(compare.PYTHON_DECAY_FACTOR))
+                python_health_render(self, view, cs)
             print_progress(100)
 
         except Exception as e:
-            sublime.status_message("Error: " + str(e))
-            print_to_log(traceback.format_exc())
+            sublime.status_message("render_health, Error: " + str(e))
+            print_to_log(str(traceback.format_exc()))
             pass
 
     #real-time updates on non-python (non-AST comment parsed) files
-    def on_modified_async(self, view):
-        #need to clear contents as insertion of new characters will shift current code health highlighted regions - unless a more clever way to do this
-        if self.parser_supported:
-            clear_colors(self, view)
-            self.render_health_scores(view)
-        return
+    #need to clear contents as insertion of new characters will shift current code health highlighted regions - can be improved
+    # def on_modified_async(self, view):
+    #     # print_to_log("on_modified_async: " + self.parser_supported)
+    #     if ".py" not in view.file_name():
+    #         sublime.status_message("on_modified")
+    #         clear_colors(self, view)
+    #         self.render_health_scores(view)
+    #     return
+
 
     #run for all parsers
     def on_post_save_async(self, view):
-        print_to_log("HealthCommand: on_post_save_async called")
+        print_to_log("on_post_save_async called")
         clear_colors(self,view)
         self.render_health_scores(view)
         

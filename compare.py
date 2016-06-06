@@ -1,16 +1,28 @@
 import difflib
-import json, math, sys
+import sys, json, math
 from redbaron import RedBaron
 
-"""
-Compare.py
-"""
+#scale used for calculating code decay amount
+PYTHON_DECAY_FACTOR = 50
 
-#max health value
+# DISTANCE_FACTOR = 5
+# on_activated_count = 1
+# on_load_count = 1
+
 MAX_HEALTH = 100
 
-#scale used for calculating code decay amount
-OUR_DECAY_FACTOR = 50
+def print_to_log(txt):
+    with open("~/codehealth_log.txt","a+") as f:
+            f.write(str(txt) + "\n") 
+
+def print_comments(comments):
+    for c in comments:
+        #print(c)
+        print_to_log(str(c))
+
+def print_progress(p):
+    return
+    # sublime.status_message("Running comment health...%s%%" % p)
 
 class Comment:
     def __init__(self, comment, score = MAX_HEALTH):
@@ -62,14 +74,14 @@ def preprocess_comments(f, excludes):
             exceptions.append(comment)
         
     return comments, exceptions
-
+    
 def compute_addition(c, distance, decay_factor):
     return int(c.score() - float(decay_factor) / (distance * distance))
     
 def compute_deletion(c, distance, decay_factor):
     return int(c.score() - float(decay_factor) / math.fabs(distance * distance * distance))
 
-def compare(s1, s2, decay_factor = OUR_DECAY_FACTOR):
+def compare(s1, s2, decay_factor = PYTHON_DECAY_FACTOR):
     try:
         red1 = RedBaron(s1)
         red2 = RedBaron(s2)
@@ -103,14 +115,15 @@ def compare(s1, s2, decay_factor = OUR_DECAY_FACTOR):
                 comments, _ = preprocess_comments(ast_f2, [])
                 result.extend(comments)
         
+        print_to_log('Result: ' + str(result))
         return result
 
     except Exception as e:
-        err = "CommentHealth compare error: " + str(e)
+        err = 'CommentHealth compare error: ' + str(e)
         return []
         
 if __name__ == '__main__':
     f1 = open(sys.argv[1], "r")
     f2 = open(sys.argv[2], "r")
     compare(f1.read(), f2.read())
-
+    

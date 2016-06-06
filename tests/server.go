@@ -36,7 +36,11 @@ import (
 
 var oxyLogger = &OxyLogger{}
 
+
+
 // Server is the reverse-proxy/load-balancer engine
+
+
 
 type Server struct {
     serverEntryPoints          serverEntryPoints
@@ -64,6 +68,7 @@ type serverRoute struct {
 }
 
 // NewServer returns an initialized Server.
+
 func NewServer(globalConfiguration GlobalConfiguration) *Server {
     server := new(Server)
 
@@ -146,6 +151,10 @@ func (server *Server) listenProviders(stop chan bool) {
             if time.Now().After(lastReceivedConfigurationValue.Add(time.Duration(server.globalConfiguration.ProvidersThrottleDuration))) {
                 log.Debugf("Last %s config received more than %s, OK", configMsg.ProviderName, server.globalConfiguration.ProvidersThrottleDuration)
                 // last config received more than n s ago
+
+
+
+
                 server.configurationValidatedChan <- configMsg
             } else {
                 log.Debugf("Last %s config received less than %s, waiting...", configMsg.ProviderName, server.globalConfiguration.ProvidersThrottleDuration)
@@ -264,6 +273,9 @@ func (server *Server) listenSignals() {
 }
 
 // creates a TLS config that allows terminating HTTPS for multiple domains using SNI
+
+
+
 func (server *Server) createTLSConfig(entryPointName string, tlsOption *TLS, router *middlewares.HandlerSwitcher) (*tls.Config, error) {
     if tlsOption == nil {
         return nil, nil
@@ -302,6 +314,7 @@ func (server *Server) createTLSConfig(entryPointName string, tlsOption *TLS, rou
     }
     // BuildNameToCertificate parses the CommonName and SubjectAlternateName fields
     // in each certificate and populates the config.NameToCertificate map.
+
     config.BuildNameToCertificate()
     return config, nil
 }
@@ -565,6 +578,8 @@ func (server *Server) buildDefaultHTTPRouter() *mux.Router {
 func getRoute(serverRoute *serverRoute, route *types.Route) error {
     // ⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠
     // TODO: backwards compatibility with DEPRECATED rule.Value
+
+    
 
     if len(route.Value) > 0 {
         route.Rule += ":" + route.Value
