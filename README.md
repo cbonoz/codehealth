@@ -117,7 +117,13 @@ Valid values: `system` (OS-dependent), `windows` (CRLF) and `unix` (LF).
 * global radiation
 * radiation calculation on save
 
-### bugs
+### Notes
 <!-- moving commment downwards affects  -->
 
+ imported files must be in python packages folder:
+ ex:
+ /Users/cbono/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+ or link: ln -s /any/file/on/the/disk linked-file
+#Remove log files:
+ find . -name "log.txt" -type f -delete
 

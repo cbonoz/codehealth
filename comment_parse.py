@@ -16,11 +16,11 @@ Dependencies:
 
 import sys
 
-from .parsers import common
-from .parsers import c_parser as cp
-from .parsers import go_parser as gp
-from .parsers import js_parser as jp
-from .parsers import shell_parser as sp
+from parsers import common
+from parsers import c_parser as cp
+from parsers import go_parser as gp
+from parsers import js_parser as jp
+from parsers import shell_parser as sp
 
 # MIME_MAP = {
 #     'text/x-c': c_parser,               # C
