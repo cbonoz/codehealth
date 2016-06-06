@@ -2,7 +2,7 @@ import sys, os, os.path
 sys.path.append(os.path.dirname(__file__))
 import difflib
 import json, math, sys
-from .redbaron import RedBaron
+from redbaron import RedBaron
 import compare
 import comment_parse
 import random, traceback
