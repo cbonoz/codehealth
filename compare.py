@@ -10,7 +10,7 @@ Compare.py
 MAX_HEALTH = 100
 
 #scale used for calculating code decay amount
-OUR_DECAY_FACTOR = 10
+OUR_DECAY_FACTOR = 50
 
 class Comment:
     def __init__(self, comment, score = MAX_HEALTH):
@@ -63,6 +63,12 @@ def preprocess_comments(f, excludes):
         
     return comments, exceptions
 
+def compute_addition(c, distance, decay_factor):
+    return int(c.score() - float(decay_factor) / (distance * distance))
+    
+def compute_deletion(c, distance, decay_factor):
+    return int(c.score() - float(decay_factor) / math.fabs(distance * distance * distance))
+
 def compare(s1, s2, decay_factor = OUR_DECAY_FACTOR):
     try:
         red1 = RedBaron(s1)
@@ -75,33 +81,36 @@ def compare(s1, s2, decay_factor = OUR_DECAY_FACTOR):
             ast_f1 = red1.find('def', name = ast_f2.name)        
             if ast_f1 is not None:
                 additions, deletions = preprocess_files(ast_f1.dumps(),
-                                                        ast_f2.dumps())
+                                                        ast_f2.dumps(),
+                                                        ast_f2.absolute_bounding_box.top_left.line)
                 comments, exceptions = preprocess_comments(ast_f2, additions) 
                 for a in additions:
                     for c in comments:
                         line, _ = c.left_bounds
-                        distance = math.fabs(line - a)
-                        score = int(c.score() - float(decay_factor) / (distance * distance))
+                        distance = line - a
+                        score = compute_addition(c, distance, decay_factor)
                         c.setScore(score if score > 0 else 0)
                 for d in deletions:
                     for c in comments:
                         line, _ = c.left_bounds
                         line = line + 1 if line >= d else line
-                        distance = math.fabs(line - d)
-                        score = int(c.score() - float(decay_factor) / (distance * distance))
-
+                        distance = line - d
+                        score = compute_deletion(c, distance, decay_factor)
                         c.setScore(score if score > 0 else 0)
                 result.extend(comments)
                 result.extend(exceptions)
             else:
-                result.extend(preprocess_comments(ast_f2, []))
-
-        result = [r for r in result if r != []]
+                comments, _ = preprocess_comments(ast_f2, [])
+                result.extend(comments)
+        
         return result
 
     except Exception as e:
         err = "CommentHealth compare error: " + str(e)
-        # sublime.status_message(err)
         return []
         
+if __name__ == '__main__':
+    f1 = open(sys.argv[1], "r")
+    f2 = open(sys.argv[2], "r")
+    compare(f1.read(), f2.read())
 
