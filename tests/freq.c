@@ -24,6 +24,14 @@ int main()
    for (c = 0; c < 26; c++)
    {
       /** Printing only characters whose count is greater than zero **/
+
+
+
+
+
+
+
+
  
       if (count[c] != 0)
          printf("%c occurs %d times in the entered string.\n",c+'a',count[c]);

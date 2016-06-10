@@ -29,6 +29,7 @@ const writeFile = promiseify(fs.writeFile);
 /**
  * For every argument, inline the templates and styles under it and write the new file.
  */
+
 for (let arg of process.argv.slice(2)) {
   if (arg.indexOf('*') < 0) {
     // Argument is a directory target, add glob patterns to include every files.
@@ -73,28 +74,3 @@ function inlineTemplate(filePath, content) {
     return `template: "${shortenedTemplate}"`;
   });
 }
-
-/*
- * Inline the styles for a source file. Simply search for instances of `styleUrls: [...]` and
- * replace with `styles: [...]` (with the content of the file included).
- * @param filePath {string} The path of the source file.
- * @param content {string} The source file's content.
- * @return {string} The content with all styles inlined.
- */
-function inlineStyle(filePath, content) {
-  return content.replace(/styleUrls:\s*(\[[\s\S]*?\])/gm, function(m, styleUrls) {
-    const urls = eval(styleUrls);
-    return 'styles: ['
-      + urls.map(styleUrl => {
-          const styleFile = path.join(path.dirname(filePath), styleUrl);
-          const styleContent = fs.readFileSync(styleFile, 'utf-8');
-          const shortenedStyle = styleContent
-            .replace(/([\n\r]\s*)+/gm, ' ')
-            .replace(/"/g, '\\"');
-          return `"${shortenedStyle}"`;
-        })
-        .join(',\n')
-      + ']';
-  });
-}
-

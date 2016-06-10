@@ -41,7 +41,6 @@ var oxyLogger = &OxyLogger{}
 // Server is the reverse-proxy/load-balancer engine
 
 
-
 type Server struct {
     serverEntryPoints          serverEntryPoints
     configurationChan          chan types.ConfigMessage

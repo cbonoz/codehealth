@@ -22,7 +22,7 @@ colormap = {}
 #indicates if the plugin highlighting is active (toggled via sublime commands)
 ACTIVE = True
 
-PRINT_TO_LOG = True
+PRINT_TO_LOG = False
 LOG_FILE = "log.txt"
 def print_to_log(txt):
 
@@ -57,6 +57,15 @@ def clear_colors(self, view):
 
 DIFFER = difflib.Differ()
 
+#calculate comment decay from single change at a distance
+def single_decay(distance):
+    if distance != 0:
+        return PARSER_DECAY_FACTOR/distance
+    #division by zero due to deletion; deletion without addition does not affect decay
+    return 0
+
+
+
 # compute scoring function for current diff
 def get_score_function(head_text, current_text):
 
@@ -87,11 +96,16 @@ def get_score_function(head_text, current_text):
                 line_deltas.add(line_num)
             else:
                 line_num += 1
-                # print_to_log("line %s: %s" % (str(line_num),str(line)))
+            print_to_log("line %s: %s" % (str(line_num),str(line)))
                 # line_deltas.append("%d: %s" % (lineNum, line[2:].strip()))
+
+        exceptions = line_deltas
 
         print_to_log("line_deltas: %s\nexceptions: %s" % (str(line_deltas), str(exceptions)))
 
+        
+
+        #score comment (potentially multiline)
         def scoring_func(c):
             lines = c._text.count("\n")
             line_start = c._line_number
@@ -105,7 +119,13 @@ def get_score_function(head_text, current_text):
                 print_to_log("comment %s healthy (line %s modified)" % (str(line_numbers),intersect))
                 return compare.MAX_HEALTH
 
-            decays = list(map(lambda x: int(PARSER_DECAY_FACTOR/(min(abs(x - line_start),abs(x - line_end)))), [x for x in line_deltas]))
+            decays = []
+
+            def decay_function(x):
+                return int(PARSER_DECAY_FACTOR/min(abs(x - line_start),abs(x - line_end)))
+
+            change_lines = line_deltas.difference(intersect)
+            decays = [decay_function(x) for x in change_lines]
 
             print_to_log("comment lines %s, decays: %s" % (str(line_numbers), str(decays)))
            
@@ -256,17 +276,18 @@ class HealthCommand(sublime_plugin.EventListener):
 
     #real-time updates on non-python (non-AST comment parsed) files
     #need to clear contents as insertion of new characters will shift current code health highlighted regions - can be improved
-    # def on_modified_async(self, view):
-    #     # print_to_log("on_modified_async: " + self.parser_supported)
-    #     if ".py" not in view.file_name():
-    #         sublime.status_message("on_modified")
-    #         clear_colors(self, view)
-    #         self.render_health_scores(view)
-    #     return
+    def on_modified_async(self, view):
+        # print_to_log("on_modified_async: " + self.parser_supported)
+        if ".py" not in view.file_name():
+            sublime.status_message("on_modified")
+            clear_colors(self, view)
+            self.render_health_scores(view)
+        return
 
 
     #run for all parsers
     def on_post_save_async(self, view):
+        # if ".py" not in view.file_name():
         print_to_log("on_post_save_async called")
         clear_colors(self,view)
         self.render_health_scores(view)
@@ -280,6 +301,8 @@ class ActivateHealthCommand(sublime_plugin.TextCommand):
         view = self.view
         global ACTIVE #use global keyword for assignment
         ACTIVE = True
+        global PRINT_TO_LOG
+        PRINT_TO_LOG = True
         sublime.status_message("Activate Health - Trigger on Save")
 
 class RemoveHealthCommand(sublime_plugin.TextCommand):
@@ -289,6 +312,8 @@ class RemoveHealthCommand(sublime_plugin.TextCommand):
         clear_colors(self,view)
         global ACTIVE
         ACTIVE = False
+        global PRINT_TO_LOG
+        PRINT_TO_LOG = False
         sublime.status_message("Remove Health Trigger")
 
 

@@ -3,6 +3,8 @@
 CodeHealth Project
 ===
 
+This folder contains sample plugin and theme generator scripts for development reference.
+
 Original Authors
 ---
 
