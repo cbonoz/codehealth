@@ -3,7 +3,7 @@ Codehealth
 
 **Codehealth** is a Sublime Text 2/3 plugin that analyzes the health of code comments.
 
-in progress
+in beta
 
 How it Works
 ------------
