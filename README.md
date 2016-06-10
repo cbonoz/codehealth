@@ -106,6 +106,18 @@ You can configure is a type of icon (dot, circle or bookmark) and path for your 
 
 If some sacred punishment has been bestowed upon you, and you have no other choice but to use OS, where console has non-UTF8 encoding, you can set console_encoding parameter to the name of your beloved encoding. This parameter is specifically designed for Windows XP users, who have their git repositories in folders with cyrillic path. Since russian XP uses CP1251 as default encoding (including console), VCS diff commands will be encoded appropriately, when using this parameter.
 ifferencing mechanism that may be specified for use in the user's runtime configuration.
+
+
+### Notes
+
+ imported files must be in python packages folder:
+ ex:
+ /Users/cbono/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+ or link: ln -s /any/file/on/the/disk linked-file
+### Remove log files:
+ find . -name "log.txt" -type f -delete
+ -->
+
  -->
 ### Line endings
 CodeHealth takes into account `default_line_ending` setting that you can change in your "User Settings" (or per project/file basis).  
@@ -116,14 +128,3 @@ Valid values: `system` (OS-dependent), `windows` (CRLF) and `unix` (LF).
 * weighted radiation: more downward of comment than upward
 * global radiation
 * radiation calculation on save
-
-### Notes
-<!-- moving commment downwards affects  -->
-
- imported files must be in python packages folder:
- ex:
- /Users/cbono/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
- or link: ln -s /any/file/on/the/disk linked-file
-#Remove log files:
- find . -name "log.txt" -type f -delete
-
